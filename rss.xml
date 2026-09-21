@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Distill 日报</title>
+<link></link>
+<description>每天从知乎 AI 关注流蒸馏出的精选日报</description>
+<item>
+<title>2026-09-20 日报：51 篇</title>
+<link>/archive/2026-09-20/</link>
+<guid>/archive/2026-09-20/</guid>
+<pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+<description>今日技术焦点集中于大模型的系统级优化与架构创新。核心脉络包括：MoE架构已成为行…</description>
+</item>
+<item>
+<title>2026-09-19 日报：51 篇</title>
+<link>/archive/2026-09-19/</link>
+<guid>/archive/2026-09-19/</guid>
+<pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+<description>今日主题围绕大模型的全栈工程化展开，从架构革新到推理优化，再到基础设施与Agen…</description>
+</item>
+<item>
+<title>2026-09-17 日报：51 篇</title>
+<link>/archive/2026-09-17/</link>
+<guid>/archive/2026-09-17/</guid>
+<pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+<description>今日主题集中在AI系统工程能力的爆发：推理优化、RL训练框架和基础设施效率成为焦…</description>
+</item>
+</channel>
+</rss>
