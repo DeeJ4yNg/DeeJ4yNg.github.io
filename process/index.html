@@ -86,7 +86,7 @@
     <div class="funnel-keep">57%</div>
   </div>
   <div class="funnel-drop">
-<span class="funnel-desc">只有 emb_key 分靠前的才送去判 Jev；其余止步于此（不花钱）</span><span class="funnel-cut">− 79</span>  </div>
+<span class="funnel-desc">只有 emb_key 分靠前的才送去判 Jev；其余止步于此</span><span class="funnel-cut">− 79</span>  </div>
   <div class="funnel-row" data-stage="jev_rejected" tabindex="0">
     <div class="funnel-name">Jev 质量闸门</div>
     <div class="funnel-track">
@@ -122,7 +122,7 @@
     <div class="funnel-keep">94%</div>
   </div>
   <div class="funnel-drop">
-<span class="funnel-desc">语义、LLM 分、共识、互动量与时间权重加权，取前 50 加 1 个探索位</span>  </div>
+<span class="funnel-desc">语义、LLM 分、共识、互动量与时间权重加权，取前 50 加 1 篇随机文章</span>  </div>
 </div>
 
 <h2>L3 权重与时间衰减</h2>
@@ -152,7 +152,7 @@
   <label>阶段
     <select id="stage-filter">
       <option value="">全部阶段</option>
-<option value="l0_rejected">L0 淘汰</option><option value="l0_pending">L0 未处理</option><option value="l1_dedup">L1 去重</option><option value="jev_rejected">Jev 判断未通过</option><option value="l2_unjudged">未进 Jev 候选</option><option value="l3_blogger">L3 同博主上限</option><option value="l3_author_ignored">L3 作者已忽略</option><option value="l3_score_cut">L3 分数落选</option><option value="in_digest">入选</option><option value="in_explore">探索位</option>    </select>
+<option value="l0_rejected">L0 淘汰</option><option value="l0_pending">L0 未处理</option><option value="l1_dedup">L1 去重</option><option value="jev_rejected">Jev 判断未通过</option><option value="l2_unjudged">未进 Jev 候选</option><option value="l3_blogger">L3 同博主上限</option><option value="l3_author_ignored">L3 作者已忽略</option><option value="l3_score_cut">L3 分数落选</option><option value="in_digest">入选</option><option value="in_explore">随机文章</option>    </select>
   </label>
   <label>发布时间
     <select id="pub-filter">
@@ -184,7 +184,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085305838453908563" target="_blank" rel="noopener">MLSys 2026 | MoE服务税：同等激活参数下，MoE推理为何慢2–3倍</a>
       <div class="byline">先进编译实验室</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 16:11">✍️ 1 位我关注的人 09-21 16:11</div>
+           title="✍️ 1 人 09-21 16:11">✍️ 1 人 09-21 16:11</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.73</td>
@@ -203,7 +203,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085117209945313843" target="_blank" rel="noopener">FlexPipe：把流水线调度写进十行代码，让大模型训练最高加速 2.28 倍</a>
       <div class="byline">深联DeepLink</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 14:38">👍 1 位我关注的人 09-21 14:38</div>
+           title="👍 1 人 09-21 14:38">👍 1 人 09-21 14:38</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.78</td>
@@ -222,7 +222,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085372895337902082" target="_blank" rel="noopener">【09-21】agentic 方式合成 / 清洗训练数据 (SFT・mid-training・RL)</a>
       <div class="byline">Lei Tian</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 18:05">👍 1 位我关注的人 09-21 18:05</div>
+           title="👍 1 人 09-21 18:05">👍 1 人 09-21 18:05</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.70</td>
@@ -241,7 +241,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2084080536096719872" target="_blank" rel="noopener">论文解读：daVinci-kernel —— 让「技能库」与「策略」共同进化的 GPU Kernel 强化学习框架</a>
       <div class="byline">Arthur</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 18:51">✍️ 1 位我关注的人 09-21 18:51</div>
+           title="✍️ 1 人 09-21 18:51">✍️ 1 人 09-21 18:51</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.74</td>
@@ -260,7 +260,7 @@
   <td><a href="https://www.zhihu.com/question/2084281918074385700/answer/2085416164054807836" target="_blank" rel="noopener">怎么看网友用两小时就实现了 TypeSafe AI 用了两年 RLCD 才做到的 Jev 模型效果？</a>
       <div class="byline">AI解码师</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 17:12">✍️ 1 位我关注的人 09-21 17:12</div>
+           title="✍️ 1 人 09-21 17:12">✍️ 1 人 09-21 17:12</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.66</td>
@@ -279,7 +279,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2084586770000261374" target="_blank" rel="noopener">贝尔曼策略优化以及score-centering</a>
       <div class="byline">haotian</div>
       <div class="moment-row"
-           title="👍 2 位我关注的人 09-21 13:14">👍 2 位我关注的人 09-21 13:14</div>
+           title="👍 2 人 09-21 13:14">👍 2 人 09-21 13:14</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.59</td>
@@ -298,7 +298,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085050823952941489" target="_blank" rel="noopener">优化 GPU Kernel 提交与并行效率</a>
       <div class="byline">MaxwellGeng</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:58">👍 1 位我关注的人 09-21 09:58</div>
+           title="👍 1 人 09-21 09:58">👍 1 人 09-21 09:58</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.72</td>
@@ -317,7 +317,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2084784910288549156" target="_blank" rel="noopener">mimo-v2.6 RL scaling实验观察</a>
       <div class="byline">香港市民董先生</div>
       <div class="moment-row"
-           title="📚 1 位我关注的人 09-21 19:21">📚 1 位我关注的人 09-21 19:21</div>
+           title="📚 1 人 09-21 19:21">📚 1 人 09-21 19:21</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.63</td>
@@ -336,7 +336,7 @@
   <td><a href="https://www.zhihu.com/question/600927104/answer/2085133694856181533" target="_blank" rel="noopener">tensorcore中ldmatrix指令的优势是什么？</a>
       <div class="byline">Anonymous</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:22">👍 1 位我关注的人 09-21 09:22</div>
+           title="👍 1 人 09-21 09:22">👍 1 人 09-21 09:22</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.62</td>
@@ -355,7 +355,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085111110953448528" target="_blank" rel="noopener">《AI基础设施系列》之内存、IO、网络与分布式概念如何影响训练</a>
       <div class="byline">想飞的石头</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-20 22:21">✍️ 1 位我关注的人 09-20 22:21</div>
+           title="✍️ 1 人 09-20 22:21">✍️ 1 人 09-20 22:21</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.65</td>
@@ -374,7 +374,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085229719906272144" target="_blank" rel="noopener">从一次 Batch Size 争论，思考 SGLang Omni 的性能验证与调度取舍</a>
       <div class="byline">Chayenne Zhao</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 05:10">✍️ 1 位我关注的人 09-21 05:10</div>
+           title="✍️ 1 人 09-21 05:10">✍️ 1 人 09-21 05:10</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.58</td>
@@ -393,7 +393,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085039491153139207" target="_blank" rel="noopener">OPENAI的神秘RL算法只是个STE的近似吗？解密OAI的RL 后训练算法</a>
       <div class="byline">dung defender</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 14:19">👍 1 位我关注的人 09-21 14:19</div>
+           title="👍 1 人 09-21 14:19">👍 1 人 09-21 14:19</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.72</td>
@@ -412,7 +412,7 @@
   <td><a href="https://www.zhihu.com/pin/2085306659015075758" target="_blank" rel="noopener">提速 50% Kitchen Attention 可用于 Qwen Image 2.1 加速 ComfyUI 之前为 M</a>
       <div class="byline">Edison Chen</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 15:12">👍 1 位我关注的人 09-21 15:12</div>
+           title="👍 1 人 09-21 15:12">👍 1 人 09-21 15:12</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.70</td>
@@ -431,7 +431,7 @@
   <td><a href="https://www.zhihu.com/pin/2084940733933416513" target="_blank" rel="noopener">当前推理引擎里面异构平台代码越来越乱了， 各种if hip/musa/xpu分支等， 看的头疼， 后续不知道怎么维护， </a>
       <div class="byline">菽陌松囿</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 08:00 · 💬 1 位我关注的人 09-20 09:54">👍 1 位我关注的人 09-21 08:00 · 💬 1 位我关注的人 09-20 09:54</div>
+           title="👍 1 人 09-21 08:00 · 💬 1 人 09-20 09:54">👍 1 人 09-21 08:00 · 💬 1 人 09-20 09:54</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.67</td>
@@ -450,7 +450,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2084476314640304028" target="_blank" rel="noopener">昇腾950：灵衢 2.0 与超节点</a>
       <div class="byline">Arthur</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 09:49">✍️ 1 位我关注的人 09-21 09:49</div>
+           title="✍️ 1 人 09-21 09:49">✍️ 1 人 09-21 09:49</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.55</td>
@@ -469,7 +469,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2063372476969660871" target="_blank" rel="noopener">[fast-ulysses] 让 Ulysses 再次伟大</a>
       <div class="byline">三木君</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:52">👍 1 位我关注的人 09-21 19:52</div>
+           title="👍 1 人 09-21 19:52">👍 1 人 09-21 19:52</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.70</td>
@@ -488,7 +488,7 @@
   <td><a href="https://www.zhihu.com/pin/2085333680143201983" target="_blank" rel="noopener">网友把 Jev 嵌入到 MiniMax H3，用来加速视频生成，在 Attention 处理里使用 Jev 做稀疏化（S</a>
       <div class="byline">恋猫</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 11:50">💬 1 位我关注的人 09-21 11:50</div>
+           title="💬 1 人 09-21 11:50">💬 1 人 09-21 11:50</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.72</td>
@@ -507,7 +507,7 @@
   <td><a href="https://www.zhihu.com/pin/2085322148411982238" target="_blank" rel="noopener">Token 用量被推爆后，扩散语言模型为何开始进入产品</a>
       <div class="byline">机器之心</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 11:00">💬 1 位我关注的人 09-21 11:00</div>
+           title="💬 1 人 09-21 11:00">💬 1 人 09-21 11:00</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.73</td>
@@ -526,7 +526,7 @@
   <td><a href="https://www.zhihu.com/question/2084906399562256955/answer/2085333441277589325" target="_blank" rel="noopener">Mimo V2.6 Flash RL训练结束！你认为这成绩怎么样？</a>
       <div class="byline">香港市民董先生</div>
       <div class="moment-row"
-           title="📚 1 位我关注的人 09-21 19:09">📚 1 位我关注的人 09-21 19:09</div>
+           title="📚 1 人 09-21 19:09">📚 1 人 09-21 19:09</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.62</td>
@@ -545,7 +545,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2056050797784438492" target="_blank" rel="noopener">大模型推理优化RoadMap-持续更新</a>
       <div class="byline">TensorDance</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 11:27">👍 1 位我关注的人 09-21 11:27</div>
+           title="👍 1 人 09-21 11:27">👍 1 人 09-21 11:27</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.78</td>
@@ -564,7 +564,7 @@
   <td><a href="https://www.zhihu.com/pin/2085334485932028790" target="_blank" rel="noopener">最近几天Jev模型很火，笔者两年前也做过类似的工作，欢迎查阅： 使用生成式大模型的“推断解码”实现文本分类任务的零样本学</a>
       <div class="byline">CyPaul Space</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 11:53">💬 1 位我关注的人 09-21 11:53</div>
+           title="💬 1 人 09-21 11:53">💬 1 人 09-21 11:53</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.66</td>
@@ -583,7 +583,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2082206899139825722" target="_blank" rel="noopener">Blackwell 上的low latency MoE Decode</a>
       <div class="byline">fffrida</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 18:54">👍 1 位我关注的人 09-21 18:54</div>
+           title="👍 1 人 09-21 18:54">👍 1 人 09-21 18:54</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.63</td>
@@ -602,7 +602,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2082643293700108552" target="_blank" rel="noopener">记一个 AMD GPU 上本意是坏的, 但执行好了的 bug</a>
       <div class="byline">Rivers</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 23:23">👍 1 位我关注的人 09-20 23:23</div>
+           title="👍 1 人 09-20 23:23">👍 1 人 09-20 23:23</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.67</td>
@@ -621,7 +621,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2083574908630652245" target="_blank" rel="noopener">潜伏863天，被72小时揪出：TencentOS Corvus AI 发现内核提权漏洞全链路实践</a>
       <div class="byline">鹅厂架构师</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 10:46">✍️ 1 位我关注的人 09-21 10:46</div>
+           title="✍️ 1 人 09-21 10:46">✍️ 1 人 09-21 10:46</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.62</td>
@@ -640,7 +640,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085321630536972260" target="_blank" rel="noopener">EMNLP 2026 | 通过分解生成与动态自反馈，构建工具调用合成数据</a>
       <div class="byline">机器之心</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 10:58">✍️ 1 位我关注的人 09-21 10:58</div>
+           title="✍️ 1 人 09-21 10:58">✍️ 1 人 09-21 10:58</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.65</td>
@@ -659,7 +659,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085092028648526705" target="_blank" rel="noopener">Qwen-Image-2.1开源：轻量高能，创作编辑一体化</a>
       <div class="byline">千问大模型</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 17:25">👍 1 位我关注的人 09-21 17:25</div>
+           title="👍 1 人 09-21 17:25">👍 1 人 09-21 17:25</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.70</td>
@@ -678,7 +678,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085398975138612023" target="_blank" rel="noopener">预训练Token消耗直接腰斩！上海AI Lab&amp;上交大提出全新预训练任务，开源首个8.9B隐空间大模型NCP-ArchPreview</a>
       <div class="byline">机器之心</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 16:05">✍️ 1 位我关注的人 09-21 16:05</div>
+           title="✍️ 1 人 09-21 16:05">✍️ 1 人 09-21 16:05</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.69</td>
@@ -697,7 +697,7 @@
   <td><a href="https://www.zhihu.com/question/2083549123160925836/answer/2084631517310067213" target="_blank" rel="noopener">如何看待前 OpenAI 研究员发布的新模型「Jev」 ？这类模型会成为 Agent 的新技术路线吗？</a>
       <div class="byline">workWork</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 06:57">👍 1 位我关注的人 09-21 06:57</div>
+           title="👍 1 人 09-21 06:57">👍 1 人 09-21 06:57</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.61</td>
@@ -716,7 +716,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2054979268661322049" target="_blank" rel="noopener">浅析 ASPLOS&#39;25 paper Virgo 的错误</a>
       <div class="byline">认真的神灯</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:26">👍 1 位我关注的人 09-21 09:26</div>
+           title="👍 1 人 09-21 09:26">👍 1 人 09-21 09:26</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.56</td>
@@ -735,7 +735,7 @@
   <td><a href="https://www.zhihu.com/question/2083549123160925836/answer/2084828653209310521" target="_blank" rel="noopener">如何看待前 OpenAI 研究员发布的新模型「Jev」 ？这类模型会成为 Agent 的新技术路线吗？</a>
       <div class="byline">寒月灼华</div>
       <div class="moment-row"
-           title="👍 2 位我关注的人 09-21 01:33">👍 2 位我关注的人 09-21 01:33</div>
+           title="👍 2 人 09-21 01:33">👍 2 人 09-21 01:33</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.73</td>
@@ -754,7 +754,7 @@
   <td><a href="https://www.zhihu.com/pin/2080801327316320565" target="_blank" rel="noopener">Loop Transformer 会对训练/推理infra带来哪些挑战和机遇</a>
       <div class="byline">老久</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 14:27">👍 1 位我关注的人 09-21 14:27</div>
+           title="👍 1 人 09-21 14:27">👍 1 人 09-21 14:27</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.76</td>
@@ -773,7 +773,7 @@
   <td><a href="https://www.zhihu.com/question/2083123101873844765/answer/2083540479745048728" target="_blank" rel="noopener">如何看待 DeepSeek 刘胜与的《我不得不把才华埋葬在昨天》？</a>
       <div class="byline">菽陌松囿</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 23:12">👍 1 位我关注的人 09-20 23:12</div>
+           title="👍 1 人 09-20 23:12">👍 1 人 09-20 23:12</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.70</td>
@@ -792,7 +792,7 @@
   <td><a href="https://www.zhihu.com/question/2083549123160925836/answer/2085193356666316156" target="_blank" rel="noopener">如何看待前 OpenAI 研究员发布的新模型「Jev」 ？这类模型会成为 Agent 的新技术路线吗？</a>
       <div class="byline">theigrams</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:53">👍 1 位我关注的人 09-21 19:53</div>
+           title="👍 1 人 09-21 19:53">👍 1 人 09-21 19:53</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.72</td>
@@ -811,7 +811,7 @@
   <td><a href="https://www.zhihu.com/pin/2079697214037874420" target="_blank" rel="noopener">AllToAll 通信算子 AllToAll 是通信算子里最难啃的一块，它把三个难题叠在一起： 数据依赖的控制流（编译器</a>
       <div class="byline">沧粟临安</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 17:29">👍 1 位我关注的人 09-21 17:29</div>
+           title="👍 1 人 09-21 17:29">👍 1 人 09-21 17:29</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.66</td>
@@ -830,7 +830,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085333421790971459" target="_blank" rel="noopener">开源Top2！实测阶跃Step 5 Preview，真有点猛啊…</a>
       <div class="byline">量子位</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 11:44">✍️ 1 位我关注的人 09-21 11:44</div>
+           title="✍️ 1 人 09-21 11:44">✍️ 1 人 09-21 11:44</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.61</td>
@@ -849,7 +849,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2084663688066290931" target="_blank" rel="noopener">Jev模型创始人：RLHF是一条弯路，下一个时代绝不是Claude Code时代</a>
       <div class="byline">高飞</div>
       <div class="moment-row"
-           title="👍 2 位我关注的人 09-21 12:58">👍 2 位我关注的人 09-21 12:58</div>
+           title="👍 2 人 09-21 12:58">👍 2 人 09-21 12:58</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.64</td>
@@ -868,7 +868,7 @@
   <td><a href="https://www.zhihu.com/pin/2085399689093035124" target="_blank" rel="noopener">开发者 secemp 在 Hugging Face 开源了一份近 16TB 的 arXiv 全量数据集 arxiv-co</a>
       <div class="byline">爱可可-爱生活</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 16:07">💬 1 位我关注的人 09-21 16:07</div>
+           title="💬 1 人 09-21 16:07">💬 1 人 09-21 16:07</div>
   </td>
   <td class="reason">作者在 config.yaml 的 ignored_authors 忽略名单中，暂不推荐（其点赞/收藏仍参与闭环学习）</td>
   <td>0.62</td>
@@ -887,7 +887,7 @@
   <td><a href="https://www.zhihu.com/pin/2085349720260723226" target="_blank" rel="noopener">Xpert:一切皆插件的开源Agent平台 Xpert 是一个面向构建者的开源 Agent 平台，让模型、工具、技能、中</a>
       <div class="byline">王鹏LLM</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 12:48">💬 1 位我关注的人 09-21 12:48</div>
+           title="💬 1 人 09-21 12:48">💬 1 人 09-21 12:48</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.65</td>
@@ -906,7 +906,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085127373150754152" target="_blank" rel="noopener">LynnReal-Omni：让文本、姿态、3D 渲染与游戏记录共同驱动视频生成</a>
       <div class="byline">AI解析新纪元</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 13:56">✍️ 1 位我关注的人 09-21 13:56</div>
+           title="✍️ 1 人 09-21 13:56">✍️ 1 人 09-21 13:56</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.65</td>
@@ -925,7 +925,7 @@
   <td><a href="https://www.zhihu.com/question/4023337465/answer/2085169553403913852" target="_blank" rel="noopener">有没有大佬帮我解释一下AI infra到底是干啥的？</a>
       <div class="byline">想飞的石头</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 00:52">✍️ 1 位我关注的人 09-21 00:52</div>
+           title="✍️ 1 人 09-21 00:52">✍️ 1 人 09-21 00:52</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.33</td>
@@ -944,7 +944,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085285774732411401" target="_blank" rel="noopener">LightNav-1 会长什么样？Qwen 基模继续进化以后，它最可能增加什么、又会撞上什么墙</a>
       <div class="byline">王多鱼-加油</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 08:36">✍️ 1 位我关注的人 09-21 08:36</div>
+           title="✍️ 1 人 09-21 08:36">✍️ 1 人 09-21 08:36</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.66</td>
@@ -963,7 +963,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085315737263068532" target="_blank" rel="noopener">阿里最新图像模型开源！视觉生成部分仅7B，能生透明图、能改图</a>
       <div class="byline">智东西</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 10:33">✍️ 1 位我关注的人 09-21 10:33</div>
+           title="✍️ 1 人 09-21 10:33">✍️ 1 人 09-21 10:33</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.69</td>
@@ -982,7 +982,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085245709117284899" target="_blank" rel="noopener">爱可可AI前沿推介(9.21)</a>
       <div class="byline">爱可可-爱生活</div>
       <div class="moment-row"
-           title="👍 0 位我关注的人 09-21 06:36">👍 0 位我关注的人 09-21 06:36</div>
+           title="👍 0 人 09-21 06:36">👍 0 人 09-21 06:36</div>
   </td>
   <td class="reason">作者在 config.yaml 的 ignored_authors 忽略名单中，暂不推荐（其点赞/收藏仍参与闭环学习）</td>
   <td>0.81</td>
@@ -1001,7 +1001,7 @@
   <td><a href="https://www.zhihu.com/pin/2085287742267834885" target="_blank" rel="noopener">【AIGC日报 · 2026-09-21】 今天先看两个真有用的更新：阶跃把旗舰模型继续往长任务和Agent推，千问则把</a>
       <div class="byline">德里克文</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 08:43">💬 1 位我关注的人 09-21 08:43</div>
+           title="💬 1 人 09-21 08:43">💬 1 人 09-21 08:43</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.71</td>
@@ -1020,7 +1020,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085133431374193256" target="_blank" rel="noopener">AI的生产悖论：当算力狂欢遭遇消费寒冬</a>
       <div class="byline">吃果冻不吐果冻皮</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-20 22:30">✍️ 1 位我关注的人 09-20 22:30</div>
+           title="✍️ 1 人 09-20 22:30">✍️ 1 人 09-20 22:30</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.60</td>
@@ -1039,7 +1039,7 @@
   <td><a href="https://www.zhihu.com/question/2085153153410917719/answer/2085426016839791966" target="_blank" rel="noopener">阿里 Qwen-Image-2.1 仅 7B 参数画出高质量图像，将如何影响 AI 创作？</a>
       <div class="byline">deephub</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 17:51">✍️ 1 位我关注的人 09-21 17:51</div>
+           title="✍️ 1 人 09-21 17:51">✍️ 1 人 09-21 17:51</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.65</td>
@@ -1058,7 +1058,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085175396983633776" target="_blank" rel="noopener">机器人也有 Scaling Law 了吗？</a>
       <div class="byline">Eric Liu</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 02:05">✍️ 1 位我关注的人 09-21 02:05</div>
+           title="✍️ 1 人 09-21 02:05">✍️ 1 人 09-21 02:05</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.57</td>
@@ -1077,7 +1077,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085419441962202197" target="_blank" rel="noopener">千问7B生图模型开放权重！3090就能跑，2K出图修图抠图全包</a>
       <div class="byline">量子位</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 17:29">✍️ 1 位我关注的人 09-21 17:29</div>
+           title="✍️ 1 人 09-21 17:29">✍️ 1 人 09-21 17:29</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.61</td>
@@ -1096,7 +1096,7 @@
   <td><a href="https://www.zhihu.com/question/1982512240482619481/answer/2073437623914345004" target="_blank" rel="noopener">有没有大佬分享一下做agent时的一些经验？</a>
       <div class="byline">刘芷宁</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 21:57">👍 1 位我关注的人 09-20 21:57</div>
+           title="👍 1 人 09-20 21:57">👍 1 人 09-20 21:57</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.63</td>
@@ -1115,7 +1115,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085345545288147490" target="_blank" rel="noopener">外网疯传，从0手搓AI Agent.pdf</a>
       <div class="byline">泳鱼</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 12:32">✍️ 1 位我关注的人 09-21 12:32</div>
+           title="✍️ 1 人 09-21 12:32">✍️ 1 人 09-21 12:32</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.77</td>
@@ -1134,7 +1134,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085289795392114808" target="_blank" rel="noopener">从科学问答到实验执行，XtalPi Science完成重要升级</a>
       <div class="byline">智东西</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 08:58">✍️ 1 位我关注的人 09-21 08:58</div>
+           title="✍️ 1 人 09-21 08:58">✍️ 1 人 09-21 08:58</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.65</td>
@@ -1153,7 +1153,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085370008419550258" target="_blank" rel="noopener">GPT-6 Astra开进机器人身体！清华联手无问芯穹等开源RPent</a>
       <div class="byline">量子位</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 14:34">✍️ 1 位我关注的人 09-21 14:34</div>
+           title="✍️ 1 人 09-21 14:34">✍️ 1 人 09-21 14:34</div>
   </td>
   <td class="reason">入选最终推荐 50 篇</td>
   <td>0.55</td>
@@ -1172,7 +1172,7 @@
   <td><a href="https://www.zhihu.com/pin/2079986394794046759" target="_blank" rel="noopener">做Agent的思路可能得换换了，Anthropic工程师发视频讲怎么用 Claude Managed Agents 快速</a>
       <div class="byline">朱卫军</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:12">👍 1 位我关注的人 09-21 13:12</div>
+           title="👍 1 人 09-21 13:12">👍 1 人 09-21 13:12</div>
   </td>
   <td class="reason">综合分未进入前 50 名</td>
   <td>0.74</td>
@@ -1187,13 +1187,13 @@
     data-stage="in_explore"
     data-pub-day="2026-09-21"
     data-seen-day="2026-09-21" data-pub-ts="1789997506" data-seen-ts="1789998672">
-  <td><span class="badge st-in">探索位</span></td>
+  <td><span class="badge st-in">随机文章</span></td>
   <td><a href="https://zhuanlan.zhihu.com/p/2085480910305215544" target="_blank" rel="noopener">从表格 Q 学习到 DQN：DQN 为什么需要经验回放和目标网络</a>
       <div class="byline">deephub</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 21:31">✍️ 1 位我关注的人 09-21 21:31</div>
+           title="✍️ 1 人 09-21 21:31">✍️ 1 人 09-21 21:31</div>
   </td>
-  <td class="reason">入选探索位</td>
+  <td class="reason">入选随机文章</td>
   <td>0.33</td>
   <td>0.48</td>
   <td>0.15</td>
@@ -1210,7 +1210,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2084323721976747574" target="_blank" rel="noopener">LLVM Cost Model 笔记（七）：总结篇 —— TTI 的分层架构与成本模型的设计哲学</a>
       <div class="byline">栈溢出警告</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 23:26">👍 1 位我关注的人 09-20 23:26</div>
+           title="👍 1 人 09-20 23:26">👍 1 人 09-20 23:26</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.31）</td>
   <td>0.31</td>
@@ -1229,7 +1229,7 @@
   <td><a href="https://www.zhihu.com/pin/2085220261046108413" target="_blank" rel="noopener">物理学研究进入机械化时代 这几天用最新的AI 做物理研究，简直就是开着推土机进入未曾开发的原野，遍地都是低垂的果实，朝哪</a>
       <div class="byline">The West</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:31">👍 1 位我关注的人 09-21 19:31</div>
+           title="👍 1 人 09-21 19:31">👍 1 人 09-21 19:31</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.31）</td>
   <td>0.31</td>
@@ -1248,7 +1248,7 @@
   <td><a href="https://www.zhihu.com/pin/2085362465811055443" target="_blank" rel="noopener">用人类数据训练机器人，下一关是什么</a>
       <div class="byline">机器之心</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 13:40">💬 1 位我关注的人 09-21 13:40</div>
+           title="💬 1 人 09-21 13:40">💬 1 人 09-21 13:40</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.31）</td>
   <td>0.31</td>
@@ -1267,7 +1267,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085471327545209680" target="_blank" rel="noopener">分享文章</a>
       <div class="byline">智东西</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 20:51">✍️ 1 位我关注的人 09-21 20:51</div>
+           title="✍️ 1 人 09-21 20:51">✍️ 1 人 09-21 20:51</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.31）</td>
   <td>0.31</td>
@@ -1286,7 +1286,7 @@
   <td><a href="https://www.zhihu.com/question/2084949943848890533/answer/2085322957564404409" target="_blank" rel="noopener">如何评价 ICLR 2027 摘要投稿量已超历年总和，预计突破 6 万？</a>
       <div class="byline">密排六方橘子</div>
       <div class="moment-row"
-           title="👍 2 位我关注的人 09-21 19:10">👍 2 位我关注的人 09-21 19:10</div>
+           title="👍 2 人 09-21 19:10">👍 2 人 09-21 19:10</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.30）</td>
   <td>0.30</td>
@@ -1305,7 +1305,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085317867000674233" target="_blank" rel="noopener">百曜科技发起，《AI虚拟细胞（AIVC）技术趋势、产业生态与应用前景研究报告》正式发布</a>
       <div class="byline">量子位</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 10:50">✍️ 1 位我关注的人 09-21 10:50</div>
+           title="✍️ 1 人 09-21 10:50">✍️ 1 人 09-21 10:50</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.30）</td>
   <td>0.30</td>
@@ -1324,7 +1324,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085133886879805943" target="_blank" rel="noopener">从写代码到写提示词：一个程序员在AI时代的生存手记</a>
       <div class="byline">吃果冻不吐果冻皮</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-20 22:32">✍️ 1 位我关注的人 09-20 22:32</div>
+           title="✍️ 1 人 09-20 22:32">✍️ 1 人 09-20 22:32</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.30）</td>
   <td>0.30</td>
@@ -1343,7 +1343,7 @@
   <td><a href="https://www.zhihu.com/question/2082262327714435225/answer/2085165068057163011" target="_blank" rel="noopener">编程领域「代码能跑就不要动它」，是普遍真理还是技术债借口？</a>
       <div class="byline">DBinary</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 00:34">✍️ 1 位我关注的人 09-21 00:34</div>
+           title="✍️ 1 人 09-21 00:34">✍️ 1 人 09-21 00:34</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.30）</td>
   <td>0.30</td>
@@ -1362,7 +1362,7 @@
   <td><a href="https://www.zhihu.com/pin/2085277527594030903" target="_blank" rel="noopener">#开除员工用AI后成本翻倍 （近期不少企业发现，用AI替代员工后综合成本不降反升，甚至翻倍，AI按量计费的“无底洞”模式</a>
       <div class="byline">爱可可-爱生活</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 08:01">💬 1 位我关注的人 09-21 08:01</div>
+           title="💬 1 人 09-21 08:01">💬 1 人 09-21 08:01</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.30）</td>
   <td>0.30</td>
@@ -1381,7 +1381,7 @@
   <td><a href="https://www.zhihu.com/question/2009080099056661232/answer/2085149552684819157" target="_blank" rel="noopener">如果你只能传送一次1KB的数据到三年前的自己面前，你会传什么？</a>
       <div class="byline">DBinary</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-20 23:33">✍️ 1 位我关注的人 09-20 23:33</div>
+           title="✍️ 1 人 09-20 23:33">✍️ 1 人 09-20 23:33</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.30）</td>
   <td>0.30</td>
@@ -1400,7 +1400,7 @@
   <td><a href="https://www.zhihu.com/question/2083895373177931200/answer/2084099614551102975" target="_blank" rel="noopener">如何评价GPT-6 Astra 给出的 Liouville 版本哥德巴赫猜想证明？</a>
       <div class="byline">SUNNY99</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:07">👍 1 位我关注的人 09-21 13:07</div>
+           title="👍 1 人 09-21 13:07">👍 1 人 09-21 13:07</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.30）</td>
   <td>0.30</td>
@@ -1419,7 +1419,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085396881945932647" target="_blank" rel="noopener">为什么Jev有些时候不如随机数发生器?</a>
       <div class="byline">Karminski-牙医</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 15:56">✍️ 1 位我关注的人 09-21 15:56</div>
+           title="✍️ 1 人 09-21 15:56">✍️ 1 人 09-21 15:56</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.29）</td>
   <td>0.29</td>
@@ -1438,7 +1438,7 @@
   <td><a href="https://www.zhihu.com/question/2044629925714457731/answer/2085343617783166830" target="_blank" rel="noopener">学术造假越来越严重，特别是生化环材CNS期刊，大家有没有什么好的建议根本上解决学术造假？</a>
       <div class="byline">纳米酱</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 12:24">✍️ 1 位我关注的人 09-21 12:24</div>
+           title="✍️ 1 人 09-21 12:24">✍️ 1 人 09-21 12:24</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.29）</td>
   <td>0.29</td>
@@ -1457,7 +1457,7 @@
   <td><a href="https://www.zhihu.com/question/2083895373177931200/answer/2085428657691030201" target="_blank" rel="noopener">如何评价GPT-6 Astra 给出的 Liouville 版本哥德巴赫猜想证明？</a>
       <div class="byline">Yuhang Liu</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:23">👍 1 位我关注的人 09-21 19:23</div>
+           title="👍 1 人 09-21 19:23">👍 1 人 09-21 19:23</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.29）</td>
   <td>0.29</td>
@@ -1476,7 +1476,7 @@
   <td><a href="https://www.zhihu.com/question/2082035913132193247/answer/2082123407701828300" target="_blank" rel="noopener">陶哲轩、邓煜等菲奖得主联合抗议 AI 公司数学军备竞赛，AI 是否在毁掉数学？</a>
       <div class="byline">timetraveller</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:13">👍 1 位我关注的人 09-21 09:13</div>
+           title="👍 1 人 09-21 09:13">👍 1 人 09-21 09:13</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.29）</td>
   <td>0.29</td>
@@ -1495,7 +1495,7 @@
   <td><a href="https://www.zhihu.com/question/2065454339120960110/answer/2075606948393886004" target="_blank" rel="noopener">如何看待有AI以后大家海量水论文？</a>
       <div class="byline">卡基</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 11:51">👍 1 位我关注的人 09-21 11:51</div>
+           title="👍 1 人 09-21 11:51">👍 1 人 09-21 11:51</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.29）</td>
   <td>0.29</td>
@@ -1514,7 +1514,7 @@
   <td><a href="https://www.zhihu.com/pin/2085383172494201794" target="_blank" rel="noopener">所有的训练和evaluation都完成了，老董叔可能是全世界唯一进行全程高强度分析直播训练，为小米高强度免费打了5天广告</a>
       <div class="byline">香港市民董先生</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 15:01">💬 1 位我关注的人 09-21 15:01</div>
+           title="💬 1 人 09-21 15:01">💬 1 人 09-21 15:01</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.29）</td>
   <td>0.29</td>
@@ -1533,7 +1533,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085362625668502603" target="_blank" rel="noopener">今天，腾讯Marvis宣布，给大家送4个管家</a>
       <div class="byline">智东西</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 13:42">✍️ 1 位我关注的人 09-21 13:42</div>
+           title="✍️ 1 人 09-21 13:42">✍️ 1 人 09-21 13:42</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.29）</td>
   <td>0.29</td>
@@ -1552,7 +1552,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085442612434150476" target="_blank" rel="noopener">阿里达摩院医疗 AI，十年拼出一张图</a>
       <div class="byline">晚点LatePost</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 18:58">✍️ 1 位我关注的人 09-21 18:58</div>
+           title="✍️ 1 人 09-21 18:58">✍️ 1 人 09-21 18:58</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.28）</td>
   <td>0.28</td>
@@ -1571,7 +1571,7 @@
   <td><a href="https://www.zhihu.com/pin/2085331643670315582" target="_blank" rel="noopener">看测评和用户自己实测，Rust 的 Codex CLI 的 CU 占用表现还挺好的啊，CU 就是综合了 CPU 时间和内</a>
       <div class="byline">恋猫</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 11:40">💬 1 位我关注的人 09-21 11:40</div>
+           title="💬 1 人 09-21 11:40">💬 1 人 09-21 11:40</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.28）</td>
   <td>0.28</td>
@@ -1590,7 +1590,7 @@
   <td><a href="https://www.zhihu.com/pin/2085339741709395748" target="_blank" rel="noopener">大致估算了一下，mimo-v2.6两个版本模型纯训练（不包括实验和前期研发）的总成本大致是1200万美元，换算成人民币是</a>
       <div class="byline">香港市民董先生</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 12:08">💬 1 位我关注的人 09-21 12:08</div>
+           title="💬 1 人 09-21 12:08">💬 1 人 09-21 12:08</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.28）</td>
   <td>0.28</td>
@@ -1609,7 +1609,7 @@
   <td><a href="https://www.zhihu.com/pin/2084719579268490250" target="_blank" rel="noopener">感觉满屏幕AI文有点看不下去了…… 前一阵的一篇blog也是AI改了很多轮不满意，实在拖太久最后还是勉强发了，感觉比纯粹</a>
       <div class="byline">Yuuu</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 02:31 · 💬 1 位我关注的人 09-19 19:05">👍 1 位我关注的人 09-21 02:31 · 💬 1 位我关注的人 09-19 19:05</div>
+           title="👍 1 人 09-21 02:31 · 💬 1 人 09-19 19:05">👍 1 人 09-21 02:31 · 💬 1 人 09-19 19:05</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.28）</td>
   <td>0.28</td>
@@ -1628,7 +1628,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085077594198824273" target="_blank" rel="noopener">辩经系列之六：超标量或者静态排流水</a>
       <div class="byline">乱序摸鱼</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 14:51">👍 1 位我关注的人 09-21 14:51</div>
+           title="👍 1 人 09-21 14:51">👍 1 人 09-21 14:51</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.28）</td>
   <td>0.28</td>
@@ -1647,7 +1647,7 @@
   <td><a href="https://www.zhihu.com/question/2085394630712074673/answer/2085400228132398251" target="_blank" rel="noopener">为什么软流水之后，还要做Warp Specialization优化呢？</a>
       <div class="byline">冯Jungle</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:19">👍 1 位我关注的人 09-21 19:19</div>
+           title="👍 1 人 09-21 19:19">👍 1 人 09-21 19:19</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.28）</td>
   <td>0.28</td>
@@ -1666,7 +1666,7 @@
   <td><a href="https://www.zhihu.com/question/2084200588892451205/answer/2085271838087713228" target="_blank" rel="noopener">如何看待华为突破冯诺依曼「单机」架构？</a>
       <div class="byline">Valkla</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 12:06">👍 1 位我关注的人 09-21 12:06</div>
+           title="👍 1 人 09-21 12:06">👍 1 人 09-21 12:06</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1685,7 +1685,7 @@
   <td><a href="https://www.zhihu.com/question/2084244345448816766/answer/2084455529271898504" target="_blank" rel="noopener">第一次把主力电脑换成 Linux，选什么发行版最不容易劝退？</a>
       <div class="byline">momo</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 04:32">👍 1 位我关注的人 09-21 04:32</div>
+           title="👍 1 人 09-21 04:32">👍 1 人 09-21 04:32</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1704,7 +1704,7 @@
   <td><a href="https://www.zhihu.com/pin/2085484679797404628" target="_blank" rel="noopener">《排序不等式及其推广》 链接 本文从排序不等式出发，沿着“矩阵化”和“多序列化”两条线索，梳理了它的主要推广</a>
       <div class="byline">苏剑林</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 21:44">💬 1 位我关注的人 09-21 21:44</div>
+           title="💬 1 人 09-21 21:44">💬 1 人 09-21 21:44</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1723,7 +1723,7 @@
   <td><a href="https://www.zhihu.com/question/563871532/answer/2085125762651374777" target="_blank" rel="noopener">你悟出一个最大的人生道理是什么？</a>
       <div class="byline">jason wang</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 10:55">👍 1 位我关注的人 09-21 10:55</div>
+           title="👍 1 人 09-21 10:55">👍 1 人 09-21 10:55</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1742,7 +1742,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085413374033138723" target="_blank" rel="noopener">AI会带来新一轮的经济泡沫吗？</a>
       <div class="byline">DeepTech深科技</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 17:02">✍️ 1 位我关注的人 09-21 17:02</div>
+           title="✍️ 1 人 09-21 17:02">✍️ 1 人 09-21 17:02</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1761,7 +1761,7 @@
   <td><a href="https://www.zhihu.com/pin/2085397971487741189" target="_blank" rel="noopener">有</a>
       <div class="byline">Kimi</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 16:00">💬 1 位我关注的人 09-21 16:00</div>
+           title="💬 1 人 09-21 16:00">💬 1 人 09-21 16:00</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1780,7 +1780,7 @@
   <td><a href="https://www.zhihu.com/pin/2083984585386354618" target="_blank" rel="noopener">mimo v2.6 pro的deepswe训到65.78了，还能凹（bushi）</a>
       <div class="byline">从不毒舌可达鸭</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 11:49">👍 1 位我关注的人 09-21 11:49</div>
+           title="👍 1 人 09-21 11:49">👍 1 人 09-21 11:49</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1799,7 +1799,7 @@
   <td><a href="https://www.zhihu.com/question/2082215679256802152/answer/2082611513039261838" target="_blank" rel="noopener">如何看待丘成桐建立的 journal of AI-assisted Mathematics？</a>
       <div class="byline">冰冰</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 18:05">👍 1 位我关注的人 09-21 18:05</div>
+           title="👍 1 人 09-21 18:05">👍 1 人 09-21 18:05</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1818,7 +1818,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085285283344421689" target="_blank" rel="noopener">score-centering的前世今生</a>
       <div class="byline">haotian</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 15:53">👍 1 位我关注的人 09-21 15:53</div>
+           title="👍 1 人 09-21 15:53">👍 1 人 09-21 15:53</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1837,7 +1837,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085331978988025620" target="_blank" rel="noopener">软件开发的未来会怎样</a>
       <div class="byline">wangleineo</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 12:23">✍️ 1 位我关注的人 09-21 12:23</div>
+           title="✍️ 1 人 09-21 12:23">✍️ 1 人 09-21 12:23</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1856,7 +1856,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085434384690300278" target="_blank" rel="noopener">ICLR 2027投稿冲到6万，比过去十几年加起来都多......</a>
       <div class="byline">机器之心</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 18:26">✍️ 1 位我关注的人 09-21 18:26</div>
+           title="✍️ 1 人 09-21 18:26">✍️ 1 人 09-21 18:26</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1875,7 +1875,7 @@
   <td><a href="https://www.zhihu.com/pin/2085451378697286048" target="_blank" rel="noopener">准确 专业 懂你 库库AI办公平台 深耕国内外办公赛道</a>
       <div class="byline">量子位</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 19:33">💬 1 位我关注的人 09-21 19:33</div>
+           title="💬 1 人 09-21 19:33">💬 1 人 09-21 19:33</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.27）</td>
   <td>0.27</td>
@@ -1894,7 +1894,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085389732348019986" target="_blank" rel="noopener">汉化组，可能是世界上最不怕AI冲击的一群人。</a>
       <div class="byline">数字生命卡兹克</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 15:39">✍️ 1 位我关注的人 09-21 15:39</div>
+           title="✍️ 1 人 09-21 15:39">✍️ 1 人 09-21 15:39</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.26）</td>
   <td>0.26</td>
@@ -1913,7 +1913,7 @@
   <td><a href="https://www.zhihu.com/question/2084605764774131080/answer/2084948059721561183" target="_blank" rel="noopener">专家怒斥「尸皮针」是将救命材料用于医美，真的是这样吗？这算是技术和资源滥用吗？</a>
       <div class="byline">云杉</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 21:14">👍 1 位我关注的人 09-21 21:14</div>
+           title="👍 1 人 09-21 21:14">👍 1 人 09-21 21:14</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.26）</td>
   <td>0.26</td>
@@ -1932,7 +1932,7 @@
   <td><a href="https://www.zhihu.com/question/2056482254214506265/answer/2075190723184440428" target="_blank" rel="noopener">TES在联赛年年都能进决赛，为什么一出去就创造各种失败纪录？</a>
       <div class="byline">Lee</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:27">👍 1 位我关注的人 09-21 13:27</div>
+           title="👍 1 人 09-21 13:27">👍 1 人 09-21 13:27</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.26）</td>
   <td>0.26</td>
@@ -1951,7 +1951,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085132461487419583" target="_blank" rel="noopener">刚刚，稚晖君同款机器人来了！发售即发货，下线一台只需2.5分钟</a>
       <div class="byline">新智元</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-20 22:25">✍️ 1 位我关注的人 09-20 22:25</div>
+           title="✍️ 1 人 09-20 22:25">✍️ 1 人 09-20 22:25</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.26）</td>
   <td>0.26</td>
@@ -1970,7 +1970,7 @@
   <td><a href="https://www.zhihu.com/question/2083276056774103356/answer/2084932562171053331" target="_blank" rel="noopener">如何评价勇哥说餐饮进入「牢」字辈？</a>
       <div class="byline">zimmer</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 22:03">👍 1 位我关注的人 09-20 22:03</div>
+           title="👍 1 人 09-20 22:03">👍 1 人 09-20 22:03</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.26）</td>
   <td>0.26</td>
@@ -1989,7 +1989,7 @@
   <td><a href="https://www.zhihu.com/pin/2084114652728924149" target="_blank" rel="noopener">Knuth 说这是几乎不可能 在我的邮件躺了几天垃圾箱中，终于又被 knuth 发现了，他说这个工作是几乎不可能做到的，</a>
       <div class="byline">ljh25252</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:19">👍 1 位我关注的人 09-21 09:19</div>
+           title="👍 1 人 09-21 09:19">👍 1 人 09-21 09:19</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.26）</td>
   <td>0.26</td>
@@ -2008,7 +2008,7 @@
   <td><a href="https://www.zhihu.com/question/2082430736288702474/answer/2085345347405201957" target="_blank" rel="noopener">传闻WorkBuddy可能要改名，单纯是不好记吗？</a>
       <div class="byline">纳米酱</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 12:31">✍️ 1 位我关注的人 09-21 12:31</div>
+           title="✍️ 1 人 09-21 12:31">✍️ 1 人 09-21 12:31</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.26）</td>
   <td>0.26</td>
@@ -2027,7 +2027,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2083147547221272327" target="_blank" rel="noopener">ECOS团队出征星火会！全开源芯片，展位等你来！</a>
       <div class="byline">ECOS开源芯片</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 23:11">👍 1 位我关注的人 09-20 23:11</div>
+           title="👍 1 人 09-20 23:11">👍 1 人 09-20 23:11</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.26）</td>
   <td>0.26</td>
@@ -2046,7 +2046,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085431919886582758" target="_blank" rel="noopener">GPT-6真敢杀人啊！推下天台，挥刀扎人不眨眼</a>
       <div class="byline">新智元</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 18:22">✍️ 1 位我关注的人 09-21 18:22</div>
+           title="✍️ 1 人 09-21 18:22">✍️ 1 人 09-21 18:22</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.25）</td>
   <td>0.25</td>
@@ -2065,7 +2065,7 @@
   <td><a href="https://www.zhihu.com/pin/2085450189356249844" target="_blank" rel="noopener">资本并不怎么在意 毕竟性能是实打实的提升了</a>
       <div class="byline">平凡</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 19:27">💬 1 位我关注的人 09-21 19:27</div>
+           title="💬 1 人 09-21 19:27">💬 1 人 09-21 19:27</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.25）</td>
   <td>0.25</td>
@@ -2084,7 +2084,7 @@
   <td><a href="https://www.zhihu.com/question/2083585452137608098/answer/2084289547211388529" target="_blank" rel="noopener">很多老师称现在批改作业不能用×，要换成◯、△，是为了保护学生吗？真的有用吗？打×本身有问题吗？</a>
       <div class="byline">NaCN</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 08:08">👍 1 位我关注的人 09-21 08:08</div>
+           title="👍 1 人 09-21 08:08">👍 1 人 09-21 08:08</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.25）</td>
   <td>0.25</td>
@@ -2103,7 +2103,7 @@
   <td><a href="https://www.zhihu.com/question/2084949943848890533/answer/2085121520158904607" target="_blank" rel="noopener">如何评价 ICLR 2027 摘要投稿量已超历年总和，预计突破 6 万？</a>
       <div class="byline">肥肥的小霸猪</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:24">👍 1 位我关注的人 09-21 19:24</div>
+           title="👍 1 人 09-21 19:24">👍 1 人 09-21 19:24</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.25）</td>
   <td>0.25</td>
@@ -2122,7 +2122,7 @@
   <td><a href="https://www.zhihu.com/question/2084549998767874886/answer/2084686797313938997" target="_blank" rel="noopener">怎么看待CNN称人工智能幻觉险些导致美国袭击中国货船？</a>
       <div class="byline">加小油</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:31">👍 1 位我关注的人 09-21 13:31</div>
+           title="👍 1 人 09-21 13:31">👍 1 人 09-21 13:31</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.25）</td>
   <td>0.25</td>
@@ -2141,7 +2141,7 @@
   <td><a href="https://www.zhihu.com/question/2085481161627906628/answer/2085485220304896212" target="_blank" rel="noopener">在没有华为全流程定义的情况下，问界这块牌子还能不能卖得动？</a>
       <div class="byline">晚点LatePost</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 21:47">✍️ 1 位我关注的人 09-21 21:47</div>
+           title="✍️ 1 人 09-21 21:47">✍️ 1 人 09-21 21:47</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.25）</td>
   <td>0.25</td>
@@ -2160,7 +2160,7 @@
   <td><a href="https://www.zhihu.com/pin/2078473616728052397" target="_blank" rel="noopener">被实习生一句老登平台整沉默了 最近招人，想要一个懂知乎的实习生，面试了大概10多个……面试时，我自然也问了年轻人对知乎的</a>
       <div class="byline">Sean Ye</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 22:39">👍 1 位我关注的人 09-20 22:39</div>
+           title="👍 1 人 09-20 22:39">👍 1 人 09-20 22:39</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.24）</td>
   <td>0.24</td>
@@ -2179,7 +2179,7 @@
   <td><a href="https://www.zhihu.com/pin/2085294765898209161" target="_blank" rel="noopener">很多人应该都发现，Codex 的每周额度是真的少了很多，速度慢了消耗还变高了，以前的时候，一天用 22 亿都没有用光10</a>
       <div class="byline">恋猫</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 09:12">💬 1 位我关注的人 09-21 09:12</div>
+           title="💬 1 人 09-21 09:12">💬 1 人 09-21 09:12</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.24）</td>
   <td>0.24</td>
@@ -2198,7 +2198,7 @@
   <td><a href="https://www.zhihu.com/question/2082035913132193247/answer/2082099247927780426" target="_blank" rel="noopener">陶哲轩、邓煜等菲奖得主联合抗议 AI 公司数学军备竞赛，AI 是否在毁掉数学？</a>
       <div class="byline">qwer</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:13">👍 1 位我关注的人 09-21 09:13</div>
+           title="👍 1 人 09-21 09:13">👍 1 人 09-21 09:13</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.24）</td>
   <td>0.24</td>
@@ -2217,7 +2217,7 @@
   <td><a href="https://www.zhihu.com/question/2083965214807139812/answer/2085123585190933969" target="_blank" rel="noopener">如何评价碧蓝航线皮肤被实锤使用ai?</a>
       <div class="byline">华氏老方噶韭菜</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 07:46">👍 1 位我关注的人 09-21 07:46</div>
+           title="👍 1 人 09-21 07:46">👍 1 人 09-21 07:46</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.23）</td>
   <td>0.23</td>
@@ -2236,7 +2236,7 @@
   <td><a href="https://www.zhihu.com/question/355518440/answer/2084995481768351425" target="_blank" rel="noopener">如何评价b站up主邵艾伦Alan？</a>
       <div class="byline">下sea万duck2</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 12:25">👍 1 位我关注的人 09-21 12:25</div>
+           title="👍 1 人 09-21 12:25">👍 1 人 09-21 12:25</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.22）</td>
   <td>0.22</td>
@@ -2255,7 +2255,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085315451148679062" target="_blank" rel="noopener">刚刚，腾讯投的大数据明星企业，港股上市！</a>
       <div class="byline">智东西</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 10:32">✍️ 1 位我关注的人 09-21 10:32</div>
+           title="✍️ 1 人 09-21 10:32">✍️ 1 人 09-21 10:32</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.22）</td>
   <td>0.22</td>
@@ -2274,7 +2274,7 @@
   <td><a href="https://www.zhihu.com/question/2077198242647914053/answer/2084969439867549344" target="_blank" rel="noopener">如何评价邵艾伦的“薄肌观”？</a>
       <div class="byline">威资吧吧务组</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 04:49">👍 1 位我关注的人 09-21 04:49</div>
+           title="👍 1 人 09-21 04:49">👍 1 人 09-21 04:49</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.22）</td>
   <td>0.22</td>
@@ -2293,7 +2293,7 @@
   <td><a href="https://www.zhihu.com/question/446221874/answer/2073380982305067100" target="_blank" rel="noopener">老师是如何一眼看出学生的作业是在抄答案？</a>
       <div class="byline">Ben V Yeung</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 10:29">👍 1 位我关注的人 09-21 10:29</div>
+           title="👍 1 人 09-21 10:29">👍 1 人 09-21 10:29</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.22）</td>
   <td>0.22</td>
@@ -2312,7 +2312,7 @@
   <td><a href="https://www.zhihu.com/question/2081408950793249316/answer/2085084518143284225" target="_blank" rel="noopener">入间人间新作『幸福家庭的人妻彻底迷上女儿朋友的故事』图透，如何评价其题材选择？</a>
       <div class="byline">Jarrett Ye</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:18">👍 1 位我关注的人 09-21 13:18</div>
+           title="👍 1 人 09-21 13:18">👍 1 人 09-21 13:18</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.22）</td>
   <td>0.22</td>
@@ -2331,7 +2331,7 @@
   <td><a href="https://www.zhihu.com/question/2084237615897600591/answer/2084457260466680630" target="_blank" rel="noopener">兹维列夫夺冠后发言被批「自以为是，赢球靠对手受伤，他怎敢把自己和阿尔卡拉斯、辛纳相比」，对此你怎么看？</a>
       <div class="byline">三棱镜</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:37">👍 1 位我关注的人 09-21 09:37</div>
+           title="👍 1 人 09-21 09:37">👍 1 人 09-21 09:37</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.22）</td>
   <td>0.22</td>
@@ -2350,7 +2350,7 @@
   <td><a href="https://www.zhihu.com/question/2016250460378522966/answer/2083544430334711729" target="_blank" rel="noopener">如何看待“泽连斯基掐灭了第三次世界大战的导火索”？</a>
       <div class="byline">火云邪神</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 18:06">👍 1 位我关注的人 09-21 18:06</div>
+           title="👍 1 人 09-21 18:06">👍 1 人 09-21 18:06</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.22）</td>
   <td>0.22</td>
@@ -2369,7 +2369,7 @@
   <td><a href="https://www.zhihu.com/question/3053448997/answer/2070079173725532832" target="_blank" rel="noopener">詹姆斯 16:4 科比的原因是什么？</a>
       <div class="byline">俞高波</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:33">👍 1 位我关注的人 09-21 13:33</div>
+           title="👍 1 人 09-21 13:33">👍 1 人 09-21 13:33</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.21）</td>
   <td>0.21</td>
@@ -2388,7 +2388,7 @@
   <td><a href="https://www.zhihu.com/pin/2085408546972354214" target="_blank" rel="noopener">收到极客邦一如往年寄过来的礼物--今年的主题是文明1060~1104，和极客邦的合作一直都很愉快，从编辑老师到运营，从企</a>
       <div class="byline">产品二姐</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 16:42">💬 1 位我关注的人 09-21 16:42</div>
+           title="💬 1 人 09-21 16:42">💬 1 人 09-21 16:42</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.21）</td>
   <td>0.21</td>
@@ -2407,7 +2407,7 @@
   <td><a href="https://www.zhihu.com/question/2085398243685266996/answer/2085449875211150078" target="_blank" rel="noopener">一医院被曝不给实习生放中秋假，遭网络曝光后疑医院职工称要「整死」爆料者，哪些信息值得关注？</a>
       <div class="byline">职业导师小全</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 21:15">👍 1 位我关注的人 09-21 21:15</div>
+           title="👍 1 人 09-21 21:15">👍 1 人 09-21 21:15</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.21）</td>
   <td>0.21</td>
@@ -2426,7 +2426,7 @@
   <td><a href="https://www.zhihu.com/question/58156088/answer/2082640140732842230" target="_blank" rel="noopener">女儿不愿意加入少先队我该如何回应？</a>
       <div class="byline">姑苏慕容</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 18:04">👍 1 位我关注的人 09-21 18:04</div>
+           title="👍 1 人 09-21 18:04">👍 1 人 09-21 18:04</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.21）</td>
   <td>0.21</td>
@@ -2445,7 +2445,7 @@
   <td><a href="https://www.zhihu.com/question/1908903001336309745/answer/2084912161793623163" target="_blank" rel="noopener">NBA哪一年的mvp争议最大?</a>
       <div class="byline">Saturn V</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:01">👍 1 位我关注的人 09-21 13:01</div>
+           title="👍 1 人 09-21 13:01">👍 1 人 09-21 13:01</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.20）</td>
   <td>0.20</td>
@@ -2464,7 +2464,7 @@
   <td><a href="https://www.zhihu.com/question/1977654075156894784/answer/2081790438567048407" target="_blank" rel="noopener">搞对象除了性行为，还有什么其他意义吗？</a>
       <div class="byline">宫驰</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:30">👍 1 位我关注的人 09-21 09:30</div>
+           title="👍 1 人 09-21 09:30">👍 1 人 09-21 09:30</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.20）</td>
   <td>0.20</td>
@@ -2483,7 +2483,7 @@
   <td><a href="https://www.zhihu.com/question/3053448997/answer/2072630040819392828" target="_blank" rel="noopener">詹姆斯 16:4 科比的原因是什么？</a>
       <div class="byline">Doom</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:33">👍 1 位我关注的人 09-21 13:33</div>
+           title="👍 1 人 09-21 13:33">👍 1 人 09-21 13:33</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.20）</td>
   <td>0.20</td>
@@ -2502,7 +2502,7 @@
   <td><a href="https://www.zhihu.com/pin/2085461107989296888" target="_blank" rel="noopener">17.穷奇 17.穷奇</a>
       <div class="byline">德里克文</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 20:11">💬 1 位我关注的人 09-21 20:11</div>
+           title="💬 1 人 09-21 20:11">💬 1 人 09-21 20:11</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.20）</td>
   <td>0.20</td>
@@ -2521,7 +2521,7 @@
   <td><a href="https://www.zhihu.com/question/2079037121806050981/answer/2082489126767675240" target="_blank" rel="noopener">谁能解释一下，什么是「抗日正面战场」？</a>
       <div class="byline">长生剑</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 18:59">👍 1 位我关注的人 09-21 18:59</div>
+           title="👍 1 人 09-21 18:59">👍 1 人 09-21 18:59</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.20）</td>
   <td>0.20</td>
@@ -2540,7 +2540,7 @@
   <td><a href="https://www.zhihu.com/pin/2085468070030435252" target="_blank" rel="noopener">干饭人头像·●·来碗泡面吗🍜｜4款任选 #搞怪头像 #刘看山 #美食</a>
       <div class="byline">刘看山</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 20:39">💬 1 位我关注的人 09-21 20:39</div>
+           title="💬 1 人 09-21 20:39">💬 1 人 09-21 20:39</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.20）</td>
   <td>0.20</td>
@@ -2559,7 +2559,7 @@
   <td><a href="https://www.zhihu.com/question/2084756540834301461/answer/2085024678502983436" target="_blank" rel="noopener">许嵩与冯禧官宣结婚，女方是其多年粉丝且两人相差 14 岁，你如何看待这对「偶像与粉丝」的结合？</a>
       <div class="byline">夜孤橙</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:25">👍 1 位我关注的人 09-21 09:25</div>
+           title="👍 1 人 09-21 09:25">👍 1 人 09-21 09:25</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.19）</td>
   <td>0.19</td>
@@ -2578,7 +2578,7 @@
   <td><a href="https://www.zhihu.com/pin/2079148428655851498" target="_blank" rel="noopener">刘慈欣的《山》居然有人做了AI版电影，最牛的是居然长达90分钟</a>
       <div class="byline">剧荒急救站</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 06:06">👍 1 位我关注的人 09-21 06:06</div>
+           title="👍 1 人 09-21 06:06">👍 1 人 09-21 06:06</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.19）</td>
   <td>0.19</td>
@@ -2597,7 +2597,7 @@
   <td><a href="https://www.zhihu.com/question/10315979917/answer/2083641217233973758" target="_blank" rel="noopener">梁文锋会不会成为中国AI里程碑人物？</a>
       <div class="byline">sex冷淡的毁灭菇</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 15:05">👍 1 位我关注的人 09-21 15:05</div>
+           title="👍 1 人 09-21 15:05">👍 1 人 09-21 15:05</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.19）</td>
   <td>0.19</td>
@@ -2616,7 +2616,7 @@
   <td><a href="https://www.zhihu.com/question/2076466539499188471/answer/2076991156387369337" target="_blank" rel="noopener">孙宇晨起诉景甜，会给她的演艺事业带来多大影响？</a>
       <div class="byline">漫游大师Errantor</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 04:43">👍 1 位我关注的人 09-21 04:43</div>
+           title="👍 1 人 09-21 04:43">👍 1 人 09-21 04:43</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.19）</td>
   <td>0.19</td>
@@ -2635,7 +2635,7 @@
   <td><a href="https://www.zhihu.com/pin/2085349969863652716" target="_blank" rel="noopener">大家好，我是一个家境贫寒的劳务派遣员工，来深圳打工我一般中午一个人骑4公里共享单车去城中村吃一份11块钱的套餐，因为上次</a>
       <div class="byline">雾魂泉守曌鹓鶵</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 12:50">💬 1 位我关注的人 09-21 12:50</div>
+           title="💬 1 人 09-21 12:50">💬 1 人 09-21 12:50</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.18）</td>
   <td>0.18</td>
@@ -2654,7 +2654,7 @@
   <td><a href="https://www.zhihu.com/question/563720815/answer/2055986636752679882" target="_blank" rel="noopener">躺平真的会毁掉年轻人吗？</a>
       <div class="byline">祉猷并茂顺遂无虞</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 22:00">👍 1 位我关注的人 09-20 22:00</div>
+           title="👍 1 人 09-20 22:00">👍 1 人 09-20 22:00</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.18）</td>
   <td>0.18</td>
@@ -2673,7 +2673,7 @@
   <td><a href="https://www.zhihu.com/question/2077198242647914053/answer/2078519835768665603" target="_blank" rel="noopener">如何评价邵艾伦的“薄肌观”？</a>
       <div class="byline">用户7890576503</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 05:10">👍 1 位我关注的人 09-21 05:10</div>
+           title="👍 1 人 09-21 05:10">👍 1 人 09-21 05:10</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.18）</td>
   <td>0.18</td>
@@ -2692,7 +2692,7 @@
   <td><a href="https://www.zhihu.com/question/2083172001682925138/answer/2084220977840444096" target="_blank" rel="noopener">如何看待小黛晨读说「女孩赴港看演唱会被取消全家低保」一事是要穷人「表演穷人」？</a>
       <div class="byline">Kritain</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 12:36">👍 1 位我关注的人 09-21 12:36</div>
+           title="👍 1 人 09-21 12:36">👍 1 人 09-21 12:36</div>
   </td>
   <td class="reason">L1 emb_key 分未进入前 100，未获 Jev 判定机会（L1 0.16）</td>
   <td>0.16</td>
@@ -2711,7 +2711,7 @@
   <td><a href="https://www.zhihu.com/question/2083549123160925836/answer/2084705267535689265" target="_blank" rel="noopener">如何看待前 OpenAI 研究员发布的新模型「Jev」 ？这类模型会成为 Agent 的新技术路线吗？</a>
       <div class="byline">Kris谭</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 00:09">👍 1 位我关注的人 09-21 00:09</div>
+           title="👍 1 人 09-21 00:09">👍 1 人 09-21 00:09</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.26 / 相关 0.64 / 值得读 0.23）</td>
   <td>0.73</td>
@@ -2730,7 +2730,7 @@
   <td><a href="https://www.zhihu.com/pin/2085383789279290651" target="_blank" rel="noopener">DeepNews | 智谱ZCode安全整改后开源；GPT-6 Astra取得哥德巴赫猜想重大突破? 技术动态 1、智谱</a>
       <div class="byline">深联DeepLink</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 15:06">💬 1 位我关注的人 09-21 15:06</div>
+           title="💬 1 人 09-21 15:06">💬 1 人 09-21 15:06</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.24 / 相关 0.63 / 值得读 0.35）</td>
   <td>0.71</td>
@@ -2749,7 +2749,7 @@
   <td><a href="https://www.zhihu.com/question/2085061933695354467/answer/2085255226538340810" target="_blank" rel="noopener">怎么看谷歌转发了 Jev 和 DiffusionGemma  的对比，表示 比 Jev 更好？</a>
       <div class="byline">程墨Morgan</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 06:33">✍️ 1 位我关注的人 09-21 06:33</div>
+           title="✍️ 1 人 09-21 06:33">✍️ 1 人 09-21 06:33</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.26 / 相关 0.68 / 值得读 0.26）</td>
   <td>0.71</td>
@@ -2768,7 +2768,7 @@
   <td><a href="https://www.zhihu.com/question/2080850073219502505/answer/2084938702434976674" target="_blank" rel="noopener">为什么DeepSeek在LLM中有一种莫名的正宫感？</a>
       <div class="byline">pansz</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 05:34">👍 1 位我关注的人 09-21 05:34</div>
+           title="👍 1 人 09-21 05:34">👍 1 人 09-21 05:34</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.12 / 相关 0.61 / 值得读 0.20）</td>
   <td>0.71</td>
@@ -2787,7 +2787,7 @@
   <td><a href="https://www.zhihu.com/pin/2085316285286577827" target="_blank" rel="noopener">“现在我们可以洞悉一切，无所不能</a>
       <div class="byline">NVIDIA英伟达中国</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 10:36">💬 1 位我关注的人 09-21 10:36</div>
+           title="💬 1 人 09-21 10:36">💬 1 人 09-21 10:36</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.11 / 相关 0.56 / 值得读 0.24）</td>
   <td>0.67</td>
@@ -2806,7 +2806,7 @@
   <td><a href="https://www.zhihu.com/question/2083549123160925836/answer/2083653597078861164" target="_blank" rel="noopener">如何看待前 OpenAI 研究员发布的新模型「Jev」 ？这类模型会成为 Agent 的新技术路线吗？</a>
       <div class="byline">赵泠</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 01:04">👍 1 位我关注的人 09-21 01:04</div>
+           title="👍 1 人 09-21 01:04">👍 1 人 09-21 01:04</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.23 / 相关 0.72 / 值得读 0.25）</td>
   <td>0.67</td>
@@ -2825,7 +2825,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085471272939607817" target="_blank" rel="noopener">刘大一恒，千问大模型负责人！</a>
       <div class="byline">智东西</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 20:51">✍️ 1 位我关注的人 09-21 20:51</div>
+           title="✍️ 1 人 09-21 20:51">✍️ 1 人 09-21 20:51</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.09 / 相关 0.47 / 值得读 0.26）</td>
   <td>0.66</td>
@@ -2844,7 +2844,7 @@
   <td><a href="https://www.zhihu.com/pin/2085167802999165108" target="_blank" rel="noopener">面向 Agent 设计的因果推断包 StatsPAI 论文已发表 StatsPAI: A Unified, Agent-</a>
       <div class="byline">王几行XING</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 00:46">💬 1 位我关注的人 09-21 00:46</div>
+           title="💬 1 人 09-21 00:46">💬 1 人 09-21 00:46</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.33 / 相关 0.47 / 值得读 0.34）</td>
   <td>0.65</td>
@@ -2863,7 +2863,7 @@
   <td><a href="https://www.zhihu.com/pin/2085163026236322165" target="_blank" rel="noopener">笑死，还真有人拿，豆包实时 Live 视频修电器，🤣还折腾了 8 小时，他真信了 豆包的 Live 模式，比豆包文本模型</a>
       <div class="byline">Trisimo崔思莫</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 00:39">💬 1 位我关注的人 09-21 00:39</div>
+           title="💬 1 人 09-21 00:39">💬 1 人 09-21 00:39</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.15 / 相关 0.45 / 值得读 0.16）</td>
   <td>0.64</td>
@@ -2882,7 +2882,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085397388068501183" target="_blank" rel="noopener">Kimi Code 有官方桌面客户端吗？</a>
       <div class="byline">Kimi</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 16:00">✍️ 1 位我关注的人 09-21 16:00</div>
+           title="✍️ 1 人 09-21 16:00">✍️ 1 人 09-21 16:00</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.08 / 相关 0.51 / 值得读 0.19）</td>
   <td>0.63</td>
@@ -2901,7 +2901,7 @@
   <td><a href="https://www.zhihu.com/question/2085304660995457603/answer/2085324858049803181" target="_blank" rel="noopener">如何看待ZCode道歉三天后开源：零git历史，注释写明开源版不享受活动权益？</a>
       <div class="byline">恋猫</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 12:58">👍 1 位我关注的人 09-21 12:58</div>
+           title="👍 1 人 09-21 12:58">👍 1 人 09-21 12:58</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.20 / 相关 0.40 / 值得读 0.28）</td>
   <td>0.62</td>
@@ -2920,7 +2920,7 @@
   <td><a href="https://www.zhihu.com/pin/2085295497955301334" target="_blank" rel="noopener">南开实践课丨《机器人世界模型》交互设计思路 五分钟看懂交互设计Paper思路：《面向机器人学习的世界模型：全景综述》 #</a>
       <div class="byline">减论(Reduct)</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 20:00">💬 1 位我关注的人 09-21 20:00</div>
+           title="💬 1 人 09-21 20:00">💬 1 人 09-21 20:00</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.29 / 相关 0.55 / 值得读 0.28）</td>
   <td>0.62</td>
@@ -2939,7 +2939,7 @@
   <td><a href="https://www.zhihu.com/question/2073727130379051737/answer/2085404926734251407" target="_blank" rel="noopener">为什么大模型还没有大面积应用到因子挖掘？</a>
       <div class="byline">旷野</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 16:28">✍️ 1 位我关注的人 09-21 16:28</div>
+           title="✍️ 1 人 09-21 16:28">✍️ 1 人 09-21 16:28</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.37 / 相关 0.53 / 值得读 0.34）</td>
   <td>0.62</td>
@@ -2958,7 +2958,7 @@
   <td><a href="https://www.zhihu.com/pin/2085414654612861064" target="_blank" rel="noopener">突然发现 markdown 已经变成了项目设计与开发时的编程语言，而 coding agent 就是它的编译器</a>
       <div class="byline">锦恢</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 21:26">💬 1 位我关注的人 09-21 21:26</div>
+           title="💬 1 人 09-21 21:26">💬 1 人 09-21 21:26</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.12 / 相关 0.56 / 值得读 0.25）</td>
   <td>0.61</td>
@@ -2977,7 +2977,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085301322891388162" target="_blank" rel="noopener">2026.09.21 本周最佳开源项目:open-code-review</a>
       <div class="byline">Open Github社区</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 09:43">✍️ 1 位我关注的人 09-21 09:43</div>
+           title="✍️ 1 人 09-21 09:43">✍️ 1 人 09-21 09:43</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.07 / 相关 0.22 / 值得读 0.14）</td>
   <td>0.61</td>
@@ -2996,7 +2996,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085378159533470456" target="_blank" rel="noopener">全员恶人！忘拔网线，Gemini一口气连黑三家公司</a>
       <div class="byline">新智元</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 14:43">✍️ 1 位我关注的人 09-21 14:43</div>
+           title="✍️ 1 人 09-21 14:43">✍️ 1 人 09-21 14:43</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.10 / 相关 0.34 / 值得读 0.19）</td>
   <td>0.60</td>
@@ -3015,7 +3015,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085398673643541539" target="_blank" rel="noopener">Jev是分类器吗？今天向所有人开放，送1.2亿token</a>
       <div class="byline">机器之心</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 16:03">✍️ 1 位我关注的人 09-21 16:03</div>
+           title="✍️ 1 人 09-21 16:03">✍️ 1 人 09-21 16:03</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.14 / 相关 0.47 / 值得读 0.25）</td>
   <td>0.59</td>
@@ -3034,7 +3034,7 @@
   <td><a href="https://www.zhihu.com/pin/2085400656622499430" target="_blank" rel="noopener">这就是开源的好处，从 MiniMax Code 可以看到，貌似要发布 MiniMax-M3.1 版本了</a>
       <div class="byline">恋猫</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 16:11">💬 1 位我关注的人 09-21 16:11</div>
+           title="💬 1 人 09-21 16:11">💬 1 人 09-21 16:11</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.09 / 相关 0.51 / 值得读 0.19）</td>
   <td>0.58</td>
@@ -3053,7 +3053,7 @@
   <td><a href="https://www.zhihu.com/pin/2085285749679723549" target="_blank" rel="noopener">【大语言模型究竟是智慧的曙光，还是一场精巧的心理幻觉</a>
       <div class="byline">爱可可-爱生活</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 08:35">💬 1 位我关注的人 09-21 08:35</div>
+           title="💬 1 人 09-21 08:35">💬 1 人 09-21 08:35</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.17 / 相关 0.42 / 值得读 0.24）</td>
   <td>0.58</td>
@@ -3072,7 +3072,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085278974305949461" target="_blank" rel="noopener">刚刚，Opus 5.5跨级偷袭！直扑GPT-6</a>
       <div class="byline">新智元</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 08:10">✍️ 1 位我关注的人 09-21 08:10</div>
+           title="✍️ 1 人 09-21 08:10">✍️ 1 人 09-21 08:10</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.09 / 相关 0.34 / 值得读 0.18）</td>
   <td>0.57</td>
@@ -3091,7 +3091,7 @@
   <td><a href="https://www.zhihu.com/question/2085120362816320561/answer/2085141607754490253" target="_blank" rel="noopener">阿里千问开源 Qwen-Image-2.1，将对 AI 图像创作领域产生哪些影响？</a>
       <div class="byline">恋猫</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 10:41">👍 1 位我关注的人 09-21 10:41</div>
+           title="👍 1 人 09-21 10:41">👍 1 人 09-21 10:41</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.19 / 相关 0.57 / 值得读 0.29）</td>
   <td>0.56</td>
@@ -3110,7 +3110,7 @@
   <td><a href="https://www.zhihu.com/pin/2085449302571336664" target="_blank" rel="noopener">Jev 5🔪1.2亿token，其实相比起它的应用场景都不算便宜了</a>
       <div class="byline">平凡</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 19:25">💬 1 位我关注的人 09-21 19:25</div>
+           title="💬 1 人 09-21 19:25">💬 1 人 09-21 19:25</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.17 / 相关 0.46 / 值得读 0.27）</td>
   <td>0.56</td>
@@ -3129,7 +3129,7 @@
   <td><a href="https://www.zhihu.com/pin/2084985331649193482" target="_blank" rel="noopener">报到 大家好，我是香港科技大学（广州）信息枢纽助理教授郭志江，主要关注如何提升大模型和智能体的能力</a>
       <div class="byline">莫驚蟄</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 09:38">👍 1 位我关注的人 09-21 09:38</div>
+           title="👍 1 人 09-21 09:38">👍 1 人 09-21 09:38</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.05 / 相关 0.61 / 值得读 0.15）</td>
   <td>0.55</td>
@@ -3148,7 +3148,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085325909192610705" target="_blank" rel="noopener">开发者实锤：OpenAI的广告正在跨站收集你行为信息</a>
       <div class="byline">机器之心</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 11:14">✍️ 1 位我关注的人 09-21 11:14</div>
+           title="✍️ 1 人 09-21 11:14">✍️ 1 人 09-21 11:14</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.15 / 相关 0.25 / 值得读 0.26）</td>
   <td>0.55</td>
@@ -3167,7 +3167,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085395197173700334" target="_blank" rel="noopener">刚刚，Jev全网解禁！1.2亿Token限时免费用</a>
       <div class="byline">新智元</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 15:55">✍️ 1 位我关注的人 09-21 15:55</div>
+           title="✍️ 1 人 09-21 15:55">✍️ 1 人 09-21 15:55</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.12 / 相关 0.40 / 值得读 0.20）</td>
   <td>0.54</td>
@@ -3186,7 +3186,7 @@
   <td><a href="https://www.zhihu.com/pin/2085315630392202104" target="_blank" rel="noopener">🏆 蝉联榜首</a>
       <div class="byline">NVIDIA英伟达中国</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 10:33">💬 1 位我关注的人 09-21 10:33</div>
+           title="💬 1 人 09-21 10:33">💬 1 人 09-21 10:33</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.05 / 相关 0.39 / 值得读 0.17）</td>
   <td>0.53</td>
@@ -3205,7 +3205,7 @@
   <td><a href="https://www.zhihu.com/question/2084906399562256955/answer/2085010919076246977" target="_blank" rel="noopener">Mimo V2.6 Flash RL训练结束！你认为这成绩怎么样？</a>
       <div class="byline">书都忽视</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 23:59">👍 1 位我关注的人 09-20 23:59</div>
+           title="👍 1 人 09-20 23:59">👍 1 人 09-20 23:59</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.10 / 相关 0.61 / 值得读 0.17）</td>
   <td>0.52</td>
@@ -3224,7 +3224,7 @@
   <td><a href="https://www.zhihu.com/pin/2085259018088478634" target="_blank" rel="noopener">#AI企业 扁平化管理 （随着AI智能体全面接管信息路由，全球科技企业正激进压缩管理层级，传统中层管理者面临前所未有的生</a>
       <div class="byline">爱可可-爱生活</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 06:48">💬 1 位我关注的人 09-21 06:48</div>
+           title="💬 1 人 09-21 06:48">💬 1 人 09-21 06:48</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.09 / 相关 0.21 / 值得读 0.18）</td>
   <td>0.51</td>
@@ -3243,7 +3243,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085440851812139202" target="_blank" rel="noopener">爆火一周后，Jev正式全面开放：一个“不会说话”的AI，为何风靡硅谷？</a>
       <div class="byline">DeepTech深科技</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 18:53">✍️ 1 位我关注的人 09-21 18:53</div>
+           title="✍️ 1 人 09-21 18:53">✍️ 1 人 09-21 18:53</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.21 / 相关 0.60 / 值得读 0.36）</td>
   <td>0.51</td>
@@ -3262,7 +3262,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085123858269524178" target="_blank" rel="noopener">刚刚，剪映发了个大的：AI生视频和AI剪辑的壁，被打破了！</a>
       <div class="byline">量子位</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-20 22:01">✍️ 1 位我关注的人 09-20 22:01</div>
+           title="✍️ 1 人 09-20 22:01">✍️ 1 人 09-20 22:01</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.11 / 相关 0.33 / 值得读 0.19）</td>
   <td>0.51</td>
@@ -3281,7 +3281,7 @@
   <td><a href="https://www.zhihu.com/question/2081698141351555724/answer/2085422899142435464" target="_blank" rel="noopener">腾讯放弃AI元宝全力押注WorkBuddy，这次战略转型算成功吗？</a>
       <div class="byline">Trisimo崔思莫</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 17:39">✍️ 1 位我关注的人 09-21 17:39</div>
+           title="✍️ 1 人 09-21 17:39">✍️ 1 人 09-21 17:39</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.22 / 相关 0.59 / 值得读 0.27）</td>
   <td>0.50</td>
@@ -3300,7 +3300,7 @@
   <td><a href="https://www.zhihu.com/pin/2085431837195870344" target="_blank" rel="noopener">豆包 2.1 Lite 更新，感觉很不错 豆包工作，最被人吐槽的， 应该就是高模用不起，低模撑不起</a>
       <div class="byline">Trisimo崔思莫</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 18:19">💬 1 位我关注的人 09-21 18:19</div>
+           title="💬 1 人 09-21 18:19">💬 1 人 09-21 18:19</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.11 / 相关 0.47 / 值得读 0.18）</td>
   <td>0.50</td>
@@ -3319,7 +3319,7 @@
   <td><a href="https://www.zhihu.com/question/2084949943848890533/answer/2085053965998338423" target="_blank" rel="noopener">如何评价 ICLR 2027 摘要投稿量已超历年总和，预计突破 6 万？</a>
       <div class="byline">潜龙勿用</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 23:24">👍 1 位我关注的人 09-20 23:24</div>
+           title="👍 1 人 09-20 23:24">👍 1 人 09-20 23:24</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.14 / 相关 0.47 / 值得读 0.29）</td>
   <td>0.50</td>
@@ -3338,7 +3338,7 @@
   <td><a href="https://www.zhihu.com/pin/2085321003383481301" target="_blank" rel="noopener">🔘假如有一个按钮， 可以删掉那些尴尬、失败、痛苦的记忆，你会按吗</a>
       <div class="byline">新知PLAYGROUND</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 11:08">👍 1 位我关注的人 09-21 11:08</div>
+           title="👍 1 人 09-21 11:08">👍 1 人 09-21 11:08</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.04 / 相关 0.11 / 值得读 0.11）</td>
   <td>0.50</td>
@@ -3357,7 +3357,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085439996534722792" target="_blank" rel="noopener">世界模型的下一个战场：生物医学</a>
       <div class="byline">DeepTech深科技</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 18:48">✍️ 1 位我关注的人 09-21 18:48</div>
+           title="✍️ 1 人 09-21 18:48">✍️ 1 人 09-21 18:48</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.27 / 相关 0.44 / 值得读 0.35）</td>
   <td>0.49</td>
@@ -3376,7 +3376,7 @@
   <td><a href="https://www.zhihu.com/pin/2085296267173930467" target="_blank" rel="noopener">黄仁勋反驳最近 Anthropic 发起的 AI 放缓提议 虽然知道老黄是卖卡的，但是没想到老黄说的这么直接： -“去读</a>
       <div class="byline">恋猫</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 09:20">💬 1 位我关注的人 09-21 09:20</div>
+           title="💬 1 人 09-21 09:20">💬 1 人 09-21 09:20</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.08 / 相关 0.25 / 值得读 0.21）</td>
   <td>0.49</td>
@@ -3395,7 +3395,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085400501340980162" target="_blank" rel="noopener">啊啊啊GPT-6 Astra这么不安全！这次马斯克都瘫坐了</a>
       <div class="byline">量子位</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 16:12">✍️ 1 位我关注的人 09-21 16:12</div>
+           title="✍️ 1 人 09-21 16:12">✍️ 1 人 09-21 16:12</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.08 / 相关 0.26 / 值得读 0.16）</td>
   <td>0.49</td>
@@ -3414,7 +3414,7 @@
   <td><a href="https://www.zhihu.com/pin/2085302284783821165" target="_blank" rel="noopener">拆解零散AIGC资讯碎片 看清行业早已发生的大转向 最近刷到一堆零零碎碎的AIGC新闻，接月星辰发新模型、千问开源生图工</a>
       <div class="byline">德里克文</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 09:40">💬 1 位我关注的人 09-21 09:40</div>
+           title="💬 1 人 09-21 09:40">💬 1 人 09-21 09:40</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.20 / 相关 0.60 / 值得读 0.30）</td>
   <td>0.49</td>
@@ -3433,7 +3433,7 @@
   <td><a href="https://www.zhihu.com/pin/2085050691911956026" target="_blank" rel="noopener">自我介绍 大家好👋，我是傅天予，现在清华电子系汪玉老师组直博五年级，25年底在 CMU 的 Beidi Chen 老师组</a>
       <div class="byline">fuvty</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 20:51">👍 1 位我关注的人 09-21 20:51</div>
+           title="👍 1 人 09-21 20:51">👍 1 人 09-21 20:51</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.13 / 相关 0.80 / 值得读 0.28）</td>
   <td>0.48</td>
@@ -3452,7 +3452,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085280211722150507" target="_blank" rel="noopener">希伯来语能破甲? 实测!</a>
       <div class="byline">Karminski-牙医</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 08:13">✍️ 1 位我关注的人 09-21 08:13</div>
+           title="✍️ 1 人 09-21 08:13">✍️ 1 人 09-21 08:13</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.12 / 相关 0.22 / 值得读 0.16）</td>
   <td>0.48</td>
@@ -3471,7 +3471,7 @@
   <td><a href="https://www.zhihu.com/question/2085106465560441898/answer/2085106634003633698" target="_blank" rel="noopener">如何评价电波系复古视觉小说游戏《心象天仪本线》？</a>
       <div class="byline">Rin酱今天玩什么</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 14:14">👍 1 位我关注的人 09-21 14:14</div>
+           title="👍 1 人 09-21 14:14">👍 1 人 09-21 14:14</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.05 / 相关 0.04 / 值得读 0.09）</td>
   <td>0.48</td>
@@ -3490,7 +3490,7 @@
   <td><a href="https://www.zhihu.com/pin/2085441496560551879" target="_blank" rel="noopener">LLM 会不会成为人类的“智子”</a>
       <div class="byline">卡卡罗特</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 18:55">💬 1 位我关注的人 09-21 18:55</div>
+           title="💬 1 人 09-21 18:55">💬 1 人 09-21 18:55</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.12 / 相关 0.31 / 值得读 0.24）</td>
   <td>0.48</td>
@@ -3509,7 +3509,7 @@
   <td><a href="https://www.zhihu.com/question/2083123101873844765/answer/2084655492530553246" target="_blank" rel="noopener">如何看待 DeepSeek 刘胜与的《我不得不把才华埋葬在昨天》？</a>
       <div class="byline">冰粉炒饭</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 18:04">👍 1 位我关注的人 09-21 18:04</div>
+           title="👍 1 人 09-21 18:04">👍 1 人 09-21 18:04</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.05 / 相关 0.12 / 值得读 0.11）</td>
   <td>0.47</td>
@@ -3528,7 +3528,7 @@
   <td><a href="https://www.zhihu.com/question/2083123101873844765/answer/2085168857912816722" target="_blank" rel="noopener">如何看待 DeepSeek 刘胜与的《我不得不把才华埋葬在昨天》？</a>
       <div class="byline">郫县 梁朝伟</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 07:15">👍 1 位我关注的人 09-21 07:15</div>
+           title="👍 1 人 09-21 07:15">👍 1 人 09-21 07:15</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.20 / 相关 0.30 / 值得读 0.28）</td>
   <td>0.47</td>
@@ -3547,7 +3547,7 @@
   <td><a href="https://www.zhihu.com/pin/2085282821954917438" target="_blank" rel="noopener">【语言学习的本质：全脑高强度健身】延缓大脑衰老不只有数独或填字游戏，学门新外语是极具综合性的脑力锻炼</a>
       <div class="byline">爱可可-爱生活</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 08:23">💬 1 位我关注的人 09-21 08:23</div>
+           title="💬 1 人 09-21 08:23">💬 1 人 09-21 08:23</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.05 / 相关 0.04 / 值得读 0.08）</td>
   <td>0.45</td>
@@ -3566,7 +3566,7 @@
   <td><a href="https://www.zhihu.com/pin/2085276139967215171" target="_blank" rel="noopener">#宁波诺丁汉毕业生吐槽找不到工作 （一位宁波诺丁汉大学国际商务管理专业的本科毕业生，投递数百份简历至今零offer，她的</a>
       <div class="byline">爱可可-爱生活</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 07:56">💬 1 位我关注的人 09-21 07:56</div>
+           title="💬 1 人 09-21 07:56">💬 1 人 09-21 07:56</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.03 / 相关 0.03 / 值得读 0.07）</td>
   <td>0.42</td>
@@ -3585,7 +3585,7 @@
   <td><a href="https://www.zhihu.com/pin/2085452355026405316" target="_blank" rel="noopener">【晚点独家丨理想推进芯片子公司首轮融资，投前估值约 150 亿元】我们独家获悉，理想芯片子公司正推进首轮外部融资，投前估</a>
       <div class="byline">晚点LatePost</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 19:46">💬 1 位我关注的人 09-21 19:46</div>
+           title="💬 1 人 09-21 19:46">💬 1 人 09-21 19:46</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.09 / 相关 0.22 / 值得读 0.19）</td>
   <td>0.42</td>
@@ -3604,7 +3604,7 @@
   <td><a href="https://www.zhihu.com/pin/2085325455759091167" target="_blank" rel="noopener">【AI绘画每日一词】灵体伴生双生 上传一张普通人像，不换脸、不换衣服、不重新摆姿势，只加这一条提示词，就能让你身后多出一</a>
       <div class="byline">德里克文</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 11:12">💬 1 位我关注的人 09-21 11:12</div>
+           title="💬 1 人 09-21 11:12">💬 1 人 09-21 11:12</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.09 / 相关 0.18 / 值得读 0.13）</td>
   <td>0.41</td>
@@ -3623,7 +3623,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085130709904241670" target="_blank" rel="noopener">华为首发企业AI白皮书：AI让员工更快了，怎样让整个企业受益？</a>
       <div class="byline">量子位</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-20 22:21">✍️ 1 位我关注的人 09-20 22:21</div>
+           title="✍️ 1 人 09-20 22:21">✍️ 1 人 09-20 22:21</div>
   </td>
   <td class="reason">Jev 判断未通过（信息量 0.15 / 相关 0.35 / 值得读 0.22）</td>
   <td>0.33</td>
@@ -3642,7 +3642,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085166638559670414" target="_blank" rel="noopener">面向 Agent 设计的因果推断包 StatsPAI 论文已发表</a>
       <div class="byline">王几行XING</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 00:45">✍️ 1 位我关注的人 09-21 00:45</div>
+           title="✍️ 1 人 09-21 00:45">✍️ 1 人 09-21 00:45</div>
   </td>
   <td class="reason">与 《面向 Agent 设计的因果推断包 StatsPAI 论文已发表 StatsPAI: A Unified, Agent-》 近似重复，保留共识更高者</td>
   <td>0.66</td>
@@ -3661,7 +3661,7 @@
   <td><a href="https://www.zhihu.com/pin/2085295109365670897" target="_blank" rel="noopener">PaperSkill：读懂《机器人世界模型》 五分钟看懂交互式Paper：《面向机器人学习的世界模型：全景综述》 #减论</a>
       <div class="byline">减论(Reduct)</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 12:30">💬 1 位我关注的人 09-21 12:30</div>
+           title="💬 1 人 09-21 12:30">💬 1 人 09-21 12:30</div>
   </td>
   <td class="reason">与 《南开实践课丨《机器人世界模型》交互设计思路 五分钟看懂交互设计Paper思路：《面向机器人学习的世界模型：全景综述》 #》 近似重复，保留共识更高者</td>
   <td>0.63</td>
@@ -3680,7 +3680,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085311050308645245" target="_blank" rel="noopener">刚刚，GPT-6 Astra取得哥德巴赫猜想重大突破！</a>
       <div class="byline">新智元</div>
       <div class="moment-row"
-           title="✍️ 1 位我关注的人 09-21 10:16">✍️ 1 位我关注的人 09-21 10:16</div>
+           title="✍️ 1 人 09-21 10:16">✍️ 1 人 09-21 10:16</div>
   </td>
   <td class="reason">与 《如何评价GPT-6 Astra 给出的 Liouville 版本哥德巴赫猜想证明？》 近似重复，保留共识更高者</td>
   <td>0.56</td>
@@ -3699,7 +3699,7 @@
   <td><a href="https://www.zhihu.com/question/2083895373177931200/answer/2085313408690345385" target="_blank" rel="noopener">如何评价GPT-6 Astra 给出的 Liouville 版本哥德巴赫猜想证明？</a>
       <div class="byline">新智元</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 12:33">👍 1 位我关注的人 09-21 12:33</div>
+           title="👍 1 人 09-21 12:33">👍 1 人 09-21 12:33</div>
   </td>
   <td class="reason">与 《如何评价GPT-6 Astra 给出的 Liouville 版本哥德巴赫猜想证明？》 近似重复，保留共识更高者</td>
   <td>0.56</td>
@@ -3718,7 +3718,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2085105674778850315" target="_blank" rel="noopener">没有语音没有宽屏，这款4:3复古视觉小说为何反而让人沉醉？</a>
       <div class="byline">Rin酱今天玩什么</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 04:43">👍 1 位我关注的人 09-21 04:43</div>
+           title="👍 1 人 09-21 04:43">👍 1 人 09-21 04:43</div>
   </td>
   <td class="reason">与 《如何评价电波系复古视觉小说游戏《心象天仪本线》？》 近似重复，保留共识更高者</td>
   <td>0.48</td>
@@ -3737,7 +3737,7 @@
   <td><a href="https://www.zhihu.com/pin/2085459922041431326" target="_blank" rel="noopener">17.穷奇 17.穷奇</a>
       <div class="byline">德里克文</div>
       <div class="moment-row"
-           title="💬 1 位我关注的人 09-21 20:06">💬 1 位我关注的人 09-21 20:06</div>
+           title="💬 1 人 09-21 20:06">💬 1 人 09-21 20:06</div>
   </td>
   <td class="reason">与 《17.穷奇 17.穷奇》 近似重复，保留共识更高者</td>
   <td>0.20</td>
@@ -3756,7 +3756,7 @@
   <td><a href="https://www.zhihu.com/question/2076466539499188471/answer/2076860567977989637" target="_blank" rel="noopener">孙宇晨起诉景甜，会给她的演艺事业带来多大影响？</a>
       <div class="byline">秋葵</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 04:42">👍 1 位我关注的人 09-21 04:42</div>
+           title="👍 1 人 09-21 04:42">👍 1 人 09-21 04:42</div>
   </td>
   <td class="reason">与 《孙宇晨起诉景甜，会给她的演艺事业带来多大影响？》 近似重复，保留共识更高者</td>
   <td>0.18</td>
@@ -3809,7 +3809,7 @@
   <td><a href="https://www.zhihu.com/question/2043660509396865080/answer/2045090338327588976" target="_blank" rel="noopener">如何看待最近（2026年）推特爆火的散户Serenity?</a>
       <div class="byline">小旋风财进</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:44">👍 1 位我关注的人 09-21 19:44</div>
+           title="👍 1 人 09-21 19:44">👍 1 人 09-21 19:44</div>
   </td>
   <td class="reason">发布超过 111 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -3828,7 +3828,7 @@
   <td><a href="https://www.zhihu.com/question/659955420/answer/2010483904231010375" target="_blank" rel="noopener">能不能说一个“就是为了这点醋，才包了这顿饺子”的典型事例？</a>
       <div class="byline">眼镜蛇</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:16">👍 1 位我关注的人 09-21 19:16</div>
+           title="👍 1 人 09-21 19:16">👍 1 人 09-21 19:16</div>
   </td>
   <td class="reason">发布超过 207 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -3847,7 +3847,7 @@
   <td><a href="https://www.zhihu.com/question/36944807/answer/17183990667" target="_blank" rel="noopener">如何评价「法语永远无法描述『落霞与孤鹜齐飞，秋水共长天一色』的美感与浪漫」这种说法？</a>
       <div class="byline">敏纳娄什</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 19:13">👍 1 位我关注的人 09-21 19:13</div>
+           title="👍 1 人 09-21 19:13">👍 1 人 09-21 19:13</div>
   </td>
   <td class="reason">发布超过 693 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -3883,7 +3883,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2020230836818060538" target="_blank" rel="noopener">详读Codex的Agent Loop</a>
       <div class="byline">少年弈</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 16:40">👍 1 位我关注的人 09-21 16:40</div>
+           title="👍 1 人 09-21 16:40">👍 1 人 09-21 16:40</div>
   </td>
   <td class="reason">发布超过 171 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -3902,7 +3902,7 @@
   <td><a href="https://www.zhihu.com/question/1899466246669469216/answer/1899957402738091819" target="_blank" rel="noopener">从军事角度看，俄乌战争打到现在，胜利的天平将倾向哪一方？</a>
       <div class="byline">尼德兰金牌保安</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 15:43">👍 1 位我关注的人 09-21 15:43</div>
+           title="👍 1 人 09-21 15:43">👍 1 人 09-21 15:43</div>
   </td>
   <td class="reason">发布超过 512 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -3921,7 +3921,7 @@
   <td><a href="https://www.zhihu.com/question/515444120/answer/1965163599526881147" target="_blank" rel="noopener">爸爸拿我和“谷爱凌”比，我该怎么办？</a>
       <div class="byline">曹亮</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 15:39">👍 1 位我关注的人 09-21 15:39</div>
+           title="👍 1 人 09-21 15:39">👍 1 人 09-21 15:39</div>
   </td>
   <td class="reason">发布超过 332 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -3940,7 +3940,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/95587264" target="_blank" rel="noopener">盘点北京周边十大户外夺命路线，胆小慎往</a>
       <div class="byline">孙长老</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 14:49">👍 1 位我关注的人 09-21 14:49</div>
+           title="👍 1 人 09-21 14:49">👍 1 人 09-21 14:49</div>
   </td>
   <td class="reason">发布超过 2482 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -3959,7 +3959,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/714734989" target="_blank" rel="noopener">地上科研-浅谈fused softmax cross entropy</a>
       <div class="byline">真实哥</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 14:31">👍 1 位我关注的人 09-21 14:31</div>
+           title="👍 1 人 09-21 14:31">👍 1 人 09-21 14:31</div>
   </td>
   <td class="reason">发布超过 767 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -3978,7 +3978,7 @@
   <td><a href="https://www.zhihu.com/question/1925158788765291276/answer/2014299035184433056" target="_blank" rel="noopener">Tabe这么好的教练，为什么RNG、BLG要放弃他？</a>
       <div class="byline">尹晨震</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 14:08">👍 1 位我关注的人 09-21 14:08</div>
+           title="👍 1 人 09-21 14:08">👍 1 人 09-21 14:08</div>
   </td>
   <td class="reason">发布超过 196 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4065,7 +4065,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2051682264325546663" target="_blank" rel="noopener">Agent(特别篇六)：Harness Engineering和Loop Engineering-一部 Agent 工程的血泪史</a>
       <div class="byline">王果ai</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 13:05">👍 1 位我关注的人 09-21 13:05</div>
+           title="👍 1 人 09-21 13:05">👍 1 人 09-21 13:05</div>
   </td>
   <td class="reason">发布超过 93 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4084,7 +4084,7 @@
   <td><a href="https://www.zhihu.com/question/656676848/answer/3595783042" target="_blank" rel="noopener">你见过的最有笑点的图片是什么？</a>
       <div class="byline">邦邦卡邦</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 12:27">👍 1 位我关注的人 09-21 12:27</div>
+           title="👍 1 人 09-21 12:27">👍 1 人 09-21 12:27</div>
   </td>
   <td class="reason">发布超过 767 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4103,7 +4103,7 @@
   <td><a href="https://www.zhihu.com/question/665627619/answer/1999441387712693059" target="_blank" rel="noopener">80年代盛行的水泥船，为什么现在没有了？</a>
       <div class="byline">繁星与辰</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 12:03">👍 1 位我关注的人 09-21 12:03</div>
+           title="👍 1 人 09-21 12:03">👍 1 人 09-21 12:03</div>
   </td>
   <td class="reason">发布超过 237 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4190,7 +4190,7 @@
   <td><a href="https://www.zhihu.com/question/2045084856711894410/answer/2051364509860749511" target="_blank" rel="noopener">如何评价张家裔从天才少女到退学流浪街头？</a>
       <div class="byline">迷糊熊</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 07:07">👍 1 位我关注的人 09-21 07:07</div>
+           title="👍 1 人 09-21 07:07">👍 1 人 09-21 07:07</div>
   </td>
   <td class="reason">发布超过 94 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4209,7 +4209,7 @@
   <td><a href="https://www.zhihu.com/question/574257334/answer/2950672749" target="_blank" rel="noopener">如何评价2023年一月新番《别当欧尼酱了》？</a>
       <div class="byline">战争之雪狼</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 07:03">👍 1 位我关注的人 09-21 07:03</div>
+           title="👍 1 人 09-21 07:03">👍 1 人 09-21 07:03</div>
   </td>
   <td class="reason">发布超过 1278 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4245,7 +4245,7 @@
   <td><a href="https://www.zhihu.com/question/34978955/answer/105668215" target="_blank" rel="noopener">你在游戏里见过最奇葩的 ID 是什么？</a>
       <div class="byline">谢道涛</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 05:11">👍 1 位我关注的人 09-21 05:11</div>
+           title="👍 1 人 09-21 05:11">👍 1 人 09-21 05:11</div>
   </td>
   <td class="reason">发布超过 3753 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4281,7 +4281,7 @@
   <td><a href="https://www.zhihu.com/question/669166275/answer/1977814149070349872" target="_blank" rel="noopener">为什么我遇到的男生都是想睡我的?</a>
       <div class="byline">茶花路莫里亚蒂</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 01:09">👍 1 位我关注的人 09-21 01:09</div>
+           title="👍 1 人 09-21 01:09">👍 1 人 09-21 01:09</div>
   </td>
   <td class="reason">发布超过 297 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4300,7 +4300,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2010293867208021164" target="_blank" rel="noopener">staleness很大的时候，如何保证offpolicy-rl训练稳定性</a>
       <div class="byline">haotian</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-21 00:52">👍 1 位我关注的人 09-21 00:52</div>
+           title="👍 1 人 09-21 00:52">👍 1 人 09-21 00:52</div>
   </td>
   <td class="reason">发布超过 207 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4319,7 +4319,7 @@
   <td><a href="https://www.zhihu.com/question/395111378/answer/2005789074582169246" target="_blank" rel="noopener">如何评价B站up主“老东北美食”？</a>
       <div class="byline">vince li</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 23:23">👍 1 位我关注的人 09-20 23:23</div>
+           title="👍 1 人 09-20 23:23">👍 1 人 09-20 23:23</div>
   </td>
   <td class="reason">发布超过 220 天，超过发布时间闸门</td>
   <td>0.00</td>
@@ -4338,7 +4338,7 @@
   <td><a href="https://zhuanlan.zhihu.com/p/2001458638011794235" target="_blank" rel="noopener">大道至简——谈论文写作风格</a>
       <div class="byline">机智的Ryan</div>
       <div class="moment-row"
-           title="👍 1 位我关注的人 09-20 22:16">👍 1 位我关注的人 09-20 22:16</div>
+           title="👍 1 人 09-20 22:16">👍 1 人 09-20 22:16</div>
   </td>
   <td class="reason">发布超过 232 天，超过发布时间闸门</td>
   <td>0.00</td>

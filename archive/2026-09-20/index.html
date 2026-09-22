@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2026-09-20 日报 · Distill 日报</title>
+<title>2026-09-20 · Distill 日报</title>
 <meta name="description" content="每天从 400+ 位知乎 AI 博主的关注流中，用四层漏斗蒸馏出值得读的内容。">
-<meta property="og:title" content="2026-09-20 日报 · Distill 日报">
+<meta property="og:title" content="2026-09-20 · Distill 日报">
 <meta property="og:image" content="https://deej4yng.github.io/cards/2026-09-20.png">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="alternate" type="application/rss+xml" title="Distill 日报" href="/rss.xml">
@@ -21,7 +21,7 @@
 </header>
 <main>
 <section class="day-head">
-  <h1>2026-09-20 日报</h1>
+  <h1>2026-09-20</h1>
 <p class="note">今日技术焦点集中于大模型的系统级优化与架构创新。核心脉络包括：MoE架构已成为行业主流，通过稀疏激活平衡知识容量与推理成本；推理引擎针对Agentic工作负载的深度优化，如vLLM的PD分离与KV Cache管理，成为提升效率的关键；硬件层面，从芯片设计（如昇腾950的Chiplet架构）到异构平台的代码维护，工程复杂度日益凸显；算法侧，</p>  <p class="meta">51 篇 ·
     <a href="/process/">筛选过程</a> · <a href="/archive/">往期</a></p>
 </section>
@@ -32,7 +32,7 @@
   <p class="byline">吃果冻不吐果冻皮</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="👍 0 位我关注的人 09-19 18:48">👍 0 位我关注的人 09-19 18:48</div>
+       title="👍 0 人 09-19 18:48">👍 0 人 09-19 18:48</div>
   <p class="comment">本文通过对比八款主流模型，清晰揭示了MoE架构的设计哲学：总参数决定知识容量，激活参数控制推理成本。文章未停留在概念炒作，而是用具体数据（如DeepSeek V4-Pro的1.6T总参/49B激活）和架构图，拆解了专家路由、负载均衡等关键工程问题。对于理解为何MoE成为旗舰模型标配，以及在实际部署中如何权衡模型规模与推理效率，提供了扎实的参考框架。</p>
   <p class="excerpt">引言如果你最近两年关注过大模型发布，会发现几乎所有头部玩家的旗舰都共享同一个关键词： MoE（Mixture-of-Experts，混合专家） 。但单看某一款模型，你只能看到参数表；比如：DeepSeek V4-Pro 把参数量堆到 1.6…</p>
 </li>
@@ -42,7 +42,7 @@
   <p class="byline">BBuf</p>
   <p class="date-row">发布：2026-09-15</p>
   <div class="moment-row"
-       title="👍 5 位我关注的人 09-19 14:23">👍 5 位我关注的人 09-19 14:23</div>
+       title="👍 5 人 09-19 14:23">👍 5 人 09-19 14:23</div>
   <p class="comment">本文以DeepSeek工程师的视角，揭示了推理系统优化对模型性能的决定性作用。通过ds v4.1 flash在SGLang上从30到1000+ tokens/s的具体案例，说明顶尖性能依赖于对CUDA算子、内核融合等底层技术的极致挖掘。文章的价值在于破除“模型决定论”迷思，强调推理引擎的工程优化同样是核心竞争力，且其影响可与模型架构创新等量齐观。</p>
   <p class="excerpt">实际上不仅仅是佬提到的cuda算子开发，整个大模型推理系统模型支持，模型性能优化都被GPT6彻底打穿了。 就以文章里DeepSeek的ds v4.1 flash为例子。SGLang开始支持的时候，gb300 single node bs=1…</p>
 </li>
@@ -52,7 +52,7 @@
   <p class="byline">vLLM</p>
   <p class="date-row">发布：2026-09-09</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-20 02:17">👍 1 位我关注的人 09-20 02:17</div>
+       title="👍 1 人 09-20 02:17">👍 1 人 09-20 02:17</div>
   <p class="comment">本文系统梳理了vLLM针对Agentic工作负载的优化方案，直指多轮会话、长上下文和Prefix复用带来的核心挑战。其价值在于将PD分离、KV Cache管理等技术与具体应用场景紧密结合，提供了从需求分析到技术选型的完整视角。对于正在部署或优化AI Agent服务的团队，本文阐述的方法论和架构考量具有直接的实践参考价值。</p>
   <p class="excerpt">agentic 工作负载（以具备自主决策与多步规划能力的 agent 为中心的工作负载）正在成为 vLLM 流量的一大来源。它们的多轮会话、长上下文与大量 prefix 复用，对推理服务栈的各个层面都提出了优化要求。本文梳理 vLLM 的一…</p>
 </li>
@@ -62,7 +62,7 @@
   <p class="byline">Arthur</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 08:30">✍️ 1 位我关注的人 09-19 08:30</div>
+       title="✍️ 1 人 09-19 08:30">✍️ 1 人 09-19 08:30</div>
   <p class="comment">本文对DaVinciCore芯片的拆解，展示了AI芯片设计在精度（MXFP8/HiF8/MXFP4）、算力（Cube与Vector核）和内存架构上的具体权衡。通过SIMD/SIMT混合编程和NDDMA等细节，揭示了硬件如何为特定AI负载进行深度优化。对于理解国产芯片的技术路线和性能特点，本文提供了难得的架构级洞察。</p>
   <p class="excerpt">一、一分钟速览 内容规模36 个 AI 子系统，每个 = 1 个 Cube Core + 2 个 Vector Core（即 36 C + 72 V）算力跃升Cube 浮点峰值算力达上一代 4 倍（MXFP4 vs 上一代 BF16）；Ve…</p>
 </li>
@@ -72,7 +72,7 @@
   <p class="byline">小力龙虾</p>
   <p class="date-row">发布：2026-09-16</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-20 13:45">👍 1 位我关注的人 09-20 13:45</div>
+       title="👍 1 人 09-20 13:45">👍 1 人 09-20 13:45</div>
   <p class="comment">本文以直观的图解方式，追溯了DeepSeek模型从V1到V4.1-Flash的KV Cache压缩历程（从389,000B到890B/token），清晰展示了技术迭代的脉络。其核心价值在于将抽象的KV Cache优化效果转化为可感知的成本与性能收益，尤其对于需要处理长上下文的Agent应用开发者和本地部署者，提供了关键的技术选型参考。</p>
   <p class="excerpt">DeepSeek V1 到 V4.1-Flash，单 token 的 global KV 如何从 389,000 B 压缩到 890 B的？这篇文章对于 Agent 的使用者、本地模型部署者、模型开发者都有一定帮助。 文章来源： https…</p>
 </li>
@@ -82,7 +82,7 @@
   <p class="byline">Arthur</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 08:26">✍️ 1 位我关注的人 09-19 08:26</div>
+       title="✍️ 1 人 09-19 08:26">✍️ 1 人 09-19 08:26</div>
   <p class="comment">本文详细解析了昇腾950的Chiplet设计（2 AI Die + 2 IO Die）及其统一内存访问架构，阐明了其如何支撑从推荐系统到大模型Prefill的多样化负载。通过950PR与950DT两款产品的差异化定位，展现了芯片设计与具体应用场景的深度绑定。对于关注国产算力基础设施的从业者，本文提供了理解其技术特性和扩展能力（384至8192卡）的扎实基础。</p>
   <p class="excerpt">一、一分钟速览 内容芯片形态多 Die 合封 Chiplet：2 个 AI Die + 2 个 IO Die + 8 个（950PR）/ 4 个（950DT）高速片上内存模块，经 D2D Clink 与 Memory Interface 连…</p>
 </li>
@@ -92,7 +92,7 @@
   <p class="byline">恋猫</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-20 13:51">💬 1 位我关注的人 09-20 13:51</div>
+       title="💬 1 人 09-20 13:51">💬 1 人 09-20 13:51</div>
   <p class="comment">本文通过OpenCode Dax的视角，点出了DeepSeek在KV Cache复用率上取得的惊人成就（接近99%），并将其归因于整体工程与优化水平。这不仅是一个技术指标，更揭示了分布式缓存系统设计与实现的巨大挑战。文章的价值在于引导读者思考：在追求高缓存命中率的背后，是哪些具体的架构决策和工程实践支撑了这一结果。</p>
   <p class="excerpt">OpenCode 的 Dax 说， KV Cache 真正能做到接近99%的全球只有DeepSeek 所以目前如果有供应商说能做到这个，大概率是在直接包装（wrap）DeepSeek的API卖给你。 为什么DeepSeek的整体聚合缓存率比…</p>
 </li>
@@ -102,7 +102,7 @@
   <p class="byline">菽陌松囿</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-21 08:00 · 💬 1 位我关注的人 09-20 09:54">👍 1 位我关注的人 09-21 08:00 · 💬 1 位我关注的人 09-20 09:54</div>
+       title="👍 1 人 09-21 08:00 · 💬 1 人 09-20 09:54">👍 1 人 09-21 08:00 · 💬 1 人 09-20 09:54</div>
   <p class="comment">本文以一线开发者的口吻，尖锐指出了当前推理引擎在支持异构平台（hip/musa/xpu等）时面临的代码维护困境。通过对比不同适配方案（如maca的wrapper思路），探讨了在框架中注入非通用代码的利弊。对于推理引擎的维护者和使用者，本文揭示了技术债的积累过程，并促使思考如何在快速支持新硬件与保持代码健康之间取得平衡。</p>
   <p class="excerpt">当前推理引擎里面异构平台代码越来越乱了， 各种if hip/musa/xpu分支等， 看的头疼， 后续不知道怎么维护， 很容烂尾， 国内关于torch适配patch方案， 基本照抄寒武纪， 做的差的连api签名都不管， 没有生态、版本兼容意…</p>
 </li>
@@ -112,7 +112,7 @@
   <p class="byline">haotian</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="👍 2 位我关注的人 09-21 13:14">👍 2 位我关注的人 09-21 13:14</div>
+       title="👍 2 人 09-21 13:14">👍 2 人 09-21 13:14</div>
   <p class="comment">本文聚焦于RLVR向离策略学习的理论转变，并引入score-centering技术来解决策略 mismatch 问题。其价值在于将强化学习在语言模型训练中的应用，从工程技巧层面提升到算法理论层面进行探讨。通过分析贝尔曼策略优化的具体机制，为理解如何更稳定、高效地利用可验证奖励进行模型后训练提供了新的理论视角。</p>
   <p class="excerpt">主要作者：Zhuoqing Song、Haotian Xu 论文 · 2026 年 9 月 14 日1. 为什么 RLVR 会变成离策略学习 可验证奖励强化学习（Reinforcement Learning with Verifiable…</p>
 </li>
@@ -122,7 +122,7 @@
   <p class="byline">王鹏LLM</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-20 13:27">💬 1 位我关注的人 09-20 13:27</div>
+       title="💬 1 人 09-20 13:27">💬 1 人 09-20 13:27</div>
   <p class="comment">本文介绍的TAKT工具，将AI编程智能体的运作方式从“自由发挥”转变为由YAML工作流定义的可重复、可审计流程。其核心价值在于解决Agent在长期任务中面临的上下文污染、指令遗忘和流程不可复现等工程可靠性问题。对于寻求将AI编程助手稳定集成到开发流程中的团队，TAKT提供了一种将控制权从模型交还给工程师的实践方案。</p>
   <p class="excerpt">TAKT: 将智能体转化为可重复的开发工作流 TAKT 是一个开源命令行工具，核心理念是：不要让 AI 编程智能体&#34;自由发挥&#34;，而是用外部工作流来控制和协调它们。 普通 AI 编程智能体在长期任务中会遗忘指令、上下文污染、职责混乱，且流程不…</p>
 </li>
@@ -132,7 +132,7 @@
   <p class="byline">恋猫</p>
   <p class="date-row">发布：2026-09-18</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-18 22:12">✍️ 1 位我关注的人 09-18 22:12</div>
+       title="✍️ 1 人 09-18 22:12">✍️ 1 人 09-18 22:12</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">笑死，这个抢发是真的无敌，这么算下来， 以后国内知名大模型的所有 Harness 都是开源的了，不错不错 ：架构实现上， MiniMax Code 底下用了 Pi 作为 Agent 基础框架，然后 MiniMax 在 Pi 上面补了 Ses…</p>
 </li>
@@ -142,7 +142,7 @@
   <p class="byline">想飞的石头</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="👍 0 位我关注的人 09-19 18:38">👍 0 位我关注的人 09-19 18:38</div>
+       title="👍 0 人 09-19 18:38">👍 0 人 09-19 18:38</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">摘要通信已成为大规模 GPU 工作负载中的第一等瓶颈。现有的分布式编译器主要通过在流（stream）层面上重叠整个计算与通信算子来解决这一问题。这种粗粒度机制会导致额外的算子启动开销，在算子边界强制执行设备级的全局同步，并且当最慢的 Til…</p>
 </li>
@@ -152,7 +152,7 @@
   <p class="byline">Arthur</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-20 09:58">✍️ 1 位我关注的人 09-20 09:58</div>
+       title="✍️ 1 人 09-20 09:58">✍️ 1 人 09-20 09:58</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">原论文 ：Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation 作者 ：Daeun Kim, Junwha H…</p>
 </li>
@@ -162,7 +162,7 @@
   <p class="byline">恋猫</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-20 13:23">💬 1 位我关注的人 09-20 13:23</div>
+       title="💬 1 人 09-20 13:23">💬 1 人 09-20 13:23</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">看了大佬统计的这个 MiMo RL 直播的重启统计，对于每小时超过 2 万美金成本的训练，每次重启都是干烧钱，什么 GPU 显存溢出）、网络故障、需要重启才能恢复的问题，都是一次高成本消耗。 比如 Flash 线有一次基础设施错误， 3 小…</p>
 </li>
@@ -172,7 +172,7 @@
   <p class="byline">恋猫</p>
   <p class="date-row">发布：2026-09-17</p>
   <div class="moment-row"
-       title="📚 1 位我关注的人 09-19 09:59 · ✍️ 1 位我关注的人 09-17 14:40">📚 1 位我关注的人 09-19 09:59 · ✍️ 1 位我关注的人 09-17 14:40</div>
+       title="📚 1 人 09-19 09:59 · ✍️ 1 人 09-17 14:40">📚 1 人 09-19 09:59 · ✍️ 1 人 09-17 14:40</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">谷歌最近又发了一篇 《Dream-RSI: Recursive Self-Improvement through Evolving Worlds》 ，这好像是最近第二次看到 谷歌类似命名的论文 ，上一个是 《Language Models…</p>
 </li>
@@ -182,7 +182,7 @@
   <p class="byline">小小将</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 09:30">✍️ 1 位我关注的人 09-19 09:30</div>
+       title="✍️ 1 人 09-19 09:30">✍️ 1 人 09-19 09:30</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">加州大学伯克利分校和 Arena 的研究团队最近做了一项名为 HarnessTax 的研究，想弄清楚一件事：同一个编程模型，换一套负责管理工具、上下文和任务执行的 harness，表现和成本会差多少？他们测试了七个模型与三种 harness…</p>
 </li>
@@ -192,7 +192,7 @@
   <p class="byline">momo</p>
   <p class="date-row">发布：2026-09-18</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-19 00:39">👍 1 位我关注的人 09-19 00:39</div>
+       title="👍 1 人 09-19 00:39">👍 1 人 09-19 00:39</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">这玩意我大概弄明白是个啥了 1. RLCD -&gt; 不是从头训练的，找了个开源LLM，然后RL微调了一下 2. 并行采样 -&gt; 一次性把所有要匹配的QA都输入，然后仅在一个受限子集合中选取first token的概率（例如，只比较Yes和No…</p>
 </li>
@@ -202,7 +202,7 @@
   <p class="byline">wangleineo</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-19 14:23">💬 1 位我关注的人 09-19 14:23</div>
+       title="💬 1 人 09-19 14:23">💬 1 人 09-19 14:23</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">Splash - 新的本地模型推理引擎 所有推理引擎都在追求通用性（能跑任何模型），从 llama.cpp 到 MLX 都是如此。Splash 反过来：追求高效，为某个模型量身造一台引擎。 Inco AI 开源的这款苹果芯片推理引擎，没有通…</p>
 </li>
@@ -212,7 +212,7 @@
   <p class="byline">fffrida</p>
   <p class="date-row">发布：2026-09-16</p>
   <div class="moment-row"
-       title="👍 2 位我关注的人 09-19 12:42">👍 2 位我关注的人 09-19 12:42</div>
+       title="👍 2 人 09-19 12:42">👍 2 人 09-19 12:42</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">这个问题的背景是 FC1 里面有两个 projection，一是 gate，一是 up。mega实现 SiLU(gate) * up。最直接的做法，就是 Weight0 和 Weight1 分别做一次 GEMM，所以同一份 activati…</p>
 </li>
@@ -222,7 +222,7 @@
   <p class="byline">王鹏LLM</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-19 19:29">💬 1 位我关注的人 09-19 19:29</div>
+       title="💬 1 人 09-19 19:29">💬 1 人 09-19 19:29</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">Laya:开源的BERT类决策模型，性能超jev 分享一下开源项目Laya ，一个多语言、非自回归的System 1 决策模型，输入文本/工单/JSON + 结构化问题，单次前向传播（~33ms）直接输出带概率的分类/打分/二值判断，不生成…</p>
 </li>
@@ -232,7 +232,7 @@
   <p class="byline">王鹏LLM</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-19 11:09">💬 1 位我关注的人 09-19 11:09</div>
+       title="💬 1 人 09-19 11:09">💬 1 人 09-19 11:09</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">jev的开源复现项目，包含数据、模型、配方 Bespoke Nimble 是一个开源的极速类型化决策模型。它受 Jev 启发，但未做蒸馏。推理时只读一次提示，为每个问题仅评分一个 token，不生成推理过程，因此速度极快。 主要特点如下:…</p>
 </li>
@@ -242,7 +242,7 @@
   <p class="byline">魔搭社区</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-20 13:20">✍️ 1 位我关注的人 09-20 13:20</div>
+       title="✍️ 1 人 09-20 13:20">✍️ 1 人 09-20 13:20</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">Prism ML由一支 Caltech 研究团队创立，长期研究&#34;压缩神经网络而不牺牲推理能力&#34;；Ternary Bonsai 2 27B是继 7 月首代模型之后，开源的新一代三元多模态模型。它基于 Qwen3.8-27B 构建，权重被压到三…</p>
 </li>
@@ -252,7 +252,7 @@
   <p class="byline">陈乐群</p>
   <p class="date-row">发布：2026-09-08</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-20 10:37">👍 1 位我关注的人 09-20 10:37</div>
+       title="👍 1 人 09-20 10:37">👍 1 人 09-20 10:37</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">最近我的工作重心从推理系统的开发转移到了后训练系统的开发。看着原本推理引擎里面干净利落的代码，落在训练框架中却变成了弯弯绕绕，我的川字纹加深了。它跑起来很慢，用起来很不灵活，埋伏着各种陷阱，维护起来也很困难。这个训练框架本意是一个精简的系统…</p>
 </li>
@@ -262,7 +262,7 @@
   <p class="byline">量子位</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 16:29">✍️ 1 位我关注的人 09-19 16:29</div>
+       title="✍️ 1 人 09-19 16:29">✍️ 1 人 09-19 16:29</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">乔不迟 发自 凹非寺 量子位 | 公众号 QbitAI华为今年全联接大会，最重磅的首先是 一组芯片时间表 。昇腾960DT研发进度比原计划 提前三个季度 ，单芯片算力实现倍增，960DT支持2 PFLOPS FP8、4 PFLOPS FP4…</p>
 </li>
@@ -272,7 +272,7 @@
   <p class="byline">周博洋</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 23:05">✍️ 1 位我关注的人 09-19 23:05</div>
+       title="✍️ 1 人 09-19 23:05">✍️ 1 人 09-19 23:05</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">大家没玩过rernak吗？ 要说有啥不一样的，确实算力优化有取巧 比如option 255的一个选项 传统bge-rerank的话，是这样婶儿滴 输入结构： 输入 1：[CLS] Context [SEP] Option 1 输入 2：[C…</p>
 </li>
@@ -282,7 +282,7 @@
   <p class="byline">智东西</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 12:41">✍️ 1 位我关注的人 09-19 12:41</div>
+       title="✍️ 1 人 09-19 12:41">✍️ 1 人 09-19 12:41</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">10万卡算力利用率大涨15%！神秘的华为“灵衢”有什么过人之处？ 编辑 | 漠影 智东西9月19日报道，在9月17日-19日举办的华为2026年全联接大会上，华为围绕 灵衢互联 架构及 超节点集群 ，推出 昇腾960芯片、昇腾960超节点、…</p>
 </li>
@@ -292,7 +292,7 @@
   <p class="byline">太平洋的水</p>
   <p class="date-row">发布：2026-09-16</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-20 13:34">👍 1 位我关注的人 09-20 13:34</div>
+       title="👍 1 人 09-20 13:34">👍 1 人 09-20 13:34</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">Qwen 与 DeepSeek 都在加记忆：N-gram 能否成为小模型的能力外挂？ 小模型能不能外挂一块大记忆，让性能继续提升？Qwen3.8-Flash-Next 的主干是 125B，另有 51B 的 n-gram 表；DeepSeek…</p>
 </li>
@@ -302,7 +302,7 @@
   <p class="byline">新智元</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-20 12:04">✍️ 1 位我关注的人 09-20 12:04</div>
+       title="✍️ 1 人 09-20 12:04">✍️ 1 人 09-20 12:04</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">整个硅谷都被Jev刷屏了 发布仅三天，它就被Vercel、Cloudflare和LangChain等主流平台迅速集成，有人说，我们即将迎来自动化智能的大爆发！ 而这场狂欢的主角，竟然是一个不会说话的大模型。 详情点击： Jev爆火硅谷！哑巴…</p>
 </li>
@@ -312,7 +312,7 @@
   <p class="byline">白露未晞me</p>
   <p class="date-row">发布：2026-09-18</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-19 15:20">👍 1 位我关注的人 09-19 15:20</div>
+       title="👍 1 人 09-19 15:20">👍 1 人 09-19 15:20</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">emmmmm，要不我来提名一下知识蒸馏 (knowledge distillation)？ 知识蒸馏早期的一个主要目标其实就是模型压缩。其中一个集大成的工作是Hinton他们的 Distilling the Knowledge in a N…</p>
 </li>
@@ -322,7 +322,7 @@
   <p class="byline">恋猫</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 20:30">✍️ 1 位我关注的人 09-19 20:30</div>
+       title="✍️ 1 人 09-19 20:30">✍️ 1 人 09-19 20:30</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">之前这个 今天各种“自进化 Agent”，离 RSI 到底还有多远？ 就讲的比较清晰，他根据能力和场景，把 RSI 做了一些分级，大概就是 B0、L1 到 L5 ：层级AI 获得的改进权力什么会进入下一轮用人话理解B0当前任务里反思、重试、…</p>
 </li>
@@ -332,7 +332,7 @@
   <p class="byline">Trisimo崔思莫</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 13:38">✍️ 1 位我关注的人 09-19 13:38</div>
+       title="✍️ 1 人 09-19 13:38">✍️ 1 人 09-19 13:38</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">千问办公 X 天文， 这可能是我今年看到的，国产 AI 在 Real-World-Task 上最好的一个案例 我比较关注 AI Agent 落地，对&#34; AI 到底能不能干写代码以外的正事 &#34;这个问题有执念。今年最引发我关注的是 OpenAI…</p>
 </li>
@@ -342,7 +342,7 @@
   <p class="byline">机器之心</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-20 12:03">✍️ 1 位我关注的人 09-20 12:03</div>
+       title="✍️ 1 人 09-20 12:03">✍️ 1 人 09-20 12:03</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">在迷宫里规划一条路径、想象 3D 物体旋转后的状态、持续追踪物体的位置…… 图像和视频不只是模型需要理解的输入，更是可以推理的 “工作空间 “。近年来，原生视觉推理受到越来越多的关注，语言不再是模型推理的唯一途径，模型可以直接理解、探索和更…</p>
 </li>
@@ -352,7 +352,7 @@
   <p class="byline">新智元</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 13:26">✍️ 1 位我关注的人 09-19 13:26</div>
+       title="✍️ 1 人 09-19 13:26">✍️ 1 人 09-19 13:26</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">17日，Anthropic 放了一个大招。Claude 在不到四周内优化了30多个开源生物分子模型，推理平均提速约4倍，还搞出一个低内存模式，能在单个 NVIDIA H100 GPU 节点上处理超过10000个 token 的生物分子系统预…</p>
 </li>
@@ -362,7 +362,7 @@
   <p class="byline">Kitt在进化</p>
   <p class="date-row">发布：2026-09-17</p>
   <div class="moment-row"
-       title="👍 2 位我关注的人 09-20 05:46">👍 2 位我关注的人 09-20 05:46</div>
+       title="👍 2 人 09-20 05:46">👍 2 人 09-20 05:46</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">卧槽，现在生产级的大模型居然直播训练？？？ 我看了下，这是MiMo-V2.6的后训练Dashboard。已经训了大概一天，花了约120万美元，消耗Token约60B。 哈哈哈，这可是宝贵数据，看看模型厂商的成本。 MiMo-V2.6 Pro…</p>
 </li>
@@ -372,7 +372,7 @@
   <p class="byline">高飞</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="👍 2 位我关注的人 09-21 12:58">👍 2 位我关注的人 09-21 12:58</div>
+       title="👍 2 人 09-21 12:58">👍 2 人 09-21 12:58</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">上个月1日，AI Engineer World&#39;s Fair峰会现场，一位演讲者登台后对全场做了一个有杀伤力的开场：“我是OpenAI内部极少数公开对ChatGPT开黑的人之一。”不过，这位演讲者有资格这么讲。他名叫迪奥戈·阿尔梅达（Dio…</p>
 </li>
@@ -382,7 +382,7 @@
   <p class="byline">王鹏LLM</p>
   <p class="date-row">发布：2026-09-18</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-18 23:55">✍️ 1 位我关注的人 09-18 23:55</div>
+       title="✍️ 1 人 09-18 23:55">✍️ 1 人 09-18 23:55</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">今天来介绍一下这两天AI界最火的一个模型Jev。这个 AI 不会聊天，只会&#34;做选择题&#34;，但程序员们却眼前一亮 不聊天、不写代码、不写文章，只回答&#34;是/否、该选哪个、有几分把握&#34;。ChatGPT 的幕后功臣做了个&#34;不会说话&#34;的模型，想解决大模…</p>
 </li>
@@ -392,7 +392,7 @@
   <p class="byline">李博杰</p>
   <p class="date-row">发布：2026-09-14</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-20 13:50">👍 1 位我关注的人 09-20 13:50</div>
+       title="👍 1 人 09-20 13:50">👍 1 人 09-20 13:50</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">《深入理解 AI Infra》发布首日就突破 2k stars 了 没想到《深入理解 AI Infra》发布首日就突破 2k stars 了，比《深入理解 AI Agent》涨星都快 😂 不少读者问我怎么写出来的，我是上个月写了一份提纲，G…</p>
 </li>
@@ -402,7 +402,7 @@
   <p class="byline">智东西</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-20 13:01">✍️ 1 位我关注的人 09-20 13:01</div>
+       title="✍️ 1 人 09-20 13:01">✍️ 1 人 09-20 13:01</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">云的主战场来到智能体。 作者 | 江宇 编辑 | 漠影 过去几年，大模型是AI产业最醒目的主角。参数规模、训练算力、推理能力一路往前狂奔，企业接入AI的第一步，也往往是先找到一个足够强的模型。 如今，企业焦虑的是，一个智能体，怎么才能在生产…</p>
 </li>
@@ -412,7 +412,7 @@
   <p class="byline">Karminski-牙医</p>
   <p class="date-row">发布：2026-09-18</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-20 00:02">👍 1 位我关注的人 09-20 00:02</div>
+       title="👍 1 人 09-20 00:02">👍 1 人 09-20 00:02</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">给大家写个简单的Jev模型介绍, 这绝对是个需要重点关注的模型. 简单讲, 这个模型放弃了传统自回归架构, 它没有办法直接输出普通文本. 但是他能进行决策! 比如最简单的二分类场景, 输入一条短信, 让它判断是否为垃圾短信, 它就可以输出这…</p>
 </li>
@@ -422,7 +422,7 @@
   <p class="byline">小小将</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 17:47">✍️ 1 位我关注的人 09-19 17:47</div>
+       title="✍️ 1 人 09-19 17:47">✍️ 1 人 09-19 17:47</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">国产大模型又出了一个“黑马”？ 刚刚，阶跃星辰最新的大模型 Step 5 Preview 出现在 Artificial Analysis 榜单里。 从 AA 上提供的 Step 5 Preview 模型页面上来看，它是一款 600B 总参数…</p>
 </li>
@@ -432,7 +432,7 @@
   <p class="byline">卡卡罗特</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="👍 0 位我关注的人 09-20 12:40">👍 0 位我关注的人 09-20 12:40</div>
+       title="👍 0 人 09-20 12:40">👍 0 人 09-20 12:40</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">Jev 真正重要的地方：ICL 可能不需要自回归 这次 Jev 爆火，我觉得最大的价值，是它让我重新思考一个问题： In-context learning 可能并不是自回归生成模型的专属能力。 如果只看 Jev 最终完成的事情——分类、打分…</p>
 </li>
@@ -442,7 +442,7 @@
   <p class="byline">香港市民董先生</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-19 17:20">💬 1 位我关注的人 09-19 17:20</div>
+       title="💬 1 人 09-19 17:20">💬 1 人 09-19 17:20</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">更新4: 再多说两句，从deepswe刷到65这个分数来看，flash版本距离当前第一梯队的deepseek-v4.1-flash还比较远，差不多有10个点的差距，哪怕pro版本也没有赶得上，有七个点的gap。(当然，当前mimo用的是av…</p>
 </li>
@@ -452,7 +452,7 @@
   <p class="byline">北方的郎</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-20 08:40">✍️ 1 位我关注的人 09-20 08:40</div>
+       title="✍️ 1 人 09-20 08:40">✍️ 1 人 09-20 08:40</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">在生成式 AI 与自主编程智能体（Coding Agent）飞速演进的过程中，“标准碎片化”曾是长期困扰开源社区与企业研发团队的核心痛点之一。近日，Anthropic 迈出了极具行业示范意义的一步：在其热门命令行 AI 编程工具 Claud…</p>
 </li>
@@ -462,7 +462,7 @@
   <p class="byline">安小强</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-19 16:59">💬 1 位我关注的人 09-19 16:59</div>
+       title="💬 1 人 09-19 16:59">💬 1 人 09-19 16:59</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">47k star的开源 Agent Harness，CowAgent 把多渠道和记忆全放在一套架构里 chatgpt-on-wechat 改名重做了，现在叫 CowAgent，47k stars，从微信机器人长成一个 Agent Harne…</p>
 </li>
@@ -472,7 +472,7 @@
   <p class="byline">安小强</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-20 14:03">💬 1 位我关注的人 09-20 14:03</div>
+       title="💬 1 人 09-20 14:03">💬 1 人 09-20 14:03</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">Agent 时代的 IDE 长什么样？开源 Orca 给了一个答案 vibe coding 的争论点已经从「用哪个 Agent」挪到「怎么同时管一堆 Agent」了，orca 这个开源 ADE 正好卡在这个位置，7.2 万 stars，主打…</p>
 </li>
@@ -482,7 +482,7 @@
   <p class="byline">奇迹的闪光迪迦</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-19 20:40">👍 1 位我关注的人 09-19 20:40</div>
+       title="👍 1 人 09-19 20:40">👍 1 人 09-19 20:40</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">可以看一下我的专栏 curryGPU设计流程记录 ，单个SM在架构上已经没有什么秘密了，ISA也基本上都被社区逆向得差不多了，现在主要就看RTL设计水平和后端水平了，当然考虑到国内很难搞到HBM，流片也会卡单芯片算力，所以还得重新考虑配比，…</p>
 </li>
@@ -492,7 +492,7 @@
   <p class="byline">恋猫</p>
   <p class="date-row">发布：2026-09-20</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-20 11:05">✍️ 1 位我关注的人 09-20 11:05</div>
+       title="✍️ 1 人 09-20 11:05">✍️ 1 人 09-20 11:05</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">我差点都怀疑谷歌就是单纯想加入前沿模型“越狱”俱乐部，又又又又是经典的环境配置错误，又又又是在网络安全测试，长链路自主执行能力的 Agent，然后就把原本合法的 CTF 行为变成未授权入侵。 熟悉的套路，又是测试中的虚构公司名称碰巧对应现实…</p>
 </li>
@@ -502,7 +502,7 @@
   <p class="byline">九老师</p>
   <p class="date-row">发布：2026-09-18</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-19 05:48">👍 1 位我关注的人 09-19 05:48</div>
+       title="👍 1 人 09-19 05:48">👍 1 人 09-19 05:48</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">第一次听到“技术深度”这个词，是我工作的第二年。那时候我觉得工作已经比较得心应手，绩效反馈也很好，拿到了第一次晋升机会。但在 review 的过程中，我第一次被挑战了一个问题：技术深度不足。 我其实没有理解什么叫“技术深度”，第一反应是“技…</p>
 </li>
@@ -512,7 +512,7 @@
   <p class="byline">达斯维达</p>
   <p class="date-row">发布：2026-09-17</p>
   <div class="moment-row"
-       title="👍 1 位我关注的人 09-19 23:55">👍 1 位我关注的人 09-19 23:55</div>
+       title="👍 1 人 09-19 23:55">👍 1 人 09-19 23:55</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">感觉非常恐惧。这位大神参与了 llm 推理 pd 分离架构的奠基之作 distserve。博一看他们的文章和项目时，颇有一种“以手抚膺坐长叹”之感。当时心里想，大概率这辈子都难以望其项背了。结果就是这样的大神，写算子的能力都快被 llm 取…</p>
 </li>
@@ -522,17 +522,17 @@
   <p class="byline">机器之心</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="✍️ 1 位我关注的人 09-19 12:53">✍️ 1 位我关注的人 09-19 12:53</div>
+       title="✍️ 1 人 09-19 12:53">✍️ 1 人 09-19 12:53</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">AI 生图很好看，但一个字都改不了：这个开源项目想把设计稿重新 “拆开” 一张海报，从「看起来不错」到「真的能交付」，中间到底差了什么？ 可能只差一句临时改掉的文案。 如今的图像生成模型，已经很会做设计了。给它一段提示词，构图、配色、光影和…</p>
 </li>
 <li class="card explore">
-  <div class="rank">探索</div>
+  <div class="rank">随机</div>
   <h2><a href="https://www.zhihu.com/pin/2084587842659947532" target="_blank" rel="noopener">果然，Anthropic 提出 AI 放缓和防御计划后，把 10 月 的 IPO 冲次继续推迟到 11 月，但是因为之前</a></h2>
   <p class="byline">恋猫</p>
   <p class="date-row">发布：2026-09-19</p>
   <div class="moment-row"
-       title="💬 1 位我关注的人 09-19 10:22">💬 1 位我关注的人 09-19 10:22</div>
+       title="💬 1 人 09-19 10:22">💬 1 人 09-19 10:22</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">果然，Anthropic 提出 AI 放缓和防御计划后，把 10 月 的 IPO 冲次继续推迟到 11 月，但是因为之前提到的 AI 安全，现在话题就变成了：“尽管存在人工智能安全方面的担忧，Anthropic 仍计划在 11 月启动其 I…</p>
 </li>
