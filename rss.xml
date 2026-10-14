@@ -5,6 +5,13 @@
 <link>https://deej4yng.github.io</link>
 <description>每天从知乎 AI 关注流蒸馏出的精选日报</description>
 <item>
+<title>2026-10-14 日报：51 篇</title>
+<link>https://deej4yng.github.io/archive/2026-10-14/</link>
+<guid>https://deej4yng.github.io/archive/2026-10-14/</guid>
+<pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+<description>今日文章聚焦大模型系统的端到端优化：异构GPU上的动态训练调度、稀疏注意力的实际…</description>
+</item>
+<item>
 <title>2026-10-13 日报：51 篇</title>
 <link>https://deej4yng.github.io/archive/2026-10-13/</link>
 <guid>https://deej4yng.github.io/archive/2026-10-13/</guid>
@@ -24,13 +31,6 @@
 <guid>https://deej4yng.github.io/archive/2026-10-11/</guid>
 <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
 <description>今日文章覆盖了从底层算子到系统级优化的完整技术栈。核心脉络围绕大模型推理效率展开…</description>
-</item>
-<item>
-<title>2026-10-10 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-10/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-10/</guid>
-<pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日技术焦点集中于大模型推理效率与训练稳定性的工程突破。核心脉络包括：通过异构硬…</description>
 </item>
 </channel>
 </rss>
