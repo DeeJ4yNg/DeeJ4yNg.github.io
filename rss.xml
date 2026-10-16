@@ -5,6 +5,13 @@
 <link>https://deej4yng.github.io</link>
 <description>每天从知乎 AI 关注流蒸馏出的精选日报</description>
 <item>
+<title>2026-10-16 日报：51 篇</title>
+<link>https://deej4yng.github.io/archive/2026-10-16/</link>
+<guid>https://deej4yng.github.io/archive/2026-10-16/</guid>
+<pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+<description>今日文章围绕系统层面的资源协同与算法细化展开：从 CPU 参与 MoE 微调、大…</description>
+</item>
+<item>
 <title>2026-10-15 日报：51 篇</title>
 <link>https://deej4yng.github.io/archive/2026-10-15/</link>
 <guid>https://deej4yng.github.io/archive/2026-10-15/</guid>
@@ -24,13 +31,6 @@
 <guid>https://deej4yng.github.io/archive/2026-10-13/</guid>
 <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
 <description>今日聚焦推理端的算子与系统创新：GPU 上的分词离载、FlashMLA 与 SR…</description>
-</item>
-<item>
-<title>2026-10-12 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-12/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-12/</guid>
-<pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日主题围绕大模型工程化的多层次优化展开：推理侧关注 KV cache 管理（P…</description>
 </item>
 </channel>
 </rss>

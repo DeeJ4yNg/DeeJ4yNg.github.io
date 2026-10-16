@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2026-10-15 · Distill 日报</title>
+<title>2026-10-16 · Distill 日报</title>
 <meta name="description" content="每天从 400+ 位知乎 AI 博主的关注流中，用四层漏斗蒸馏出值得读的内容。">
-<meta property="og:title" content="2026-10-15 · Distill 日报">
-<meta property="og:image" content="https://deej4yng.github.io/cards/2026-10-15.png">
+<meta property="og:title" content="2026-10-16 · Distill 日报">
+<meta property="og:image" content="https://deej4yng.github.io/cards/2026-10-16.png">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="alternate" type="application/rss+xml" title="Distill 日报" href="/rss.xml">
 </head>
@@ -21,520 +21,520 @@
 </header>
 <main>
 <section class="day-head">
-  <h1>2026-10-15</h1>
-<p class="note">今日聚焦推理引擎细节（DeepEP、vLLM KV双向、PageWeaver、GraphTok）、异构训练调度（Arena、FP8 scaling）、以及Agent/RL系统演进（veRL重构、DeepSeek v4.1踩坑、QwenGyre动态GP调度），均提供代码层面或实验数据的具体方法。</p>  <p class="meta">51 篇 ·
+  <h1>2026-10-16</h1>
+<p class="note">今日文章围绕系统层面的资源协同与算法细化展开：从 CPU 参与 MoE 微调、大规模 GLM 推理实践，到 RL 训练踩坑、注意力掩码优化、后训练难点、Agent 推理加速、记忆框架、量化交叉影响、低秩 KV Cache 对齐以及重要性采样校正，体现了在算力受限情况下通过硬件软件协同和精细化设计提升效率的共同诉求。</p>  <p class="meta">51 篇 ·
     <a href="/process/">筛选过程</a> · <a href="/archive/">往期</a></p>
 </section>
 <ol class="digest">
 <li class="card">
   <div class="rank">1</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093792706279613355" target="_blank" rel="noopener">深度拆解 DeepEP V2 三件套：ElasticBuffer、EPHandle 与 EventOverlap 的实现原理</a></h2>
-  <p class="byline">Arthur</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094437649457091155" target="_blank" rel="noopener">别再让计算等着搬权重了！KTransformers让CPU直接参与MoE微调计算</a></h2>
+  <p class="byline">机器之心</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="👍 0 人 10-15 08:37">👍 0 人 10-15 08:37</div>
-  <p class="comment">文中逐行对照DeepEP V2源码，解释ElasticBuffer如何在EP跨 rank 间弹性分配内存，EPHandle管理生命周期，EventOverlap实现通信与计算重叠，适合想了解底层缓存与同步机制的读者。</p>
-  <p class="excerpt">代码基线：deepseek-ai/DeepEP @ d4f41e4（V2 版本，deep_ep 2.0.0）。本文所有结论都能在仓库里逐行核对：Python 侧 deep_ep/buffers/elastic.py、deep_ep/util…</p>
+       title="👍 0 人 10-16 18:38">👍 0 人 10-16 18:38</div>
+  <p class="comment">文章介绍 KTransformers 如何把 MoE 专家权重放在 CPU 内存，利用页式调度和异步搬运让 GPU 专注计算。给出了实现细节、内存布局以及在 Qwen‑3.8 上的微调速度和显存占比数据，便于评估在受限 GPU 上的可行性。</p>
+  <p class="excerpt">从 DeepSeek-V4 到 Qwen-3.8、Kimi-K3、GLM-5.3，每⼀次超⼤模型的开源都带来性能上的巨⼤跃升。然⽽，随着模型规模越来越大，多数研究者与开发者只能尝试调用 API，无法在资源受限条件下进行微调，这进一步限制了大…</p>
 </li>
 <li class="card">
   <div class="rank">2</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094076847348832252" target="_blank" rel="noopener">SLM 生成式高并发推理引擎：延迟约束下的有效吞吐优化</a></h2>
-  <p class="byline">美团技术团队</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2069369440374993915" target="_blank" rel="noopener">大规模模型(GLM5.2)集群推理实践</a></h2>
+  <p class="byline">菽陌松囿</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 14:49">✍️ 1 人 10-15 14:49</div>
-  <p class="comment">提出静态DAG组织请求、AOTInductor预编译、Packed Prefill、内部KV共享及选择性FP8，在低延迟场景下显著提升有效吞吐，给出具体实现步骤和性能数据。</p>
-  <p class="excerpt">搜索和推荐场景中想要使用语言模型提高在线效果，往往面临着在线极低延迟的约束，现有通用大模型推理引擎并非在这一延迟约束下设计，因此本文从「具有确定 decode 次数上界的请求」这一工作负载出发，重新设计在线执行路径：以静态 DAG 组织完整…</p>
+       title="👍 1 人 10-16 19:05">👍 1 人 10-16 19:05</div>
+  <p class="comment">基于 SGLang 构建的 GLM‑5.2 集群推理方案详细描述了模型分片、批量调度、KV cache 共享以及多机网络容忍机制。文中给出了吞吐量、延迟和故障恢复实测数字，有助于理解大规模推理的工程落地要点。</p>
+  <p class="excerpt">前言：因为我们整套推理框架也是基于sglang构建， 秉着开源分享的精神(其实我们发现bug， 还没来得及提PR，但是很多问题社区随后也fix了， sglang社区还是非常卷的)， 很久就想写一篇我们team在glm5.2落地实践， 市面上…</p>
 </li>
 <li class="card">
   <div class="rank">3</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093651453797734207" target="_blank" rel="noopener">EuroSys 2026 ｜Arena让大模型训练在异构GPU集群中动态换挡</a></h2>
-  <p class="byline">先进编译实验室</p>
-  <p class="date-row">发布：2026-10-14</p>
-  <div class="moment-row"
-       title="✍️ 1 人 10-14 16:07">✍️ 1 人 10-14 16:07</div>
-  <p class="comment">Arena将GPU分配与模型阶段划分放入同一优化空间，通过网格探索、低成本剖析和运行时剪枝，同时改善吞吐、排队时间和作业完成时间，提供了异构集群调度的可操作方案。</p>
-  <p class="excerpt">大模型训练进入生产集群后，难点不是把一个模型塞进GPU，而是让大小、优先级和运行时间不同的任务，在型号混杂且资源碎片化的GPU上持续高效。Arena把“给谁多少卡、给哪种卡”和“模型如何切阶段、如何阶段内切分”放进同一个联合优化空间，用网格…</p>
-</li>
-<li class="card">
-  <div class="rank">4</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093772106974638398" target="_blank" rel="noopener">论文解读：PageWeaver——稀疏注意力「选得少」不等于「跑得快」</a></h2>
-  <p class="byline">Arthur</p>
-  <p class="date-row">发布：2026-10-14</p>
-  <div class="moment-row"
-       title="✍️ 1 人 10-14 18:55">✍️ 1 人 10-14 18:55</div>
-  <p class="comment">指出稀疏注意力中选中KV页数相同不等于GPU工作量相同，因为页亲和度影响内存访问模式，文中用有界窗口和亲和度度量解释这一现象，有助于避免设计误区。</p>
-  <p class="excerpt">论文：PageWeaver: KV-Guided Query Unions for Sparse Attention（商汤 SenseTime，arXiv:2610.11201，2026-10，11 页） 一句话：动态稀疏注意力给每个 qu…</p>
-</li>
-<li class="card">
-  <div class="rank">5</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093791385761626099" target="_blank" rel="noopener">为什么 veRL 不到两年就几乎重构了整套大模型强化学习系统？——从 HybridFlow、GRPO、AgentLoop、异步 RL、Model Engine 到 OPD的技术思想史</a></h2>
-  <p class="byline">万理的探求者</p>
-  <p class="date-row">发布：2026-10-14</p>
-  <div class="moment-row"
-       title="👍 1 人 10-15 15:05">👍 1 人 10-15 15:05</div>
-  <p class="comment">梳理veRL从HybridFlow、GRPO、AgentLoop、异步RL到OPD的技术演变，说明每次重构的动机、设计权衡以及最近的Breaking Change，为理解RL框架演进提供一手脉络。</p>
-  <p class="excerpt">2026 年 9 月 20 日，veRL 发布 v0.9.1。 这次更新中，有一条很容易被忽略的 Breaking Change： 原来的 Fully Async Policy Trainer 和 One-Step-Off-Policy 实…</p>
-</li>
-<li class="card">
-  <div class="rank">6</div>
   <h2><a href="https://zhuanlan.zhihu.com/p/2093494438676927321" target="_blank" rel="noopener">DeepSeek v4.1  RL训练踩坑日记</a></h2>
   <p class="byline">sallon88</p>
   <p class="date-row">发布：2026-10-14</p>
   <div class="moment-row"
-       title="👍 1 人 10-15 00:00">👍 1 人 10-15 00:00</div>
-  <p class="comment">作者记录在LoongSage框架中接入DeepSeek V4.1 Agentic RL的全过程，遇到SGLang day0支持不足、数据同步和奖励函数调试等具体问题，并给出解决方案，具备可复制的调试经验。</p>
+       title="📚 1 人 10-16 22:08 · 👍 1 人 10-15 00:00">📚 1 人 10-16 22:08 · 👍 1 人 10-15 00:00</div>
+  <p class="comment">作者在自研 LoongSage 框架中复现 DeepSeek V4.1 Flash 的 Agentic RL 训练，记录了 reward 模型不匹配、梯度爆炸、采样偏差等具体问题及对应的调试手段（如奖励重新中心化、梯度裁剪阈值调整）。提供了实验曲线和代码片段，便于同类训练的参考。</p>
   <p class="excerpt">前段时间组里接了个活儿，把DeepSeek V4.1 Flash的Agentic RL训练在我们自研的 LoongSage 框架内拉起来。一开始想着，框架本身已经支持DeepSeek V4的Agentic 训练了，而且SGLang社区也放出…</p>
 </li>
 <li class="card">
-  <div class="rank">7</div>
-  <h2><a href="https://www.zhihu.com/question/2093072808725292320/answer/2093310951529387113" target="_blank" rel="noopener">如何看待阿里千问发布的超长程智能体框架 QwenGyre？</a></h2>
-  <p class="byline">恋猫</p>
-  <p class="date-row">发布：2026-10-13</p>
+  <div class="rank">4</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094378890449917689" target="_blank" rel="noopener">FlashMask：让长序列 Attention 训练更高效、更灵活</a></h2>
+  <p class="byline">德布劳钦</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="📚 1 人 10-14 19:06 · ✍️ 1 人 10-13 12:03">📚 1 人 10-14 19:06 · ✍️ 1 人 10-13 12:03</div>
-  <p class="comment">描述QwenGyre如何在Agent运行时将空闲GPU动态切换到训练批次，支持KV Cache通过RDMA迁移以及新增GPU加入训练，提供了一种在同一集群内实现推理与训练资源弹性的机制。</p>
-  <p class="excerpt">这个还挺有意思的，等于是把 GPU 变成可以动态切换职责的计算单元，比如 100 个 Agent 在同时工作，然后部分任务完成后，系统可以把空闲 GPU 逐步转去训练，剩下的 Agent 继续执行， 也就是训练过程中动态挪 GPU，正在运行…</p>
+       title="👍 1 人 10-16 22:49">👍 1 人 10-16 22:49</div>
+  <p class="comment">FlashMask 通过可掩码的稀疏矩阵乘法实现对任意 Attention Mask 的高效支持，并在分布式长序列训练中引入了块级别的负载均衡策略。文中给出了算子伪码、CUDA 内核实现要点以及在 8‑A100 集群上的吞吐提升数据。</p>
+  <p class="excerpt">很高兴向大家分享 百度 Paddle @王小帅 团队的FlashMask！这是一套面向大模型训练的高性能 Attention 算子库，致力于解决复杂 Attention Mask 带来的计算开销与分布式训练效率问题。相比主要面向高效 Att…</p>
 </li>
 <li class="card">
-  <div class="rank">8</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093220798483915702" target="_blank" rel="noopener">论文解读：把分词请下主机——Agent 推理时代的 GPU 分词器 GraphTok</a></h2>
-  <p class="byline">Arthur</p>
-  <p class="date-row">发布：2026-10-13</p>
-  <div class="moment-row"
-       title="✍️ 1 人 10-13 21:32">✍️ 1 人 10-13 21:32</div>
-  <p class="comment">GraphTok将分词流水线（预分词、BPE合并、ID装配）搬到GPU并以图形式表示，解决前缀缓存后分词成为TTFT瓶颈的问题，给出实现细节和在Agent服务中的延迟改善数据。</p>
-  <p class="excerpt">论文：Taking Tokenization off the Host for Agentic LLM Serving 一句话：前缀缓存把 prefill 干掉之后， 分词（tokenization） 这个长期被当成&#34;零成本&#34;的 CPU 阶…</p>
-</li>
-<li class="card">
-  <div class="rank">9</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093063907724243275" target="_blank" rel="noopener">大模型演化史（混合精度篇）：Scaling FP8，DeepSeek-V3 中 FP8 的大规模实践（三）</a></h2>
-  <p class="byline">Civ</p>
-  <p class="date-row">发布：2026-10-12</p>
-  <div class="moment-row"
-       title="👍 0 人 10-14 21:23 · ✍️ 1 人 10-12 19:59">👍 0 人 10-14 21:23 · ✍️ 1 人 10-12 19:59</div>
-  <p class="comment">系统说明DeepSeek-V3中FP8仅用于计算密集且对精度不敏感的算子，其余保持BF16/FP32，给出显存降低和吞吐提升的实测数字，并讨论了FP8在大规模训练中的适用条件与误差控制。</p>
-  <p class="excerpt">上一篇文章介绍了 LLM 中基于 FP8 混合精度的基本方法，其核心思路是只将模型训练中那些计算最密集，且对精度要求不高的部分使用 FP8 计算，其余部分仍然采用高精度格式（如 BF16 或 FP32）。这种方法在保证模型精度的前提下，可以…</p>
-</li>
-<li class="card">
-  <div class="rank">10</div>
-  <h2><a href="https://www.zhihu.com/pin/2093318974461290446" target="_blank" rel="noopener">vLLM 开始支持双向 KV 传输，针对多轮 Agent 在 prefill/decode 分离部署中反复计算历史上下文</a></h2>
-  <p class="byline">深杯酒满</p>
-  <p class="date-row">发布：2026-10-13</p>
-  <div class="moment-row"
-       title="👍 1 人 10-15 08:37">👍 1 人 10-15 08:37</div>
-  <p class="comment">vLLM新增双向KV传输，使多轮Agent在prefill/decode分离部署时能够将上一轮decode产生的KV回传至prefill节点复用，实测在20K长度下将首token延迟从2.3s降至约0.6s，展示了上下文重用的实际收益。</p>
-  <p class="excerpt">vLLM 开始支持双向 KV 传输，针对多轮 Agent 在 prefill/decode 分离部署中反复计算历史上下文的问题：上一轮 decode 节点算出的 KV，下一轮可以传回 prefill 节点继续复用。 在 AWS P5en +…</p>
-</li>
-<li class="card">
-  <div class="rank">11</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093827158036763827" target="_blank" rel="noopener">大模型的稀疏化革命：MoE推理技术原理</a></h2>
-  <p class="byline">吃果冻不吐果冻皮</p>
-  <p class="date-row">发布：2026-10-14</p>
-  <div class="moment-row"
-       title="👍 1 人 10-15 10:24">👍 1 人 10-15 10:24</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">前言Mixture-of-Experts (MoE) 是当前大语言模型的核心架构之一。DeepSeek-V2/V3/V4、Qwen3-MoE、GLM5、Kimi K3 等主流模型都采用了 MoE 架构。相比稠密模型，MoE 在相同计算量下可…</p>
-</li>
-<li class="card">
-  <div class="rank">12</div>
+  <div class="rank">5</div>
   <h2><a href="https://zhuanlan.zhihu.com/p/2094068680439115881" target="_blank" rel="noopener">LLM后训练到底难在哪：聊聊我们的 Rufus-Air 技术报告</a></h2>
   <p class="byline">赵拓</p>
   <p class="date-row">发布：2026-10-15</p>
   <div class="moment-row"
-       title="👍 3 人 10-15 18:22">👍 3 人 10-15 18:22</div>
-  <p class="comment">（暂无点评）</p>
+       title="👍 4 人 10-16 14:01">👍 4 人 10-16 14:01</div>
+  <p class="comment">报告回顾了在 Amazon Search 中从零构建后训练流程（SFT、RM、PPO）的全过程，强调了数据混合、奖励模型校准和对抗样本生成的实践细节。文中列出了实验对比表格，指出了在有限算力下的取舍和潜在瓶颈。</p>
   <p class="excerpt">最近我们把 Rufus-Air 的技术报告挂上了 arXiv（ http://http://arxiv.org/abs/2609.29421 ），这是我在 Amazon 的收官之作。报告里写的，是我们一个不大的研究团队在 Amazon Se…</p>
 </li>
 <li class="card">
-  <div class="rank">13</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2092730808725420019" target="_blank" rel="noopener">【Agentic RL / 强化学习框架】AstraFlow 架构解析：面向数据流的大规模强化学习系统</a></h2>
-  <p class="byline">罗西的思考</p>
-  <p class="date-row">发布：2026-10-14</p>
-  <div class="moment-row"
-       title="✍️ 1 人 10-14 20:13">✍️ 1 人 10-14 20:13</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">【Agentic RL / 强化学习框架】AstraFlow 架构解析：面向数据流的大规模强化学习系统 0x00 概要 0x01 现有问题 1.1 现有 RL 框架的问题 1.2 解决思路：dataflow-oriented coordin…</p>
-</li>
-<li class="card">
-  <div class="rank">14</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094071369726218311" target="_blank" rel="noopener">EMNLP 2026 | 大模型推理如何再快一步？SpecTr-GBV统一多草稿与块验证，加速推测解码</a></h2>
+  <div class="rank">6</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094393304397910578" target="_blank" rel="noopener">Agent推理快10倍是怎么做到的？苹果×CMU：把「生成」改成「做选择题」</a></h2>
   <p class="byline">机器之心</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 14:26">✍️ 1 人 10-15 14:26</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">大语言模型的生成过程天然具有自回归特性，即模型基于已有上下文逐 token 预测并生成后续内容。随着模型规模不断增大，单步前向计算的开销也随之增加，使得自回归解码面临较高的推理延迟。推测解码（Speculative Decoding, SD…</p>
+       title="✍️ 1 人 10-16 11:45">✍️ 1 人 10-16 11:45</div>
+  <p class="comment">提出的 SSR 框架把自由形式的思考替换为结构化的选择题，利用概率归一化和候选集剪枝将推理步骤降至原来的十分之一。文章给出了理论推导、算法复杂度分析以及在多个 Agent 基准上的延迟和准确率对比。</p>
+  <p class="excerpt">在智能体的典型工作流程中，模型每执行一个动作之前，都要先生成一段自由形式推理（free-form thinking）：分析当前观察、评估已有证据、再决定下一步行动。这一 “思考” 过程是 ReAct 范式的核心环节，但也带来了实打实的推理开…</p>
 </li>
 <li class="card">
-  <div class="rank">15</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093970044233445624" target="_blank" rel="noopener">后训练不是给 Qwen 套一层 LoRA：具身模型真正需要适配的五种差异</a></h2>
-  <p class="byline">王多鱼-加油</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <div class="rank">7</div>
+  <h2><a href="https://www.zhihu.com/question/2094503307029100396/answer/2094532257251848324" target="_blank" rel="noopener">腾讯混元记忆框架 HyMemory2.0 开源，对 Agent 生态意味着什么？</a></h2>
+  <p class="byline">恋猫</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 07:44">✍️ 1 人 10-15 07:44</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">第四篇 讨论的是“项目有没有开放一条用户可以执行的训练链”；这一篇讨论另一个问题：即使训练工具已经具备，面对一种具体失败，我们究竟应该更新模型的哪一部分。这段时间我们做了几件看起来互不相干的事：跑通 LightNav-0，拆解 pointi…</p>
+       title="✍️ 1 人 10-16 20:56">✍️ 1 人 10-16 20:56</div>
+  <p class="comment">HyMemory2.0 采用 30B 参数的强化学习记忆模型，专门学习何时保留、更新或丢弃代码片段，并引入 Diff Chain 记录版本演化。文中提供了模型结构图、训练超参数以及在代码补全任务上的准确率提升数据。</p>
+  <p class="excerpt">Diff Chain 这个还是挺有意思的，这个版本加了代码记忆引入版本演化链路，可以「 保留代码之前怎么修改、为什么回退，还有最终采用什么方案 」，这个看起来还挺实用的。记忆模型用的专门的强化学习训练，30B 总参数、 3B 激活参数，专门…</p>
 </li>
 <li class="card">
-  <div class="rank">16</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2092199505210955284" target="_blank" rel="noopener">[译] tcgen05 入门指南</a></h2>
-  <p class="byline">KuangjuX</p>
-  <p class="date-row">发布：2026-10-10</p>
+  <div class="rank">8</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2081158630800372569" target="_blank" rel="noopener">NVFP4 和 DFlash 各自都快，叠起来为什么不到 1+1=2</a></h2>
+  <p class="byline">xinxinxinxinxin</p>
+  <p class="date-row">发布：2026-09-10</p>
   <div class="moment-row"
-       title="👍 1 人 10-15 14:16">👍 1 人 10-15 14:16</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">原文： tcgen05 for dummies · 作者：gau-nernst本文为完整中文翻译。图内英文和代码（含注释）保留原样，正文中的“我”指原作者。性能数据、推测与实验限制按原文保留。 tcgen05 是一组 PTX 指令，用于编程…</p>
+       title="👍 1 人 10-16 17:30">👍 1 人 10-16 17:30</div>
+  <p class="comment">文章深入分析 NVFP4 的两级 scale 在量化和反量化中的作用点，揭示了 MoE 激活 scale 的隐蔽误差来源，并给出了一种基于 Amdahl 法则的收益预估算法，帮助判断量化与投机解码叠加后的实际性能提升。</p>
+  <p class="excerpt">写在前面 ：全文约 1.15 万字，读完大概 30 分钟。适合做过 LLM 推理部署、听过「量化」和「投机解码」这两个词，但还没在 Blackwell 上实际配过 W4A4 的工程师。读完能带走三样东西：NVFP4 两级 scale 到底在…</p>
 </li>
 <li class="card">
-  <div class="rank">17</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2067387689473663000" target="_blank" rel="noopener">从 GDN 到 KDA、GDN2、EDA：原理与代码分析</a></h2>
-  <p class="byline">slowlyC</p>
-  <p class="date-row">发布：2026-08-02</p>
-  <div class="moment-row"
-       title="👍 1 人 10-15 07:12">👍 1 人 10-15 07:12</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">【施工中】 近期 Kimi 发布的 K3 模型采用了 KDA 结构，其原理建立在 GDN 之上，前文 GDN 原理与代码分析 已经介绍了 Linear Attention 和 GDN 的原理，本文接着往下讲 GDN 之后的三个改进：Kimi…</p>
-</li>
-<li class="card">
-  <div class="rank">18</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094012600119981083" target="_blank" rel="noopener">HISA不存在DeepSeek的相位敏感性问题</a></h2>
-  <p class="byline">孟繁续</p>
-  <p class="date-row">发布：2026-10-15</p>
-  <div class="moment-row"
-       title="👍 2 人 10-15 19:43">👍 2 人 10-15 19:43</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">碎碎念DeepSeek-V4发布CSA的时候，我对比了一下 HISA 和CSA的异同，跟身边的同学说，CSA相比HISA确确实实的能减少KV Cache，但是效果会比HISA差一些。但是当时也没有想到如何很好的把这种优势通过实验给展示出来。…</p>
-</li>
-<li class="card">
-  <div class="rank">19</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094018032741904857" target="_blank" rel="noopener">DMAD 开源：4 步生成有声视频的 MiniMax-H3 学生模型，支持 8GB 显存的消费级显卡</a></h2>
-  <p class="byline">魔搭社区</p>
-  <p class="date-row">发布：2026-10-15</p>
-  <div class="moment-row"
-       title="✍️ 1 人 10-15 16:33">✍️ 1 人 10-15 16:33</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">DMAD 项目团队开源了用于联合音视频生成的 MiniMax-H3 4 步学生模型 ，同时发布面向图像、视频和音视频的少步蒸馏方法、训练与推理代码。 在 MiniMax-H3-33B 上，DMAD 将 50 步教师模型蒸馏为 4 步学生模型…</p>
-</li>
-<li class="card">
-  <div class="rank">20</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093945056579302806" target="_blank" rel="noopener">AI芯片设计新突破：把 MoE 的专家权重从 HBM 里消灭</a></h2>
+  <div class="rank">9</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094310021186205079" target="_blank" rel="noopener">论文解读：BELT——把低秩 KV Cache 压缩「对齐到注意力行为」上</a></h2>
   <p class="byline">Arthur</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="✍️ 1 人 10-16 14:21">✍️ 1 人 10-16 14:21</div>
+  <p class="comment">BELT 将低秩 KV Cache 的压缩目标从能量保留转移到注意力输出的一致性，在 key 侧直接优化 softmax 后的注意力分布，value 侧保持加权 SVD 闭式解，并引入全局秩分配器的软/硬门控机制。文中给出了数学推导和在长上下文基准上的困惑度改善。</p>
+  <p class="excerpt">一句话概括：这篇来自北京大学 / 京东 / 腾讯 / 北航的论文指出，主流低秩 KV cache（键值缓存）压缩方法「按 KV 张量自身的能量保留主奇异方向」这个准则并不等于「保住最终的注意力输出」，并由此提出两点改动：键侧（key-sid…</p>
+</li>
+<li class="card">
+  <div class="rank">10</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094185510956708283" target="_blank" rel="noopener">从 FlashREINFORCE 到 Score Centering：重新理解重要性采样的校正作用</a></h2>
+  <p class="byline">初七9527</p>
   <p class="date-row">发布：2026-10-15</p>
   <div class="moment-row"
-       title="👍 1 人 10-15 12:03">👍 1 人 10-15 12:03</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">一句话概括：这篇来自威斯康星大学麦迪逊分校（UW-Madison，ASPLOS 2027）的论文提出一个反常识的做法—— 专家权重不必是躺在 HBM 里的静态载荷 。它用一个 Clifford 代数里的「转子（rotor）」把每个稠密专家压…</p>
+       title="👍 1 人 10-16 09:48">👍 1 人 10-16 09:48</div>
+  <p class="comment">从 FlashREINFORCE 保留未裁剪的 token‑level importance ratio 出发，文章提出 Score Centering 通过调整 score 均值来消除离策略采样带来的偏置。提供了数学推导、方差分析以及在策略梒子任务上的实验对比。</p>
+  <p class="excerpt">FlashREINFORCE 的一个关键选择，是保留未裁剪的 token-level importance ratio，同时在序列层面筛选偏离较大的轨迹。[1] 这个设计通常被理解为对异步采样的 off-policy 校正。 Score C…</p>
 </li>
 <li class="card">
-  <div class="rank">21</div>
-  <h2><a href="https://www.zhihu.com/question/2091513666864682278/answer/2094056229509280879" target="_blank" rel="noopener">如何评价字节Seed团队发现DeepSeek性能漂移？</a></h2>
-  <p class="byline">孟繁续</p>
-  <p class="date-row">发布：2026-10-15</p>
-  <div class="moment-row"
-       title="✍️ 1 人 10-15 13:25">✍️ 1 人 10-15 13:25</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">我快速复现的实验表明，block indexer不会导致这种相位敏感性，block core-attention才会导致这种相位敏感性。因此保留完整的kv cache目前看还是有必要的。 HISA不存在DeepSeek的相位敏感性问题</p>
-</li>
-<li class="card">
-  <div class="rank">22</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093445468827149601" target="_blank" rel="noopener">Diffusion Reward Model：用扩散模型重做 RLHF 奖励</a></h2>
-  <p class="byline">AI解析新纪元</p>
-  <p class="date-row">发布：2026-10-14</p>
-  <div class="moment-row"
-       title="👍 0 人 10-14 20:18">👍 0 人 10-14 20:18</div>
-  <p class="comment">（暂无点评）</p>
-  <p class="excerpt">Diffusion Reward Models 奖励为什么不该只是一个数？奖励模型通常被描述成一把尺子：给定提示 和回答 ，模型输出一个标量 ，数值越大，回答越好。这个抽象很方便，因为 PPO、Best-of- 和多数评测协议都需要一个可排…</p>
-</li>
-<li class="card">
-  <div class="rank">23</div>
+  <div class="rank">11</div>
   <h2><a href="https://zhuanlan.zhihu.com/p/2093707486100563896" target="_blank" rel="noopener">PipeLink：让高性能GPU算子模块化、可复用、可组合</a></h2>
   <p class="byline">Hsword</p>
   <p class="date-row">发布：2026-10-14</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-14 14:34">✍️ 1 人 10-14 14:34</div>
+       title="👍 1 人 10-16 14:23 · ✍️ 1 人 10-14 14:34">👍 1 人 10-16 14:23 · ✍️ 1 人 10-14 14:34</div>
   <p class="comment">（暂无点评）</p>
   <p class="excerpt">最近，我们团队开源了一个GPU编程工具PipeLink（ https://http://github.com/PKU-DAIR/PipeLink ），探索GPU Kernel的模块化组合。这里想从开发者的角度，聊聊为什么会做这件事，也向社区…</p>
 </li>
 <li class="card">
-  <div class="rank">24</div>
-  <h2><a href="https://www.zhihu.com/question/2081380378493961583/answer/2093672445077106700" target="_blank" rel="noopener">如何评价正式发布的 DeepSeek V4.1 Flash？</a></h2>
-  <p class="byline">孟繁续</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <div class="rank">12</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094475590334264117" target="_blank" rel="noopener">DeltaBox Lite：面向终端 AI Agent 的轻量文件沙箱</a></h2>
+  <p class="byline">IPADS-SYS</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-14 12:00">✍️ 1 人 10-14 12:00</div>
+       title="✍️ 1 人 10-16 17:23">✍️ 1 人 10-16 17:23</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">在各基模团队还在研究简单的有损压缩indexer的方法时，小红书Dots团队研究员 @孟繁续 @我我我魔术师 自研的DoSA：Dots Sparse Attention能够无损减少计算和访存的方案，将GLM-5.2的首token加速2x，D…</p>
+  <p class="excerpt">专为 AI Agent 打造的轻量级文件系统运行时，提供原生事务级 Diff · Commit · Abort 语义与审批机制。 DeltaBox Lite 已通过插件和扩展支持 DeepSeek Harness（含桌面版）与 Pi Age…</p>
+</li>
+<li class="card">
+  <div class="rank">13</div>
+  <h2><a href="https://www.zhihu.com/question/2093344101663863892/answer/2094235415691772998" target="_blank" rel="noopener">田柯宇时隔两年回应字节「模型投毒」事件，称抢夺集群资源、持续两月恶意攻击等不实，到底是怎么回事？</a></h2>
+  <p class="byline">霚漀曌鵷戀羅雲熙</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="👍 1 人 10-16 21:48">👍 1 人 10-16 21:48</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">谢邀。偏个题，我今天学习了一下清华邱海权老师发表在 ICLR 2026 分析 Flash Attention 低精度反向算子在训练中 loss 爆炸的论文： Why Low-Precision Transformer Training Fa…</p>
+</li>
+<li class="card">
+  <div class="rank">14</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2093839944267587628" target="_blank" rel="noopener">LLM 面试官笔记 (8)：KL 估计量怎么选，放 loss 还是 reward</a></h2>
+  <p class="byline">LLMCat</p>
+  <p class="date-row">发布：2026-10-15</p>
+  <div class="moment-row"
+       title="👍 0 人 10-16 21:34 · ✍️ 1 人 10-15 12:50">👍 0 人 10-16 21:34 · ✍️ 1 人 10-15 12:50</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">本系列文章会分享 GRPO 排查的经验。以及我作为面试官，考查 post-training 方向候选人时，是如何判断对方是否有对应的能力。这篇讨论两个经常被混在一起的问题： k1、k2、k3 哪个更适合用来估计或优化 KL？KL 应该作为…</p>
+</li>
+<li class="card">
+  <div class="rank">15</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094378213476771469" target="_blank" rel="noopener">阶跃开源Step-5-Preview：智能体旗舰模型，600B 参数 27B 激活，最高支持 1M 上下文</a></h2>
+  <p class="byline">魔搭社区</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="✍️ 1 人 10-16 11:42">✍️ 1 人 10-16 11:42</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">阶跃星辰正式开源 Step 5 Preview ，面向真实世界的智能体（Agentic）任务，覆盖 AI 编程、软件工程与专业知识工作。模型采用稀疏 MoE 架构， 总参数量 600B，每个 Token 激活 27B 参数 ，支持 1M T…</p>
+</li>
+<li class="card">
+  <div class="rank">16</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094431986500755536" target="_blank" rel="noopener">全球领先！千卡超节点算力巨无霸，成功点亮</a></h2>
+  <p class="byline">新智元</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="✍️ 1 人 10-16 14:19">✍️ 1 人 10-16 14:19</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">2026 年 10 月 15 日，阶跃星辰正式开源新一代旗舰模型 Step 5 Preview，在 AI 编程、软件工程、专业知识工作、金融等任务上达到前沿水平。 此次 Step 5 Preview 一经开源发布，昇腾就基于 vLLM 推理…</p>
+</li>
+<li class="card">
+  <div class="rank">17</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2091299272411051246" target="_blank" rel="noopener">字节 AI Infra 三面复盘</a></h2>
+  <p class="byline">草原小可汗</p>
+  <p class="date-row">发布：2026-10-07</p>
+  <div class="moment-row"
+       title="👍 1 人 10-16 01:35">👍 1 人 10-16 01:35</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">流程大致是：自我介绍与经历背景 → 项目深挖 → 算子开发与硬件基础 → 求职意向 → 反问。 开场先确认过去团队的工作范围、我的职责和交付对象，也聊到了 TensorFlow 算子适配的应用场景。 问题复盘1. CUDA Graph 与…</p>
+</li>
+<li class="card">
+  <div class="rank">18</div>
+  <h2><a href="https://www.zhihu.com/question/2094234009622599449/answer/2094504270611625068" target="_blank" rel="noopener">如何看待微软已完成2.8T大模型的预训练？</a></h2>
+  <p class="byline">zch</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="👍 1 人 10-16 21:21">👍 1 人 10-16 21:21</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">微软真是一个神人公司了 MFU21%，而且还是用的BF16峰值口径，算mxfp8模型的训练，感情这玩意实际预训练时MFU也就10.5%，您完全不优化的吗 简直是暴殄天物</p>
+</li>
+<li class="card">
+  <div class="rank">19</div>
+  <h2><a href="https://www.zhihu.com/question/2094176071876874471/answer/2094221168953840072" target="_blank" rel="noopener">字节腾讯阿里扎堆布局个人 Agent，国内能否跑出「中国版 Muse」？</a></h2>
+  <p class="byline">手动狗头</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="✍️ 1 人 10-16 00:20">✍️ 1 人 10-16 00:20</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">倒反天罡了，个人agent这个品类就是中国先做起来的，从豆包手机到千问点奶茶，到workbuddy，meta后知后觉试图收购manus然后照着抄一遍就变成先发了？ 就算在美国它也不是先发啊，前面openclaw，hermes一大堆呢</p>
+</li>
+<li class="card">
+  <div class="rank">20</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094303012487423759" target="_blank" rel="noopener">坐不住了! Meta 把 Muse Spark 开源了!</a></h2>
+  <p class="byline">Karminski-牙医</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="✍️ 1 人 10-16 05:46">✍️ 1 人 10-16 05:46</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">Meta 刚刚开源了 Muse Spark Open 大模型! 1M上下文, 支持全模态输入! 模型参数量816B-A42B, 说实话这个激活数量可不小, 尤其是对比 DeepSeek-v4.1-flash (552B MoE 主干 + 1…</p>
+</li>
+<li class="card">
+  <div class="rank">21</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094181978539025896" target="_blank" rel="noopener">DINO Forcing：既然表征能预测，何必去噪？</a></h2>
+  <p class="byline">AI解析新纪元</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="✍️ 1 人 10-16 14:00">✍️ 1 人 10-16 14:00</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">Dino Forcing Flow Models: Do not denoise what you can predict 如果一份预训练表征是图像的确定函数，我们为什么还要专门从噪声里“生成”它一次？ 这正是 DINO Forcing F…</p>
+</li>
+<li class="card">
+  <div class="rank">22</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094366918186623793" target="_blank" rel="noopener">OPD-RL 新范式：diff 出圈——从目标，到奖励，再到梯度</a></h2>
+  <p class="byline">长琴</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="👍 0 人 10-16 13:10">👍 0 人 10-16 13:10</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">OPD 大家熟知是需要一个 teacher 提供 logits 的，OPSD（自蒸馏）一般是拿一个外部信号让模型自己提升，都是现在的主流范式。我们前阵子介绍的《 「差值即信号」：OPD 蒸馏的新范式 | 长琴 [1]》在 OPD 这个方向上…</p>
+</li>
+<li class="card">
+  <div class="rank">23</div>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094489577658508681" target="_blank" rel="noopener">OCP 全球峰会：伴随生态系统的采用，NVIDIA 开放 Vera Rubin 架构，助力全球 AI 工厂规模化部署</a></h2>
+  <p class="byline">NVIDIA英伟达中国</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="✍️ 1 人 10-16 18:09">✍️ 1 人 10-16 18:09</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">思科、谷歌、Meta、微软和 Visionbay 正共同推进 Vera Rubin 架构的发展。 随着 AI 工厂的规模从兆瓦级增长到十亿瓦级，建造这些工厂需要的不仅仅是先进的计算。开放标准正在帮助行业以更快、更高效、更可靠的方式扩展 AI…</p>
+</li>
+<li class="card">
+  <div class="rank">24</div>
+  <h2><a href="https://www.zhihu.com/question/1965722681296019689/answer/2094317226568442589" target="_blank" rel="noopener">为什么大家纷纷抛弃了 transformer 架构(注意力机制)?</a></h2>
+  <p class="byline">赵拓</p>
+  <p class="date-row">发布：2026-10-16</p>
+  <div class="moment-row"
+       title="✍️ 1 人 10-16 06:42">✍️ 1 人 10-16 06:42</div>
+  <p class="comment">（暂无点评）</p>
+  <p class="excerpt">attention以后可能会被抛弃，但肯定不是现在。 以sliding window attention + learnable sink为基础，每隔几层加上一层full attention，仍然是最可靠的选择。 就算其他的新的结构，无外乎…</p>
 </li>
 <li class="card">
   <div class="rank">25</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2090552659241591553" target="_blank" rel="noopener">逐 Query Sparse Attention Kernel 的设计取舍</a></h2>
-  <p class="byline">KuangjuX</p>
-  <p class="date-row">发布：2026-10-07</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094452624808474383" target="_blank" rel="noopener">Google DeepMind用AI智能体寻找新抗菌肽：从数百万蛋白到实验候选</a></h2>
+  <p class="byline">机器之心</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="👍 1 人 10-13 20:44">👍 1 人 10-13 20:44</div>
+       title="✍️ 1 人 10-16 15:41">✍️ 1 人 10-16 15:41</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">最近正在设计一个逐 Query 的 Block Sparse Attention，在设计的过程中前后尝试了几种不同的 Kernel 设计方案，这篇文章主要作为我的一部分工作总结，整理这些设计实测中观察到的问题。在进入正题之前，我们首先复习一…</p>
+  <p class="excerpt">编辑丨&amp; 抗菌药物的耐药性不断加剧，新型抗菌分子的发现却仍是一项耗时的工作。天然蛋白质序列数据库积累了海量生物信息，但其中相当一部分蛋白的功能尚不明确。它们可能蕴藏着新的抗菌活性，却很难仅凭已知序列注释被识别出来。 10月15日，Googl…</p>
 </li>
 <li class="card">
   <div class="rank">26</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093717154348716813" target="_blank" rel="noopener">Learning Representations to Guide Pixel Diffusion Transformers论文解析</a></h2>
-  <p class="byline">FirSight</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <h2><a href="https://www.zhihu.com/question/5182307271/answer/2094032288992458689" target="_blank" rel="noopener">强化学习最近是不是没有什么突破了?</a></h2>
+  <p class="byline">Soulflare</p>
+  <p class="date-row">发布：2026-10-15</p>
   <div class="moment-row"
-       title="👍 1 人 10-15 02:26">👍 1 人 10-15 02:26</div>
+       title="👍 1 人 10-16 11:26">👍 1 人 10-16 11:26</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">原文链接 https://http://arxiv.org/pdf/2610.12978 一、要解决什么问题1.1 根本问题：为「理解」而生的表征，凭什么对「生成」有用？视觉表征研究（SimCLR / MAE / DINO / DINOv2…</p>
+  <p class="excerpt">强化学习没有陷入停滞，它只是把整天在仿真环境里折腾小车倒立摆的人熬成了旧时代遗老，然后转身成了现代大模型进化的核心发动机。 题主现在研一，看到实验室还在跑PPO、SAC、TD3，看多智能体论文满屏还是MAPPO、QMIX、MADDPG，产生…</p>
 </li>
 <li class="card">
   <div class="rank">27</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2092654065377457038" target="_blank" rel="noopener">混合架构的长文力学 Part 1.1：从混合注意力到混合位置（上）</a></h2>
-  <p class="byline">河畔草lxr</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2093435973992445082" target="_blank" rel="noopener">后程序员时代--学会与AI Agent共存</a></h2>
+  <p class="byline">蓝色</p>
+  <p class="date-row">发布：2026-10-13</p>
   <div class="moment-row"
-       title="👍 1 人 10-15 15:05">👍 1 人 10-15 15:05</div>
+       title="👍 4 人 10-16 06:28">👍 4 人 10-16 06:28</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">大家好，欢迎大家关注我们的最新工作， 混合架构的长文力学 Part 1.1：从混合注意力到混合位置 。arXiv: https://http://arxiv.org/abs/2610.10114 HuggingFace: https://h…</p>
+  <p class="excerpt">过去半年，我大量利用AI Agent参与编写代码，使用程度丝毫不低于一线工程师。我认为若我不亲自大量参与这件事，我想我是无法感知到他的边界在哪里的。 我第一次接触AI Agent编写代码还是在Cursor时代，我刚翻阅了一下我注册Curso…</p>
 </li>
 <li class="card">
   <div class="rank">28</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093726777143252369" target="_blank" rel="noopener">清华提出Jev-LDE：ICL示例只改一次，1-shot平均准确率就能暴涨</a></h2>
-  <p class="byline">机器之心</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <h2><a href="https://www.zhihu.com/question/2016772723754410989/answer/2094198216673714307" target="_blank" rel="noopener">sft与强化学习，哪个更重要？</a></h2>
+  <p class="byline">OpenLLMAI</p>
+  <p class="date-row">发布：2026-10-15</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-14 15:40">✍️ 1 人 10-14 15:40</div>
+       title="👍 1 人 10-15 23:55">👍 1 人 10-15 23:55</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">大模型做 In-Context Learning（ICL，上下文学习）时，通常会先从示例库里检索若干 demonstration，再把这些示例和当前问题一起放进 prompt。 但检索得到的 Top-K 并不一定适合目标模型。示例过多会增加…</p>
+  <p class="excerpt">在当前的训练流程里，其实都是不可或缺的 比较推荐的是： 重midtrain、轻SFT、有难度的RL。 或者说一个更有价值的问题是midtrain/SFT做到什么程度才去做RL？二者应该如何配合？</p>
 </li>
 <li class="card">
   <div class="rank">29</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093441704724645264" target="_blank" rel="noopener">位置编码到底有无必要？NoPE 走进生产大模型的四年</a></h2>
-  <p class="byline">大模型最新论文</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2093284470522638552" target="_blank" rel="noopener">为什么Agent必然会走向Swarm形态？</a></h2>
+  <p class="byline">wangleineo</p>
   <p class="date-row">发布：2026-10-13</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-13 20:57">✍️ 1 人 10-13 20:57</div>
+       title="👍 1 人 10-15 23:45 · ✍️ 1 人 10-13 11:29">👍 1 人 10-15 23:45 · ✍️ 1 人 10-13 11:29</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">一句话总结 自注意力分不清词序，所以必须外挂位置编码。但这个 “常识” 在 decoder-only 模型上并不成立：因果掩码本身就携带位置信息，在这类模型上删掉位置编码的影响并不大。2025 年左右 NoPE 开始走进生产级大模型，业界的…</p>
+  <p class="excerpt">今天读到一篇 PrimeIntellect 工程师的文章，很有启发性。 https://www. primeintellect.ai/blog/ on-the-nature-of-the-swarm 文章论述了为什么 Agent 一定会走向…</p>
 </li>
 <li class="card">
   <div class="rank">30</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093973568400929719" target="_blank" rel="noopener">我们可能一直都低估了小模型！Select to Think：也许选择比生成更重要</a></h2>
-  <p class="byline">青稞AI</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://www.zhihu.com/pin/2094356951274616342" target="_blank" rel="noopener">AI圈一日上演冰火大戏：两款千亿大模型开源 头部服务宕机 你见过AI圈一天之内上演的冰火大戏吗</a></h2>
+  <p class="byline">德里克文</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 07:59">✍️ 1 人 10-15 07:59</div>
+       title="💬 1 人 10-16 09:20">💬 1 人 10-16 09:20</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">作者：叶文萱，tum在读博士 论文 ：Select to Think: Unlocking SLM Potential with Local Sufficiency Paper： https:// proceedings.mlr.press…</p>
+  <p class="excerpt">AI圈一日上演冰火大戏：两款千亿大模型开源 头部服务宕机 你见过AI圈一天之内上演的冰火大戏吗？ 一边是巨头接连甩出王炸：Meta开源8160亿参数的Muse Spark Open，国内皆月星辰同步开放6000亿参数的Step 5预览版，两…</p>
 </li>
 <li class="card">
   <div class="rank">31</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093650426113668306" target="_blank" rel="noopener">面壁开源 MiniCPM-V 4.7：苹果手机 3GB 内存跑35B-A3B MoE</a></h2>
-  <p class="byline">魔搭社区</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094396763805323760" target="_blank" rel="noopener">五个月速成博资考之深度学习——第七章：Auto-Regressive Model</a></h2>
+  <p class="byline">7w1nKle</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-14 10:49">✍️ 1 人 10-14 10:49</div>
+       title="👍 1 人 10-16 12:14">👍 1 人 10-16 12:14</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">OpenBMB 发布并 开源 MiniCPM-V 4.7 ，提供 35B-A3B 和 1B 两种规格，聚焦端侧多模态能力与推理效率。其中，35B-A3B 是 MiniCPM-V 系列首个 MoE 模型 ，可在 iPhone 17 Pro M…</p>
+  <p class="excerpt">Auto-Regressive Models在生成模型中，我们希望根据已有的数据学习其潜在的概率分布，从而生成与真实数据具有相似统计特征的新样本。例如，在语言生成中，我们希望模型能够生成自然、连贯的文本；在图像生成中，我们希望模型能够产生符…</p>
 </li>
 <li class="card">
   <div class="rank">32</div>
-  <h2><a href="https://www.zhihu.com/question/1892964747521012429/answer/2093866065428271625" target="_blank" rel="noopener">NVIDIA H100引入了SM之间的互联，称为DSMEM，目前业界是否有相关的应用？</a></h2>
-  <p class="byline">运维一线排障录</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094380138993660516" target="_blank" rel="noopener">硅基流动上线高速版 GLM-5.3-Flash</a></h2>
+  <p class="byline">硅基流动</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="👍 1 人 10-15 13:24">👍 1 人 10-15 13:24</div>
+       title="✍️ 1 人 10-16 10:54">✍️ 1 人 10-16 10:54</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">DSMEM（Distributed Shared Memory，分布式共享内存）目前已经有一些实际应用，但还没有像 Tensor Core、CUDA Core 那样成为大量 AI 框架默认使用的基础设施。它更像是 H100/Hopper 架…</p>
+  <p class="excerpt">前沿多模态智能，变得更加“随手可用”。作为智谱 GLM-5 系列首款原生多模态模型，GLM-5.3-Flash 不仅显著提升了编程能力与推理效率，还解锁了视觉理解能力。 在 Artificial Analysis 综合智能指数测试中，GLM…</p>
 </li>
 <li class="card">
   <div class="rank">33</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093702570825069706" target="_blank" rel="noopener">破除“玩具级 Demo”魔咒：智能体（AI Agent）工程的 FDE 落地战法</a></h2>
-  <p class="byline">北方的郎</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094381425151697773" target="_blank" rel="noopener">3个月用Harness重写90万行旧代码：踩过的坑都在这里</a></h2>
+  <p class="byline">腾讯技术工程</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-14 14:02">✍️ 1 人 10-14 14:02</div>
+       title="✍️ 1 人 10-16 18:10">✍️ 1 人 10-16 18:10</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">一、 智能体落地之殇：从幻觉试验到生产悬崖当今企业级智能体（AI Agent）研发正在面临一个普遍的技术困境： “Demo 惊艳众人，上线一触即溃。” 在实验室环境中，大模型仅凭几条精心编排的 Prompt 就能展现出敏捷的推理与工具调用能…</p>
+  <p class="excerpt">作者：komahu 如今程序员越来越离不开AI Coding。当AI有足够能力很快把代码实现写出来，而开发人员在此过程中应该干什么？我们在开发过程中遇到的几个问题：这个需求到底要做成什么样？做完效果如何？最终产物质量够不够好？以前手搓代码时…</p>
 </li>
 <li class="card">
   <div class="rank">34</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093368263384232111" target="_blank" rel="noopener">ICML&#39;26 | AMPD：Agent多轮对话该如何处理PD分离？</a></h2>
-  <p class="byline">marsggbo</p>
-  <p class="date-row">发布：2026-10-13</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094394121523930686" target="_blank" rel="noopener">东方资产 × 硅基流动：以国产算力为底座，构建企业级大模型基础设施</a></h2>
+  <p class="byline">硅基流动</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="👍 1 人 10-14 18:17">👍 1 人 10-14 18:17</div>
+       title="✍️ 1 人 10-16 13:08">✍️ 1 人 10-16 13:08</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">原文： Efficient Multi-round LLM Inference over Disaggregated Serving （He et al., ICML 2026） 1. 从单轮问答到多轮 agent，推理负载换了副面孔想象你…</p>
+  <p class="excerpt">大模型走进金融业务，真正的考验在于：能否在每一次被调用时，都能稳定、安全、经济地给出响应。 从场景试点走向规模化应用，这道考题也摆在了东方资产面前。智能问答、智能尽调、报告助手、数据分析……当大模型开始参与更多日常工作，企业需要的不再只是一…</p>
 </li>
 <li class="card">
   <div class="rank">35</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2092960495041042247" target="_blank" rel="noopener">如何在SpacemiT-K3上使用Triton写出高效的Kernel</a></h2>
-  <p class="byline">Alex</p>
-  <p class="date-row">发布：2026-10-12</p>
+  <h2><a href="https://www.zhihu.com/question/2094273885155882945/answer/2094289090665517774" target="_blank" rel="noopener">如何看待Meta 发布开放权重模型 Muse Spark Open，可在两Mac Studio上运行？</a></h2>
+  <p class="byline">平凡</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="👍 1 人 10-14 09:10">👍 1 人 10-14 09:10</div>
+       title="✍️ 1 人 10-16 04:50">✍️ 1 人 10-16 04:50</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">Triton 是一套用于编写高性能计算 Kernel 的编程语言和编译器。它提供接近 Python 的开发方式，让开发者以数据块为单位描述加载、计算和写回，再由编译器完成到目标机器代码的转换。对于想从框架调用走向算子实现的开发者，这种表达方…</p>
+  <p class="excerpt">模型本身架构上没有什么太多好说的。当然它哪怕标榜自己是美国现在最强的开源模型，这确实也没错，就跟 Mistral Large 是欧洲最强模型一样。毕竟在他们那个地界，一个盛产闭源模型，一个什么都不产。 总参数量 8160 亿、单 token…</p>
 </li>
 <li class="card">
   <div class="rank">36</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2087842854592950950" target="_blank" rel="noopener">训练也“PD分离”，可能是更优的Scaling之路</a></h2>
-  <p class="byline">Yibo Zhu</p>
-  <p class="date-row">发布：2026-09-28</p>
+  <h2><a href="https://www.zhihu.com/pin/2094242130185155633" target="_blank" rel="noopener">NLPer 做具身</a></h2>
+  <p class="byline">李磊NLP</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="👍 3 人 10-15 15:42">👍 3 人 10-15 15:42</div>
+       title="💬 1 人 10-16 01:43">💬 1 人 10-16 01:43</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">上周忙完了 Step 5 Preview 的发布，终于有时间整理下过去几个月捣鼓的新idea，并发在了arxiv上。虽然 Step 5 还没用上，但是也许不久的将来就能在我们的主线模型中看到类似的思路了~ KITE: KV-Invarian…</p>
+  <p class="excerpt">NLPer 做具身？Natura-1 值得看的不是参数 Scaling Law的路径是：把模型和数据一起放大，让能力从规模里长出来 这句话在 NLP 里已经被反复验证，从 GPT-1 到 6，没有人给写诗、翻译、Coding Agent各写…</p>
 </li>
 <li class="card">
   <div class="rank">37</div>
-  <h2><a href="https://www.zhihu.com/pin/2092361809101578335" target="_blank" rel="noopener">RSIGym：能跑、能控、能测的 RSI 环境 前沿模型现在能自己当&#34;研究员&#34;了——不是写写总结，是真的造数据、训模型、</a></h2>
-  <p class="byline">vibe life</p>
-  <p class="date-row">发布：2026-10-10</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2078049367722824156" target="_blank" rel="noopener">适用于端侧的多模态检索模型</a></h2>
+  <p class="byline">中投靓仔</p>
+  <p class="date-row">发布：2026-10-09</p>
   <div class="moment-row"
-       title="👍 1 人 10-14 08:36">👍 1 人 10-14 08:36</div>
+       title="👍 1 人 10-16 08:14">👍 1 人 10-16 08:14</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">RSIGym：能跑、能控、能测的 RSI 环境 前沿模型现在能自己当&#34;研究员&#34;了——不是写写总结，是真的造数据、训模型、改代码、跑评估，全程只给 500 美元预算。 这篇论文（RSIGym，arXiv 2610.10310）做了两件事： 造…</p>
+  <p class="excerpt">背景过去几年，视觉语言模型的一条重要发展主线是 Scaling ：更大的模型、更多的数据和更强的算力，不断抬高通用图文理解与检索的能力上限。但在真实的工业系统中，我们关心的往往是另一组问题：模型能否在手机、摄像头等边缘设备上运行？能否在有限…</p>
 </li>
 <li class="card">
   <div class="rank">38</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093740990628618767" target="_blank" rel="noopener">苹果LensVLM：长上下文压缩成图片，模型边看边「放大」</a></h2>
-  <p class="byline">机器之心</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <h2><a href="https://www.zhihu.com/pin/2094395047156494754" target="_blank" rel="noopener">南开实践课丨《智能体管控》交互设计思路 五分钟看懂交互设计Paper思路：《智能体 Harness 工程：可观测性驱动的</a></h2>
+  <p class="byline">减论(Reduct)</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-14 16:33">✍️ 1 人 10-14 16:33</div>
+       title="💬 1 人 10-16 20:01">💬 1 人 10-16 20:01</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">Agent 执行长程任务时，代码、工具输出和交互记录不断累积，上下文也跟着变长。 生成摘要、压缩上下文，可以减少输入，却也可能删掉后续任务需要的细节。一段当时看起来无关紧要的记录，到了下一步，或许就是关键线索。如果模型只能看到压缩结果，就很…</p>
+  <p class="excerpt">南开实践课丨《智能体管控》交互设计思路 五分钟看懂交互设计Paper思路：《智能体 Harness 工程：可观测性驱动的编码智能体 Harness 自动演化》 #减论 #​人工智能 #智能体 #大模型 #AI技术</p>
 </li>
 <li class="card">
   <div class="rank">39</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093994725443481851" target="_blank" rel="noopener">NeurIPS 2026 | 不止记住摘要，OmniMem让长视频生成直接检索完整历史</a></h2>
-  <p class="byline">我爱计算机视觉</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094375771741630568" target="_blank" rel="noopener">Meta杀回开源：816B新模型，两台Mac Studio就能跑</a></h2>
+  <p class="byline">机器之心</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 09:46">✍️ 1 人 10-15 09:46</div>
+       title="✍️ 1 人 10-16 10:35">✍️ 1 人 10-16 10:35</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">生成长视频，难道只能一边向前，一边遗忘？删掉早期画面，主角容易变样；把历史压成摘要，又可能找不回关键细节。美国东北大学与Adobe Research提出的OmniMem，首次实现完整历史的长视频生成，让模型实时检索当前需要的记忆。 60秒同…</p>
+  <p class="excerpt">编辑｜泽南 没想到 Meta 重回开源的方式，是和苹果携手。 本周五凌晨，Meta 突然发布了 Muse Spark Open，号称「最强美国开源权重大模型」。这是一款原生多模态模型，参数量 816B，激活参数 42B，上下文 1M，专门为…</p>
 </li>
 <li class="card">
   <div class="rank">40</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094147460901950239" target="_blank" rel="noopener">Agent 如何理解直播？</a></h2>
-  <p class="byline">减论(Reduct)</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094410278993672071" target="_blank" rel="noopener">AI黑箱要被AI破解了？前OpenAI研究员发现，90%的神经元功能可以解释</a></h2>
+  <p class="byline">DeepTech深科技</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 19:29">✍️ 1 人 10-15 19:29</div>
+       title="✍️ 1 人 10-16 12:52">✍️ 1 人 10-16 12:52</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">DeltaStreamer让AI边看、边记、主动回看 面对持续输入的直播流，Agent该用什么方式处理信息，理解内容？在还不知道用户会问什么时，Agent应该记住哪些信息？等问题出现，已经过去的关键画面又该如何找回？新工作DeltaStre…</p>
+  <p class="excerpt">10 月 15 日，前 OpenAI 研究员、现任 Goodfire 研究员 Nick Cammarata 在社交平台上分享了一项引发 AI 研究界关注的发现——大型神经网络的内部结构，可能远比过去认为的更容易理解。 几乎同时，他发表了题为…</p>
 </li>
 <li class="card">
   <div class="rank">41</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093874661226442897" target="_blank" rel="noopener">Agent-Reflex | 教智能体主动反思</a></h2>
-  <p class="byline">卡卡卡卡比</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://www.zhihu.com/pin/2094454163165949993" target="_blank" rel="noopener">10分钟，Kimi Work 从入门到精通 Kimi Work 是我们推出的本地 AI Agent，就像住在电脑里的 A</a></h2>
+  <p class="byline">Kimi</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 01:27">✍️ 1 人 10-15 01:27</div>
+       title="💬 1 人 10-16 15:59">💬 1 人 10-16 15:59</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">很开心分享最近对智能体反思学习的探索工作 ： Agent-Reflex: Teaching Language Agents to Act Reflectively Arxiv： https://http://arxiv.org/pdf/26…</p>
+  <p class="excerpt">10分钟，Kimi Work 从入门到精通 Kimi Work 是我们推出的本地 AI Agent，就像住在电脑里的 AI 同事，可以直接读取本地文件、操作浏览器和常用工具。 今天我们从下载安装开始，手把手带大家完成基础任务，再进一步解锁进…</p>
 </li>
 <li class="card">
   <div class="rank">42</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2091847058844029112" target="_blank" rel="noopener">Jev 技术拆解</a></h2>
-  <p class="byline">绝密伏击</p>
-  <p class="date-row">发布：2026-10-13</p>
+  <h2><a href="https://www.zhihu.com/pin/2094491860479885670" target="_blank" rel="noopener">DeepNews | Muse Spark Open开源；DeepSeek发放赠金补偿…… 技术动态 1、Meta发布开</a></h2>
+  <p class="byline">深联DeepLink</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="👍 0 人 10-13 22:35 · ✍️ 1 人 10-13 14:59">👍 0 人 10-13 22:35 · ✍️ 1 人 10-13 14:59</div>
+       title="💬 1 人 10-16 18:21">💬 1 人 10-16 18:21</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">最近 Jev 爆火，随着 OpenAI、Cloudflare、Perplexity 等厂商相继推出决策 API 或模型，以及 Laya、Kev、Nimble、APUS-OpenJev 等开放实现不断涌现， 面向有限候选空间的决策模型，正在成…</p>
+  <p class="excerpt">DeepNews | Muse Spark Open开源；DeepSeek发放赠金补偿…… 技术动态 1、Meta发布开放权重模型Muse Spark Open：两台Mac Studio可本地跑 2、首套1024卡昇腾950超节点成功点亮…</p>
 </li>
 <li class="card">
   <div class="rank">43</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094038704994128402" target="_blank" rel="noopener">世界模型新突破：偷懒率下降85.7%</a></h2>
-  <p class="byline">超正经学术君</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094480230299726412" target="_blank" rel="noopener">软件工程基础设施正在被重建</a></h2>
+  <p class="byline">wangleineo</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 12:18">✍️ 1 人 10-15 12:18</div>
+       title="✍️ 1 人 10-16 19:21">✍️ 1 人 10-16 19:21</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">投稿作者：王凯琪 先进研究院算法工程师 世界模型预测机器人操作过程时，能否保持目标的物理一致性， 避免无故复制、消失或形变 ？目前的主流方法，是以预训练视频生成模型为基础，在机器人操作数据上进行监督微调（SFT），根据初始观测、任务指令等条…</p>
+  <p class="excerpt">Anthropic 发表了一篇博客，犹抱琵琶半遮面地讲了他们内部的新代码版本系统 Scion。由于代码量暴增，以Git为基础的系统已经承受不住压力，不得不另起炉灶， 重新定义 version control 系统 。这已经是今年业界第二次重…</p>
 </li>
 <li class="card">
   <div class="rank">44</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094035847796601896" target="_blank" rel="noopener">当视频模型回到原点，它还认得这里吗？Honeycomb用恒定大小记忆守住长视频的一致性</a></h2>
-  <p class="byline">机器之心</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094461804948748189" target="_blank" rel="noopener">硬刚OpenAI dots！这家中国公司狂卷Work Agent</a></h2>
+  <p class="byline">新智元</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 12:05">✍️ 1 人 10-15 12:05</div>
+       title="✍️ 1 人 10-16 16:18">✍️ 1 人 10-16 16:18</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">让视频生成模型沿着相机轨迹不断探索一个场景，并不算最难。真正困难的是：当镜头绕了一圈再次回到原点，房间的布局、家具的位置和墙面的纹理，是否还与最初一样？ 现有视频世界模型可以生成视觉效果出色的短片。但随着生成过程不断延长，早期画面会逐渐离开…</p>
+  <p class="excerpt">最近半个月，硅谷和国内大厂在Agent赛道上彻底杀疯了！ 刚刚过去的旧金山开发者大会上，奥特曼突然祭出OpenAI王炸新物种「dots」。这是OpenAI首个自带 独立云端电脑 、全天候在线的常驻Agent。OpenAI产品负责人当场放话，…</p>
 </li>
 <li class="card">
   <div class="rank">45</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094149381222032330" target="_blank" rel="noopener">LangChain 短期记忆持久化：Agent 会话状态保存与使用</a></h2>
-  <p class="byline">跟我学机器学习</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094433536354866369" target="_blank" rel="noopener">MedReaMM：面向专家级临床诊断综合能力的评测</a></h2>
+  <p class="byline">我爱计算机视觉</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 19:37">✍️ 1 人 10-15 19:37</div>
+       title="✍️ 1 人 10-16 14:32">✍️ 1 人 10-16 14:32</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">5.2 短期记忆持久化与使用LangGraph 没有为短期记忆单独设计一套存储系统，而是直接复用了我们在第4.9节中介绍过的状态机制（State）。Agent 在一次对话中需要记住的所有内容——包括对话历史、用户上传的文件、检索到的文档片段…</p>
+  <p class="excerpt">随着大语言模型和视觉语言模型不断进入医学场景，模型能不能“看懂一张片子” 已经不再是唯一问题。真实诊断往往同时依赖病史、症状、实验室检查、医学影像和病理结果，医生需要把这些来源不同、粒度不同的证据放在一起，形成一份有优先级的鉴别诊断。 然而…</p>
 </li>
 <li class="card">
   <div class="rank">46</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094036366917112283" target="_blank" rel="noopener">Agent Memory调研笔记——测评篇</a></h2>
-  <p class="byline">一脑袋浆糊</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://www.zhihu.com/pin/2094344098572457720" target="_blank" rel="noopener">【AIGC日报 · 2026-10-16】 今日简讯： 1、阶跃开放Step 5 Preview权重，支持百万Token</a></h2>
+  <p class="byline">德里克文</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 12:25">✍️ 1 人 10-15 12:25</div>
+       title="💬 1 人 10-16 08:30">💬 1 人 10-16 08:30</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">之前做了一个 position，就是下一阶段 Agent 记忆系统应该考虑的核心目标，是保持 Agent 运行态的心流 （ 在做完【记忆需求注册】+【记忆推荐】机制半年后，我觉得，我漏掉了一个关键…… ）。 而【心流】就像一个深入思考某事的…</p>
+  <p class="excerpt">【AIGC日报 · 2026-10-16】 今日简讯： 1、阶跃开放Step 5 Preview权重，支持百万Token上下文 2、Meta发布Muse Spark Open，开放8160亿参数模型权重 3、英伟达发布Nemotron 3.…</p>
 </li>
 <li class="card">
   <div class="rank">47</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093790023338533121" target="_blank" rel="noopener">Agent记忆机制：短期记忆与长期记忆概览</a></h2>
-  <p class="byline">跟我学机器学习</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <h2><a href="https://www.zhihu.com/question/2080572349796168710/answer/2092146977744089125" target="_blank" rel="noopener">为了实现Token自由，自己买GPU值得吗？</a></h2>
+  <p class="byline">泽远</p>
+  <p class="date-row">发布：2026-10-10</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-14 19:48">✍️ 1 人 10-14 19:48</div>
+       title="👍 1 人 10-16 08:53">👍 1 人 10-16 08:53</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">5 Agent 记忆机制与管理在第4章内容中我们详细介绍了 Agent 的工具调用与检索能力，但细心的读者可能已经注意到一个问题：在 RAG Agent 这个场景里至始至终都只涉及到了一个 Agent 来理解问题、检索内容和回答问题。但是在…</p>
+  <p class="excerpt">目前这块我只能说我的研究吊打绝大多数人 然后以我从RWKV和百川1研究到现在的经验给你个结论： 如果你的判断标准是“你的LLM服务器折旧成本和电费成本能跑赢线上API” 那你基本亏钱，这个领域95%的情景下是亏钱的，大家都是出于别的考量 对…</p>
 </li>
 <li class="card">
   <div class="rank">48</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2093780510594094611" target="_blank" rel="noopener">对话上交大蔡登：比RSI更本质的是部署后自进化，关键是让上下文学习无限持续</a></h2>
-  <p class="byline">DeepTech深科技</p>
-  <p class="date-row">发布：2026-10-14</p>
+  <h2><a href="https://www.zhihu.com/pin/2094281181936329555" target="_blank" rel="noopener">Muse Spark Open Meta 把它的Muse Spark开源了</a></h2>
+  <p class="byline">平凡</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-14 19:10">✍️ 1 人 10-14 19:10</div>
+       title="💬 1 人 10-16 04:21">💬 1 人 10-16 04:21</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">当前，大模型的“记忆”大多依赖同一种机制：把信息存储在模型权重之外的数据库中，需要时检索出来，再注入上下文窗口供模型使用。这一方法在 2020 年被 Facebook 人工智能研究院（Facebook AI Research）正式命名为检索…</p>
+  <p class="excerpt">Muse Spark Open Meta 把它的Muse Spark开源了。这是一个 800B 多参数的模型，架构上没有什么特别特殊的，100 万上下文这都很正常。 一般来说这么大的模型肯定不建议在本地跑，但这有意思的是，Meta 专门针对…</p>
 </li>
 <li class="card">
   <div class="rank">49</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2091496765124096068" target="_blank" rel="noopener">置身AI内: 从推理infra到RL infra</a></h2>
-  <p class="byline">是盏一啊</p>
-  <p class="date-row">发布：2026-10-08</p>
+  <h2><a href="https://zhuanlan.zhihu.com/p/2094543597001512537" target="_blank" rel="noopener">Token工厂，融资大爆发</a></h2>
+  <p class="byline">智东西</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="👍 1 人 10-13 21:06">👍 1 人 10-13 21:06</div>
+       title="✍️ 1 人 10-16 21:41">✍️ 1 人 10-16 21:41</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">两年前写 《从数据库到 AI》 时，我刚结束数学知识重建的第一阶段，准备从数据库内核转去做 AI。当时写了满满一篇，记录自己如何系统性地重建数学知识网络。前几天翻工作周报，又看到 2024-09-23 那条：“Vllm 链路初步掌握了”。那…</p>
+  <p class="excerpt">国内最大AI Infra融资诞生！资本为什么大抢Token工厂？ 编辑 | 心缘 2026年， Token工厂 成为最吸金的AI Infra赛道之一。在海外，被黄仁勋称为“AI工厂的台积电”的 Fireworks AI 在7月拿到15.05…</p>
 </li>
 <li class="card">
   <div class="rank">50</div>
-  <h2><a href="https://zhuanlan.zhihu.com/p/2094073736739738948" target="_blank" rel="noopener">详解 Jev 的 RLCD：概率校准的原理与训练机制</a></h2>
-  <p class="byline">绝密伏击</p>
-  <p class="date-row">发布：2026-10-15</p>
+  <h2><a href="https://www.zhihu.com/pin/2094414530130592135" target="_blank" rel="noopener">上海AI实验室大模型训练/推理框架工程师招聘中</a></h2>
+  <p class="byline">深联DeepLink</p>
+  <p class="date-row">发布：2026-10-16</p>
   <div class="moment-row"
-       title="✍️ 1 人 10-15 14:53">✍️ 1 人 10-15 14:53</div>
+       title="💬 1 人 10-16 13:14">💬 1 人 10-16 13:14</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">TypeSafe 宣布，Jev 采用了新的模型架构、并行输出机制，以及 RLCD（Reinforcement Learning for Calibrated Decisions，面向校准决策的强化学习） 训练方法。它直接返回结构化决策与概率…</p>
+  <p class="excerpt">上海AI实验室大模型训练/推理框架工程师招聘中！ 社招 | 上海人工智能实验室招聘： -资深推理系统架构师 -推理系统工程师 -大模型训练框架算法工程师 寻找深耕框架、对性能有执念的你！ #人工智能 #大模型 #工程师 #招聘 #AI技术</p>
 </li>
 <li class="card explore">
   <div class="rank">随机</div>
-  <h2><a href="https://www.zhihu.com/pin/2093480952806762015" target="_blank" rel="noopener">JevEval：Jev作为LLM的裁判评估模型 JevEval 使用 Jev 作为自定义 LLM 评估的裁判，而不是每次</a></h2>
-  <p class="byline">王鹏LLM</p>
-  <p class="date-row">发布：2026-10-13</p>
+  <h2><a href="https://www.zhihu.com/question/2085720951812109785/answer/2090376590257664274" target="_blank" rel="noopener">请问各位研究生/博士生，AI agents可以代替你的导师指导科研吗？</a></h2>
+  <p class="byline">朱一凡</p>
+  <p class="date-row">发布：2026-10-05</p>
   <div class="moment-row"
-       title="💬 1 人 10-13 23:19">💬 1 人 10-13 23:19</div>
+       title="👍 1 人 10-16 12:20">👍 1 人 10-16 12:20</div>
   <p class="comment">（暂无点评）</p>
-  <p class="excerpt">JevEval：Jev作为LLM的裁判评估模型 JevEval 使用 Jev 作为自定义 LLM 评估的裁判，而不是每次评估都依赖另一个生成式 LLM。 思路很简单：你定义希望评估器做出的精确判断，Jev 对每一项进行评估并返回概率，Dee…</p>
+  <p class="excerpt">在2026年10月这个节点，针对光学仪器领域，不能。且缺口很明确，AI提出的idea实在是太差劲了。 我做过一个让AI系统性生成idea的尝试： 1，一个高性能subagent （5.6 sol或astra）根据我预制好的idea范畴描述（…</p>
 </li>
 </ol>
 </main>
