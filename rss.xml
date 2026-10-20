@@ -5,6 +5,13 @@
 <link>https://deej4yng.github.io</link>
 <description>每天从知乎 AI 关注流蒸馏出的精选日报</description>
 <item>
+<title>2026-10-20 日报：51 篇</title>
+<link>https://deej4yng.github.io/archive/2026-10-20/</link>
+<guid>https://deej4yng.github.io/archive/2026-10-20/</guid>
+<pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+<description>今日脉络是推理系统从单点算子优化走向全栈协同：稀疏注意力与 SSD 级 KV c…</description>
+</item>
+<item>
 <title>2026-10-18 日报：51 篇</title>
 <link>https://deej4yng.github.io/archive/2026-10-18/</link>
 <guid>https://deej4yng.github.io/archive/2026-10-18/</guid>
@@ -17,20 +24,6 @@
 <guid>https://deej4yng.github.io/archive/2026-10-17/</guid>
 <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
 <description>今日聚焦推理系统中的瓶颈与突破：远端 KV Cache 带宽限制导致尾延迟飙升；…</description>
-</item>
-<item>
-<title>2026-10-16 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-16/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-16/</guid>
-<pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日文章围绕系统层面的资源协同与算法细化展开：从 CPU 参与 MoE 微调、大…</description>
-</item>
-<item>
-<title>2026-10-15 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-15/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-15/</guid>
-<pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日聚焦推理引擎细节（DeepEP、vLLM KV双向、PageWeaver、G…</description>
 </item>
 </channel>
 </rss>
