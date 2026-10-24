@@ -5,6 +5,13 @@
 <link>https://deej4yng.github.io</link>
 <description>每天从知乎 AI 关注流蒸馏出的精选日报</description>
 <item>
+<title>2026-10-24 日报：51 篇</title>
+<link>https://deej4yng.github.io/archive/2026-10-24/</link>
+<guid>https://deej4yng.github.io/archive/2026-10-24/</guid>
+<pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+<description>今日关注点聚焦在推理系统的底层优化与工程落地上：uGDS 将 GDS 重写为纯用…</description>
+</item>
+<item>
 <title>2026-10-22 日报：51 篇</title>
 <link>https://deej4yng.github.io/archive/2026-10-22/</link>
 <guid>https://deej4yng.github.io/archive/2026-10-22/</guid>
@@ -17,13 +24,6 @@
 <guid>https://deej4yng.github.io/archive/2026-10-21/</guid>
 <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
 <description>今日主线是 DeepInfer 公开后对大规模推理的工程复盘：从 kernel、…</description>
-</item>
-<item>
-<title>2026-10-20 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-20/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-20/</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日脉络是推理系统从单点算子优化走向全栈协同：稀疏注意力与 SSD 级 KV c…</description>
 </item>
 </channel>
 </rss>
