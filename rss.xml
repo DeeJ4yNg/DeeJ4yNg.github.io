@@ -5,6 +5,13 @@
 <link>https://deej4yng.github.io</link>
 <description>每天从知乎 AI 关注流蒸馏出的精选日报</description>
 <item>
+<title>2026-10-25 日报：51 篇</title>
+<link>https://deej4yng.github.io/archive/2026-10-25/</link>
+<guid>https://deej4yng.github.io/archive/2026-10-25/</guid>
+<pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+<description>今日聚焦推理优化与异构部署。Eagle-4 聚焦系统层面改造（Efficient…</description>
+</item>
+<item>
 <title>2026-10-24 日报：51 篇</title>
 <link>https://deej4yng.github.io/archive/2026-10-24/</link>
 <guid>https://deej4yng.github.io/archive/2026-10-24/</guid>
@@ -17,13 +24,6 @@
 <guid>https://deej4yng.github.io/archive/2026-10-22/</guid>
 <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
 <description>今日推理工程的主题围绕两条主线展开：一是 DeepSeek 开源 DeepInf…</description>
-</item>
-<item>
-<title>2026-10-21 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-21/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-21/</guid>
-<pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日主线是 DeepInfer 公开后对大规模推理的工程复盘：从 kernel、…</description>
 </item>
 </channel>
 </rss>
