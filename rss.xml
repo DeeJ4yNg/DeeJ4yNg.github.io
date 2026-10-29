@@ -5,25 +5,18 @@
 <link>https://deej4yng.github.io</link>
 <description>每天从知乎 AI 关注流蒸馏出的精选日报</description>
 <item>
+<title>2026-10-29 日报：51 篇</title>
+<link>https://deej4yng.github.io/archive/2026-10-29/</link>
+<guid>https://deej4yng.github.io/archive/2026-10-29/</guid>
+<pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+<description>今天关注点聚在 MoE 推理与 KV cache 存储调度、GPU kernel…</description>
+</item>
+<item>
 <title>2026-10-26 日报：51 篇</title>
 <link>https://deej4yng.github.io/archive/2026-10-26/</link>
 <guid>https://deej4yng.github.io/archive/2026-10-26/</guid>
 <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
 <description>今日关注热点集中在大模型推理优化、训练工程与 Agent 记忆管理等方向。Dee…</description>
-</item>
-<item>
-<title>2026-10-25 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-25/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-25/</guid>
-<pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日聚焦推理优化与异构部署。Eagle-4 聚焦系统层面改造（Efficient…</description>
-</item>
-<item>
-<title>2026-10-24 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-24/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-24/</guid>
-<pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日关注点聚焦在推理系统的底层优化与工程落地上：uGDS 将 GDS 重写为纯用…</description>
 </item>
 </channel>
 </rss>
