@@ -5,6 +5,13 @@
 <link>https://deej4yng.github.io</link>
 <description>每天从知乎 AI 关注流蒸馏出的精选日报</description>
 <item>
+<title>2026-11-03 日报：51 篇</title>
+<link>https://deej4yng.github.io/archive/2026-11-03/</link>
+<guid>https://deej4yng.github.io/archive/2026-11-03/</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+<description>今日焦点聚焦训推数值一致性与稀疏模型推理优化。涵盖GRPO下训推概率偏差、MoE…</description>
+</item>
+<item>
 <title>2026-11-02 日报：51 篇</title>
 <link>https://deej4yng.github.io/archive/2026-11-02/</link>
 <guid>https://deej4yng.github.io/archive/2026-11-02/</guid>
@@ -24,13 +31,6 @@
 <guid>https://deej4yng.github.io/archive/2026-10-31/</guid>
 <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
 <description>今日焦点：LLM系统工程的实际落地与参数级创新。从Apple Silicon推理…</description>
-</item>
-<item>
-<title>2026-10-30 日报：51 篇</title>
-<link>https://deej4yng.github.io/archive/2026-10-30/</link>
-<guid>https://deej4yng.github.io/archive/2026-10-30/</guid>
-<pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-<description>今日关注点聚焦于推理优化、Agent 工程与后训练三个方向。推理优化方面，Dee…</description>
 </item>
 </channel>
 </rss>
